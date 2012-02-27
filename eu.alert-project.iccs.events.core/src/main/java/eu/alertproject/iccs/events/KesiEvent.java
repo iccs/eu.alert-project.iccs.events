@@ -1,10 +1,9 @@
-package eu.alertproject.events;
+package eu.alertproject.iccs.events;
 
-import com.sun.tools.javac.parser.Scanner;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
-import eu.alertproject.events.converters.KESIDateConverter;
+import eu.alertproject.iccs.events.converters.KESIDateConverter;
 
 import java.io.Serializable;
 import java.util.Date;

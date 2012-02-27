@@ -1,4 +1,4 @@
-package eu.alertproject.events;
+package eu.alertproject.iccs.events;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
@@ -60,7 +60,7 @@ public class KeuiEvent implements Serializable {
     }
 
     @XStreamAlias("s1:concept")
-    static class Concept implements Serializable{
+    public static class Concept implements Serializable{
      
         @XStreamAlias("s1:uri")
         private String uri;

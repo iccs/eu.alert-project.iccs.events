@@ -7,7 +7,7 @@
     <bean id="jaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
         <property name="classesToBeBound">
             <list>
-                <value>eu.alertproject.events.Envelope</value>
+                <value>eu.alertproject.iccs.events.Envelope</value>
             </list>
         </property>
     </bean>

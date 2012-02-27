@@ -1,4 +1,4 @@
-package eu.alertproject.events;
+package eu.alertproject.iccs.events;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 

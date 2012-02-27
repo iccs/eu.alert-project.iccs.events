@@ -1,4 +1,4 @@
-package eu.alertproject.events;
+package eu.alertproject.iccs.events;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -7,17 +7,9 @@ import com.thoughtworks.xstream.io.xml.StaxDriver;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.oxm.jaxb.Jaxb2Marshaller;
-import org.springframework.oxm.xmlbeans.XmlBeansMarshaller;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.xml.bind.Marshaller;
-import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 
 /**
@@ -40,6 +32,7 @@ public class IssueNewUpdatedTest {
 
 
         Envelope o = (Envelope) xstream.fromXML(resourceAsStream);
+
 
         Assert.assertNotNull(o);
 

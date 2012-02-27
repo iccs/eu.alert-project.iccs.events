@@ -1,4 +1,4 @@
-package eu.alertproject.events;
+package eu.alertproject.iccs.events;
 
 /**
  * User: fotis
@@ -37,7 +37,7 @@ public class  Envelope implements Serializable{
     }
 
 
-    static class Body implements Serializable{
+    public static class Body implements Serializable{
 
         @XStreamAlias("wsnt:Notify")
         private Notify notify;
@@ -51,7 +51,7 @@ public class  Envelope implements Serializable{
             this.notify = notify;
         }
 
-        static class Notify implements Serializable {
+        public static class Notify implements Serializable {
 
 
             @XStreamAlias("wsnt:NotificationMessage")
@@ -67,7 +67,7 @@ public class  Envelope implements Serializable{
 
 
 
-            static class NotificationMessage implements Serializable{
+            public static class NotificationMessage implements Serializable{
 
                 @XStreamAlias("wsnt:Topic")
                 private String topic;
@@ -120,7 +120,7 @@ public class  Envelope implements Serializable{
                 }
 
 
-                static class Message implements Serializable{
+                public static class Message implements Serializable{
 
                     @XStreamAlias("ns1:event")
                     private Event event;

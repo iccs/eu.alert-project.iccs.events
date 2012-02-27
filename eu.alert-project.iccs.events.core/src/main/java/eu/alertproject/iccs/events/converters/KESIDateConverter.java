@@ -1,4 +1,4 @@
-package eu.alertproject.events.converters;
+package eu.alertproject.iccs.events.converters;
 
 import com.thoughtworks.xstream.converters.basic.DateConverter;
 
