@@ -24,9 +24,17 @@ public class Topics {
     public final static String IccsMlNewMail=PARENT+DOT+ML+DOT+"NewEmail";
 
 
+
     public static final String ALERT_STARDOM_Identity_Updated= "ALERT.STARDOM.Identity.Updated";
-    public static final String ALERT_STARDOM_Issue_Updated= "ALERT.STARDOM.Issue.Updated";
     public static final String ALERT_STARDOM_New_Identity= "ALERT.STARDOM.Identity.New";
+    public static final String ALERT_STARDOM_Issue_Updated= "ALERT.STARDOM.Issue.Updated";
+
+    public static final String ALERT_CEP_SOCRATES_Identity_Recommendation_Request= "ALERT.CEP.Recommender.RecommendationRequest";
+    public static final String ALERT_SEARCH_SOCRATES_Issue_Recommendation_Request= "ALERT.Search.Recommender.IssueRecommendationRequest";
+
+    public static final String ALERT_SOCRATES_Issue_Recommendation= "ALERT.Recommender.IssueRecommendation";
+    public static final String ALERT_SOCRATES_Identity_Recommendation= "ALERT.Recommender.IdentityRecommendation";
+
     public static final String ALERT_KEUI_CommendNew_Annotated = "ALERT.KEUI.CommentNew.Annotated";
     public static final String ALERT_KEUI_IssueNew_Annotated = "ALERT.KEUI.IssueNew.Annotated";
     public static final String ALERT_Metadata_IssueNew_Updated = "ALERT.Metadata.IssueNew.Updated";

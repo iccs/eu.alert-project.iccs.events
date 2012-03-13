@@ -1,7 +1,6 @@
-package eu.alertproject.iccs.events.stardom;
+package eu.alertproject.iccs.events.socrates;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import eu.alertproject.iccs.events.IdentityPersons;
 import eu.alertproject.iccs.events.api.Meta;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,8 +14,7 @@ import java.util.List;
  * Time: 14:39
  */
 
-@XmlAccessorType(XmlAccessType.FIELD)
-public class StardomIdentityUpdatePayload{
+public class RecommendIssuesPayload {
 
     @XStreamAlias("ns1:meta")
     private Meta meta;
@@ -41,10 +39,10 @@ public class StardomIdentityUpdatePayload{
         this.eventData = eventData;
     }
 
-    @XStreamAlias("ns1:eventData")
+
     public static class EventData implements Serializable {
 
-        @XStreamAlias("sm:identities")
+        @XStreamAlias("sc:identities")
         private List<Identity> identities;
 
 
@@ -56,17 +54,23 @@ public class StardomIdentityUpdatePayload{
             this.identities = identities;
         }
 
-        @XStreamAlias("sm:identity")
+        @XStreamAlias("sc:identity")
         public static class Identity{
 
-            @XStreamAlias("sm:uuid")
+
+            @XStreamAlias("sc:uuid")
             private String uuid;
 
-            @XStreamAlias("sm:add")
-            private IdentityPersons add;
+            @XStreamAlias("sc:name")
+            private String name;
 
-            @XStreamAlias("sm:remove")
-            private IdentityPersons remove;
+            public Identity() {
+            }
+
+            public Identity(String uuid, String name) {
+                this.uuid = uuid;
+                this.name = name;
+            }
 
             public String getUuid() {
                 return uuid;
@@ -76,23 +80,14 @@ public class StardomIdentityUpdatePayload{
                 this.uuid = uuid;
             }
 
-            public IdentityPersons getAdd() {
-                return add;
+            public String getName() {
+                return name;
             }
 
-            public void setAdd(IdentityPersons add) {
-                this.add = add;
-            }
-
-            public IdentityPersons getRemove() {
-                return remove;
-            }
-
-            public void setRemove(IdentityPersons remove) {
-                this.remove = remove;
+            public void setName(String name) {
+                this.name = name;
             }
         }
     }
-
 
 }

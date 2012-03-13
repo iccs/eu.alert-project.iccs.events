@@ -1,4 +1,4 @@
-package eu.alertproject.iccs.events.stardom;
+package eu.alertproject.iccs.events.socrates;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import eu.alertproject.iccs.events.IdentityPersons;
@@ -16,7 +16,7 @@ import java.util.List;
  */
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class StardomIdentityNewPayload{
+public class RecommendIdentityPayload {
 
     @XStreamAlias("ns1:meta")
     private Meta meta;
@@ -43,28 +43,34 @@ public class StardomIdentityNewPayload{
 
     public static class EventData implements Serializable {
 
-        @XStreamAlias("sm:identities")
-        private List<Identity> identities;
+        @XStreamAlias("sc:issues")
+        private List<Issue> issues;
 
 
-        public List<Identity> getIdentities() {
-            return identities;
+        public List<Issue> getIssues() {
+            return issues;
         }
 
-        public void setIdentities(List<Identity> identities) {
-            this.identities = identities;
+        public void setIssues(List<Issue> identities) {
+            this.issues = identities;
         }
 
-        @XStreamAlias("sm:identity")
-        public static class Identity{
+        @XStreamAlias("sc:issue")
+        public static class Issue{
 
-            @XStreamAlias("sm:uuid")
+            @XStreamAlias("sc:id")
             private String uuid;
 
+            @XStreamAlias("o:bug")
+            private String bug;
 
-            @XStreamAlias("sm:persons")
-            private IdentityPersons persons;
+            public Issue() {
+            }
 
+            public Issue(String uuid, String bug) {
+                this.uuid = uuid;
+                this.bug = bug;
+            }
 
             public String getUuid() {
                 return uuid;
@@ -74,12 +80,12 @@ public class StardomIdentityNewPayload{
                 this.uuid = uuid;
             }
 
-            public IdentityPersons getPersons() {
-                return persons;
+            public String getBug() {
+                return bug;
             }
 
-            public void setPersons(IdentityPersons persons) {
-                this.persons = persons;
+            public void setBug(String bug) {
+                this.bug = bug;
             }
         }
     }

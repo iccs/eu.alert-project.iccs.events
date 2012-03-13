@@ -2,6 +2,10 @@ package eu.alertproject.iccs.events.api;
 
 import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.IdentityPersons;
+import eu.alertproject.iccs.events.socrates.RecommendIdentityEnvelope;
+import eu.alertproject.iccs.events.socrates.RecommendIdentityPayload;
+import eu.alertproject.iccs.events.socrates.RecommendIssuesEnvelope;
+import eu.alertproject.iccs.events.socrates.RecommendIssuesPayload;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewEnvelope;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewPayload;
 import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatePayload;
@@ -13,18 +17,16 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
  * User: fotis
  * Date: 13/03/12
  * Time: 17:57
- * To change this template use File | Settings | File Templates.
  */
 public class EventFactory {
 
     private static String fixEvent(String str,boolean appendHeader){
         
         String eventStr = str.replace("<s:Envelope>","<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:wsnt=\"http://docs.oasis-open.org/wsn/b-2\" xmlns:wsa=\"http://www.w3.org/2005/08/addressing\">");
-        eventStr = eventStr.replace("<ns1:event>","<ns1:event xmlns:ns1=\"http://www.alert-project.eu/\"    xmlns:o=\"http://www.alert-project.eu/ontoevents-mdservice\" xmlns:r=\"http://www.alert-project.eu/rawevents-forum\" xmlns:r1=\"http://www.alert-project.eu/rawevents-mailinglist\" xmlns:r2=\"http://www.alert-project.eu/rawevents-wiki\" xmlns:s=\"http://www.alert-project.eu/strevents-kesi\" xmlns:sm=\"http://www.alert-project.eu/stardom\" xmlns:s1=\"http://www.alert-project.eu/strevents-keui\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.alert-project.eu/alert-root.xsd\">");
+        eventStr = eventStr.replace("<ns1:event>","<ns1:event xmlns:ns1=\"http://www.alert-project.eu/\" xmlns:o=\"http://www.alert-project.eu/ontoevents-mdservice\" xmlns:r=\"http://www.alert-project.eu/rawevents-forum\" xmlns:r1=\"http://www.alert-project.eu/rawevents-mailinglist\" xmlns:r2=\"http://www.alert-project.eu/rawevents-wiki\" xmlns:s=\"http://www.alert-project.eu/strevents-kesi\" xmlns:sm=\"http://www.alert-project.eu/stardom\" xmlns:s1=\"http://www.alert-project.eu/strevents-keui\" xmlns:sc=\"http://www.alert-project.eu/socrates\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.alert-project.eu/alert-root.xsd\">");
 
         if(appendHeader){
             eventStr = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+eventStr;
@@ -38,13 +40,13 @@ public class EventFactory {
     }
 
 
-    public static String createStardomIdentityNew(String uuid, List<String> isPersons, List<String> isNotPersons){
+    public static String createStardomIdentityNew(Integer eventId, long start,long end, int sequence, String uuid, List<String> isPersons, List<String> isNotPersons){
         Head head = new Head();
         head.setSender("STARDOM");
-        head.setTimestamp(System.currentTimeMillis());
-        head.setSequenceNumber(RandomUtils.nextInt());
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
 
-        StardomIdentityNewPayload.StardomIdentityNewEvent.Identity identity = new StardomIdentityNewPayload.StardomIdentityNewEvent.Identity();
+        StardomIdentityNewPayload.EventData.Identity identity = new StardomIdentityNewPayload.EventData.Identity();
         identity.setUuid(uuid);
 
         IdentityPersons identityPersons = new IdentityPersons();
@@ -60,17 +62,17 @@ public class EventFactory {
         identity.setPersons(identityPersons);
 
 
-        List<StardomIdentityNewPayload.StardomIdentityNewEvent.Identity> identities = new ArrayList<StardomIdentityNewPayload.StardomIdentityNewEvent.Identity>();
+        List<StardomIdentityNewPayload.EventData.Identity> identities = new ArrayList<StardomIdentityNewPayload.EventData.Identity>();
         identities.add(identity);
 
-        StardomIdentityNewPayload.StardomIdentityNewEvent se = new StardomIdentityNewPayload.StardomIdentityNewEvent();
+        StardomIdentityNewPayload.EventData se = new StardomIdentityNewPayload.EventData();
         se.setIdentities(identities);
 
         Meta meta = new Meta();
         meta.setEventName(Topics.ALERT_STARDOM_New_Identity);
-        meta.setStartTime(System.currentTimeMillis());
-        meta.setEndTime(System.currentTimeMillis());
-        meta.setEventId(RandomUtils.nextInt());
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
         meta.setType("Request");
 
 
@@ -112,24 +114,25 @@ public class EventFactory {
     }
 
     public static String createStardomIdentityUpdate(
-            StardomIdentityUpdatePayload.StardomIdentityUpdateEvent.Identity ... identities
+            Integer eventId, long start,long end, int sequence,
+            StardomIdentityUpdatePayload.EventData.Identity ... identities
     ){
 
 
         Head head = new Head();
         head.setSender("STARDOM");
-        head.setTimestamp(System.currentTimeMillis());
-        head.setSequenceNumber(RandomUtils.nextInt());
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
 
 
-        StardomIdentityUpdatePayload.StardomIdentityUpdateEvent se = new StardomIdentityUpdatePayload.StardomIdentityUpdateEvent();
+        StardomIdentityUpdatePayload.EventData se = new StardomIdentityUpdatePayload.EventData();
         se.setIdentities(Arrays.asList(identities));
 
         Meta meta = new Meta();
         meta.setEventName(Topics.ALERT_STARDOM_Issue_Updated);
-        meta.setStartTime(System.currentTimeMillis());
-        meta.setEndTime(System.currentTimeMillis());
-        meta.setEventId(RandomUtils.nextInt());
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
         meta.setType("Request");
 
         StardomIdentityUpdatePayload payload = new StardomIdentityUpdatePayload();
@@ -166,6 +169,122 @@ public class EventFactory {
         xstream.processAnnotations(StardomIdentityUpdatedEnvelope.class);
 
         return EventFactory.fixEvent(xstream.toXML(envelope));
+
+    }
+
+    public static String createRecommendationIssuesEvent(
+            Integer eventId, long start,long end, int sequence,
+            List<RecommendIdentityPayload.EventData.Issue> issues) {
+
+        Head head = new Head();
+        head.setSender("SOCRATES");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        RecommendIdentityPayload.EventData se = new RecommendIdentityPayload.EventData();
+        se.setIssues(issues);
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_SOCRATES_Issue_Recommendation);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
+        meta.setType("Reply");
+
+        RecommendIdentityPayload payload = new RecommendIdentityPayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        RecommendIdentityEnvelope.Body.Notify.NotificationMessage.Message.Event event = new RecommendIdentityEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+
+
+        RecommendIdentityEnvelope.Body.Notify.NotificationMessage.Message message = new RecommendIdentityEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/socrates");
+
+        RecommendIdentityEnvelope.Body.Notify.NotificationMessage notificationMessage = new RecommendIdentityEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_SOCRATES_Issue_Recommendation);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+
+        RecommendIdentityEnvelope.Body.Notify notify = new RecommendIdentityEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+
+        RecommendIdentityEnvelope.Body body = new RecommendIdentityEnvelope.Body();
+        body.setNotify(notify);
+
+        RecommendIdentityEnvelope envelope = new RecommendIdentityEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+        XStream xstream = new XStream();
+        xstream.processAnnotations(RecommendIdentityEnvelope.class);
+
+        return EventFactory.fixEvent(xstream.toXML(envelope));
+
+
+    }
+
+    public static String createRecommendationIdentityEvent(
+            Integer eventId, long start,long end, int sequence,
+            List<RecommendIssuesPayload.EventData.Identity> identities) {
+
+        Head head = new Head();
+        head.setSender("SOCRATES");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        RecommendIssuesPayload.EventData se = new RecommendIssuesPayload.EventData();
+        se.setIdentities(identities);
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_SOCRATES_Identity_Recommendation);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
+        meta.setType("Reply");
+
+        RecommendIssuesPayload payload = new RecommendIssuesPayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        RecommendIssuesEnvelope.Body.Notify.NotificationMessage.Message.Event event = new RecommendIssuesEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+
+
+        RecommendIssuesEnvelope.Body.Notify.NotificationMessage.Message message = new RecommendIssuesEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/socrates");
+
+        RecommendIssuesEnvelope.Body.Notify.NotificationMessage notificationMessage = new RecommendIssuesEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_SOCRATES_Identity_Recommendation);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+
+        RecommendIssuesEnvelope.Body.Notify notify = new RecommendIssuesEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+
+        RecommendIssuesEnvelope.Body body = new RecommendIssuesEnvelope.Body();
+        body.setNotify(notify);
+
+        RecommendIssuesEnvelope envelope = new RecommendIssuesEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+        XStream xstream = new XStream();
+        xstream.processAnnotations(RecommendIssuesEnvelope.class);
+
+        return EventFactory.fixEvent(xstream.toXML(envelope));
+
 
     }
 }

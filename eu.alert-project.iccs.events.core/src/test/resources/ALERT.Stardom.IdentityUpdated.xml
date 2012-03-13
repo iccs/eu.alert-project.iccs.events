@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <s:Header>Header</s:Header>
+  <s:Body>
+    <wsnt:Notify>
+      <wsnt:NotificationMessage>
+        <wsnt:Topic>ALERT.STARDOM.Issue.Updated</wsnt:Topic>
+        <wsnt:ProducerReference>
+          <wsa:Address>http://www.alert-project.eu/stardom</wsa:Address>
+        </wsnt:ProducerReference>
+        <wsnt:Message>
+          <ns1:event xmlns:ns1="http://www.alert-project.eu/" xmlns:o="http://www.alert-project.eu/ontoevents-mdservice" xmlns:r="http://www.alert-project.eu/rawevents-forum" xmlns:r1="http://www.alert-project.eu/rawevents-mailinglist" xmlns:r2="http://www.alert-project.eu/rawevents-wiki" xmlns:s="http://www.alert-project.eu/strevents-kesi" xmlns:sm="http://www.alert-project.eu/stardom" xmlns:s1="http://www.alert-project.eu/strevents-keui" xmlns:sc="http://www.alert-project.eu/socrates" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.alert-project.eu/alert-root.xsd">
+            <ns1:head>
+              <ns1:sender>STARDOM</ns1:sender>
+              <ns1:timestamp>1331675854818</ns1:timestamp>
+              <ns1:sequencenumber>2063254152</ns1:sequencenumber>
+            </ns1:head>
+            <ns1:payload>
+              <ns1:meta>
+                <ns1:startTime>1331675854818</ns1:startTime>
+                <ns1:endTime>1331675854822</ns1:endTime>
+                <ns1:eventName>ALERT.STARDOM.Issue.Updated</ns1:eventName>
+                <ns1:eventId>1697944231</ns1:eventId>
+                <ns1:eventType>Request</ns1:eventType>
+              </ns1:meta>
+              <ns1:eventData>
+                <sm:identities class="java.util.Arrays$ArrayList">
+                  <a class="sm:identity-array">
+                    <sm:identity>
+                      <sm:uuid>46daed6d-19f4-49ac-822c-3903e31daa18</sm:uuid>
+                      <sm:add>
+                        <sm:isnt>
+                          <o:person>http://www.alert-project.eu/ontologies/alert_scm.owl#Person12</o:person>
+                        </sm:isnt>
+                      </sm:add>
+                      <sm:remove>
+                        <sm:is>
+                          <o:person>http://www.alert-project.eu/ontologies/alert_scm.owl#Person12</o:person>
+                        </sm:is>
+                      </sm:remove>
+                    </sm:identity>
+                  </a>
+                </sm:identities>
+              </ns1:eventData>
+            </ns1:payload>
+          </ns1:event>
+        </wsnt:Message>
+      </wsnt:NotificationMessage>
+    </wsnt:Notify>
+  </s:Body>
+</s:Envelope>
