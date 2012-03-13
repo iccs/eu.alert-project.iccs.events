@@ -1,4 +1,4 @@
-package eu.alertproject.iccs.events;
+package eu.alertproject.iccs.events.stardom;
 
 /**
  * User: fotis
@@ -7,11 +7,13 @@ package eu.alertproject.iccs.events;
  */
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import eu.alertproject.iccs.events.api.Head;
+import eu.alertproject.iccs.events.api.ProducerReference;
 
 import java.io.Serializable;
 
 @XStreamAlias("s:Envelope")
-public class  Envelope implements Serializable{
+public class StardomIdentityUpdatedEnvelope implements Serializable{
 
     @XStreamAlias("s:Header")
     private String header;
@@ -70,14 +72,13 @@ public class  Envelope implements Serializable{
             public static class NotificationMessage implements Serializable{
 
                 @XStreamAlias("wsnt:Topic")
-                private String topic;
+                private String topic = "ALERT.Stardom.IdentityUpdate";
 
                 @XStreamAlias("wsnt:ProducerReference")
                 private ProducerReference producerReference;
 
                 @XStreamAlias("wsnt:Message")
                 private Message message;
-
 
 
                 public String getTopic() {
@@ -104,22 +105,6 @@ public class  Envelope implements Serializable{
                     this.message = message;
                 }
 
-
-                static class ProducerReference implements Serializable{
-
-                    @XStreamAlias("wsa:Address")
-                    private String address;
-
-                    public String getAddress() {
-                        return address;
-                    }
-
-                    public void setAddress(String address) {
-                        this.address = address;
-                    }
-                }
-
-
                 public static class Message implements Serializable{
 
                     @XStreamAlias("ns1:event")
@@ -131,6 +116,33 @@ public class  Envelope implements Serializable{
 
                     public void setEvent(Event event) {
                         this.event = event;
+                    }
+
+                    public static class Event  {
+
+                        @XStreamAlias("ns1:head")
+                        private Head head;
+
+                        @XStreamAlias("ns1:payload")
+                        private StardomIdentityUpdatePayload payload;
+
+                        public Head getHead() {
+                            return head;
+                        }
+
+                        public void setHead(Head head) {
+                            this.head = head;
+                        }
+
+                        public StardomIdentityUpdatePayload getPayload() {
+                            return payload;
+                        }
+
+                        public void setPayload(StardomIdentityUpdatePayload payload) {
+                            this.payload = payload;
+                        }
+
+
                     }
                 }
 
