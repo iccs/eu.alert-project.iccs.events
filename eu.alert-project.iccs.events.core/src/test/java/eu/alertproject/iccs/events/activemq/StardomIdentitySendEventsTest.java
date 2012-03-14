@@ -24,18 +24,18 @@ import java.util.Arrays;
  * Date: 13/03/12
  * Time: 13:44
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:applicationContext.xml"})
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration({"classpath:applicationContext.xml"})
 public class StardomIdentitySendEventsTest {
 
 
     private Logger logger = LoggerFactory.getLogger(StardomIdentitySendEventsTest.class);
 
-    @Autowired
+//    @Autowired
     JmsTemplate jmsTemplate;
 
 
-    @Test
+//    @Test
     public void testNewIdentity() throws ClassNotFoundException, IOException {
 
         final String toSend = EventFactory.createStardomIdentityNew(
@@ -62,7 +62,7 @@ public class StardomIdentitySendEventsTest {
 
     }
 
-    @Test
+//    @Test
     public void testIdentityUpdated() throws ClassNotFoundException, IOException {
 
         IdentityPersons add = new IdentityPersons();

@@ -2,6 +2,8 @@ package eu.alertproject.iccs.events.api;
 
 import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.IdentityPersons;
+import eu.alertproject.iccs.events.jsi.TextToAnnotateRequestEnvelope;
+import eu.alertproject.iccs.events.jsi.TextToAnnotateRequestPayload;
 import eu.alertproject.iccs.events.socrates.RecommendIdentityEnvelope;
 import eu.alertproject.iccs.events.socrates.RecommendIdentityPayload;
 import eu.alertproject.iccs.events.socrates.RecommendIssuesEnvelope;
@@ -10,7 +12,6 @@ import eu.alertproject.iccs.events.stardom.StardomIdentityNewEnvelope;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewPayload;
 import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatePayload;
 import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatedEnvelope;
-import org.apache.commons.lang.math.RandomUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -282,6 +283,70 @@ public class EventFactory {
 
         XStream xstream = new XStream();
         xstream.processAnnotations(RecommendIssuesEnvelope.class);
+
+        return EventFactory.fixEvent(xstream.toXML(envelope));
+
+
+    }
+
+    public static String createTextToAnnotateRequestEvent(
+            Integer eventId, long start,long end, int sequence,
+            String text) {
+
+        Head head = new Head();
+        head.setSender("STARDOM");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        TextToAnnotateRequestPayload.EventData.GeneralText ge = new TextToAnnotateRequestPayload.EventData.GeneralText();
+
+        ge.setSource("stardom");
+        ge.setText(text);
+
+        TextToAnnotateRequestPayload.EventData se = new TextToAnnotateRequestPayload.EventData();
+
+        se.setGeneralText(ge);
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_STARDOM_TextToAnnotate);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
+        meta.setType("Request");
+        
+        TextToAnnotateRequestPayload payload = new TextToAnnotateRequestPayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        TextToAnnotateRequestEnvelope.Body.Notify.NotificationMessage.Message.Event event = new TextToAnnotateRequestEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+        
+        
+        TextToAnnotateRequestEnvelope.Body.Notify.NotificationMessage.Message message = new TextToAnnotateRequestEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/stardom");
+        
+        TextToAnnotateRequestEnvelope.Body.Notify.NotificationMessage notificationMessage = new TextToAnnotateRequestEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_STARDOM_TextToAnnotate);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+        
+        TextToAnnotateRequestEnvelope.Body.Notify notify = new TextToAnnotateRequestEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+        
+        TextToAnnotateRequestEnvelope.Body body = new TextToAnnotateRequestEnvelope.Body();
+        body.setNotify(notify);
+        
+        TextToAnnotateRequestEnvelope envelope = new TextToAnnotateRequestEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+        XStream xstream = new XStream();
+        xstream.processAnnotations(TextToAnnotateRequestEnvelope.class);
 
         return EventFactory.fixEvent(xstream.toXML(envelope));
 

@@ -5,6 +5,7 @@ import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
 import eu.alertproject.iccs.events.socrates.RecommendIdentityEnvelope;
 import eu.alertproject.iccs.events.socrates.RecommendIdentityPayload;
+import eu.alertproject.iccs.events.socrates.RecommendIssuesEnvelope;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -32,7 +33,7 @@ public class RecommendIdentitiesRequestEnvelopeTest {
         XStream xstream = new XStream();
         xstream.processAnnotations(RecommendIdentityEnvelope.class);
 
-        String s = IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/ALERT.ALL.Recommender.IdentitiesRecommendationRequest.xml"));
+        String s = IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/Search-Request.xml"));
 
         RecommendIdentityEnvelope o = (RecommendIdentityEnvelope) xstream.fromXML(s);
         
