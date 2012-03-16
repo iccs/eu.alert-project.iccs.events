@@ -25,25 +25,25 @@ public class Topics {
 
 
 
-    public static final String ALERT_STARDOM_Identity_Updated= "ALERT.STARDOM.Identity.Updated";
-    public static final String ALERT_STARDOM_New_Identity= "ALERT.STARDOM.Identity.New";
-    public static final String ALERT_STARDOM_Issue_Updated= "ALERT.STARDOM.Issue.Updated";
+    public static final String ALERT_STARDOM_Identity_Updated= "ALERT.STARDOM.IdentityUpdated";
+    public static final String ALERT_STARDOM_New_Identity= "ALERT.STARDOM.IdentityNew";
+    public static final String ALERT_STARDOM_Issue_Updated= "ALERT.STARDOM.IssueUpdated";
     public static final String ALERT_STARDOM_TextToAnnotate ="ALERT.STARDOM.TextToAnnotate";
 
-    public static final String ALERT_CEP_SOCRATES_Identity_Recommendation_Request= "ALERT.CEP.Recommender.RecommendationRequest";
-    public static final String ALERT_CEP_SOCRATES_Issue_Recommendation_Request= "ALERT.CEP.Recommender.IssueRecommendationRequest";
+
+    public static final String ALERT_ALL_SOCRATES_Identity_Recommendation_Request= "ALERT.*.Recommender.IdentitiesRecommendationRequest";
+    public static final String ALERT_ALL_SOCRATES_Identity_Verification_Request= "ALERT.*.Recommender.VerifyIdentitiesRequest.xml";
+
     public static final String ALERT_SEARCH_SOCRATES_Issue_Recommendation_Request= "ALERT.Search.Recommender.IssueRecommendationRequest";
     public static final String ALERT_SEARCH_SOCRATES_Identity_Recommendation_Request= "ALERT.Search.Recommender.RecommendationRequest";
 
     public static final String ALERT_SOCRATES_Issue_Recommendation= "ALERT.Recommender.IssueRecommendation";
     public static final String ALERT_SOCRATES_Identity_Recommendation= "ALERT.Recommender.IdentityRecommendation";
+    public static final String ALERT_SOCRATES_Identity_Verification= "ALERT.Recommender.IdentityVerification";
 
 
     public static final String ALERT_KEUI_TextToAnnotate_Annotated ="ALERT.KEUI.TextToAnnotate.Annotated";
 
-
-    public static final String ALERT_KEUI_CommendNew_Annotated = "ALERT.KEUI.CommentNew.Annotated";
-    public static final String ALERT_KEUI_IssueNew_Annotated = "ALERT.KEUI.IssueNew.Annotated";
     public static final String ALERT_Metadata_IssueNew_Updated = "ALERT.Metadata.IssueNew.Updated";
 
 

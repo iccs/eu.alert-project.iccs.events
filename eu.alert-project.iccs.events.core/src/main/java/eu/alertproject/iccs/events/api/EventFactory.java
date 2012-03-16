@@ -1,20 +1,16 @@
 package eu.alertproject.iccs.events.api;
 
 import com.thoughtworks.xstream.XStream;
-import eu.alertproject.iccs.events.IdentityPersons;
 import eu.alertproject.iccs.events.jsi.TextToAnnotateRequestEnvelope;
 import eu.alertproject.iccs.events.jsi.TextToAnnotateRequestPayload;
-import eu.alertproject.iccs.events.socrates.RecommendIdentityEnvelope;
-import eu.alertproject.iccs.events.socrates.RecommendIdentityPayload;
-import eu.alertproject.iccs.events.socrates.RecommendIssuesEnvelope;
-import eu.alertproject.iccs.events.socrates.RecommendIssuesPayload;
+import eu.alertproject.iccs.events.socrates.*;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewEnvelope;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewPayload;
 import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatePayload;
 import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatedEnvelope;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -41,33 +37,22 @@ public class EventFactory {
     }
 
 
-    public static String createStardomIdentityNew(Integer eventId, long start,long end, int sequence, String uuid, List<String> isPersons, List<String> isNotPersons){
+    public static String createStardomIdentityNew(Integer eventId,
+                                                  long start,
+                                                  long end,
+                                                  int sequence,
+                                                  StardomIdentityNewPayload.EventData.Identity ... identities){
         Head head = new Head();
         head.setSender("STARDOM");
         head.setTimestamp(start);
         head.setSequenceNumber(sequence);
 
-        StardomIdentityNewPayload.EventData.Identity identity = new StardomIdentityNewPayload.EventData.Identity();
-        identity.setUuid(uuid);
+        List<StardomIdentityNewPayload.EventData.Identity> identityList = new ArrayList<StardomIdentityNewPayload.EventData.Identity>();
+        Collections.addAll(identityList,identities);
 
-        IdentityPersons identityPersons = new IdentityPersons();
-
-        if(isPersons !=null && isPersons.size() > 0){
-            identityPersons.setIs(new IdentityPersons.Persons(isPersons.toArray(new String[isPersons.size()])));
-        }
-
-        if(isNotPersons !=null && isNotPersons.size() > 0){
-            identityPersons.setIsnt(new IdentityPersons.Persons(isNotPersons.toArray(new String[isNotPersons.size()])));
-        }
-
-        identity.setPersons(identityPersons);
-
-
-        List<StardomIdentityNewPayload.EventData.Identity> identities = new ArrayList<StardomIdentityNewPayload.EventData.Identity>();
-        identities.add(identity);
 
         StardomIdentityNewPayload.EventData se = new StardomIdentityNewPayload.EventData();
-        se.setIdentities(identities);
+        se.setIdentities(identityList);
 
         Meta meta = new Meta();
         meta.setEventName(Topics.ALERT_STARDOM_New_Identity);
@@ -126,8 +111,12 @@ public class EventFactory {
         head.setSequenceNumber(sequence);
 
 
+        List<StardomIdentityUpdatePayload.EventData.Identity> identityList = new ArrayList<StardomIdentityUpdatePayload.EventData.Identity>();
+        Collections.addAll(identityList,identities);
+
+
         StardomIdentityUpdatePayload.EventData se = new StardomIdentityUpdatePayload.EventData();
-        se.setIdentities(Arrays.asList(identities));
+        se.setIdentities(identityList);
 
         Meta meta = new Meta();
         meta.setEventName(Topics.ALERT_STARDOM_Issue_Updated);
@@ -175,7 +164,7 @@ public class EventFactory {
 
     public static String createRecommendationIssuesEvent(
             Integer eventId, long start,long end, int sequence,
-            List<RecommendIdentityPayload.EventData.Issue> issues) {
+            List<Issue> issues) {
 
         Head head = new Head();
         head.setSender("SOCRATES");
@@ -233,7 +222,7 @@ public class EventFactory {
 
     public static String createRecommendationIdentityEvent(
             Integer eventId, long start,long end, int sequence,
-            List<RecommendIssuesPayload.EventData.Identity> identities) {
+            List<Identity> identities) {
 
         Head head = new Head();
         head.setSender("SOCRATES");
@@ -347,6 +336,74 @@ public class EventFactory {
 
         XStream xstream = new XStream();
         xstream.processAnnotations(TextToAnnotateRequestEnvelope.class);
+
+        return EventFactory.fixEvent(xstream.toXML(envelope));
+
+
+    }
+    
+    
+    public static String createVerifyIdentityEvent(
+            Integer eventId, 
+            long start,
+            long end, 
+            int sequence,
+            Identity identity,
+            Issue issue,
+            boolean verified) {
+
+        Head head = new Head();
+        head.setSender("SOCRATES");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        VerifyIdentityPayload.EventData se = new VerifyIdentityPayload.EventData();
+        
+        se.setIdentity(identity);
+        se.setIssue(issue);
+        se.setRespone(verified ? "yes":"no");
+
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_SOCRATES_Identity_Verification);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
+        meta.setType("Reply");
+        
+        VerifyIdentityPayload payload = new VerifyIdentityPayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        VerifyIdentityEnvelope.Body.Notify.NotificationMessage.Message.Event event = new VerifyIdentityEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+        
+        
+        VerifyIdentityEnvelope.Body.Notify.NotificationMessage.Message message = new VerifyIdentityEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/stardom");
+        
+        VerifyIdentityEnvelope.Body.Notify.NotificationMessage notificationMessage = new VerifyIdentityEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_SOCRATES_Identity_Verification);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+        
+        VerifyIdentityEnvelope.Body.Notify notify = new VerifyIdentityEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+        
+        VerifyIdentityEnvelope.Body body = new VerifyIdentityEnvelope.Body();
+        body.setNotify(notify);
+        
+        VerifyIdentityEnvelope envelope = new VerifyIdentityEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+        XStream xstream = new XStream();
+        xstream.processAnnotations(VerifyIdentityEnvelope.class);
 
         return EventFactory.fixEvent(xstream.toXML(envelope));
 

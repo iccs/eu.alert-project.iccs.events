@@ -3,6 +3,7 @@ package eu.alertproject.iccs.events.xstream;
 import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
+import eu.alertproject.iccs.events.socrates.Identity;
 import eu.alertproject.iccs.events.socrates.RecommendIssuesEnvelope;
 import eu.alertproject.iccs.events.socrates.RecommendIssuesPayload;
 import org.apache.commons.io.IOUtils;
@@ -54,12 +55,12 @@ public class RecommendIssuesRequestEvenlopeTest {
                                 .getType());
 
 
-        List<RecommendIssuesPayload.EventData.Identity> identities = o.getBody().getNotify().getNotificationMessage().getMessage().getEvent().getPayload().getEventData().getIdentities();
+        List<Identity> identities = o.getBody().getNotify().getNotificationMessage().getMessage().getEvent().getPayload().getEventData().getIdentities();
 
         Assert.assertNotNull(identities);
         Assert.assertEquals(3,identities.size(),0);
 
-        Iterator<RecommendIssuesPayload.EventData.Identity> iterator = identities.iterator();
+        Iterator<Identity> iterator = identities.iterator();
         
         Assert.assertEquals("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1",iterator.next().getUuid().trim());
         Assert.assertEquals("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e2",iterator.next().getUuid().trim());
@@ -68,13 +69,12 @@ public class RecommendIssuesRequestEvenlopeTest {
 
     @Test
     public void testSerialize() throws IOException {
-        List<RecommendIssuesPayload.EventData.Identity> identities =
-                                                new ArrayList<RecommendIssuesPayload.EventData.Identity>();
+        List<Identity> identities =new ArrayList<Identity>();
 
 
-        identities.add(new RecommendIssuesPayload.EventData.Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1","Fotis"));
-        identities.add(new RecommendIssuesPayload.EventData.Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e3","John"));
-        identities.add(new RecommendIssuesPayload.EventData.Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e4","Messi"));
+        identities.add(new Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1","Fotis"));
+        identities.add(new Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e3","John"));
+        identities.add(new Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e4","Messi"));
 
 
 

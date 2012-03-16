@@ -3,9 +3,9 @@ package eu.alertproject.iccs.events.xstream;
 import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
+import eu.alertproject.iccs.events.socrates.Issue;
 import eu.alertproject.iccs.events.socrates.RecommendIdentityEnvelope;
 import eu.alertproject.iccs.events.socrates.RecommendIdentityPayload;
-import eu.alertproject.iccs.events.socrates.RecommendIssuesEnvelope;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -33,12 +33,12 @@ public class RecommendIdentitiesRequestEnvelopeTest {
         XStream xstream = new XStream();
         xstream.processAnnotations(RecommendIdentityEnvelope.class);
 
-        String s = IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/Search-Request.xml"));
+        String s = IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/ALERT.ALL.Recommender.IdentitiesRecommendationRequest.xml"));
 
         RecommendIdentityEnvelope o = (RecommendIdentityEnvelope) xstream.fromXML(s);
         
         Assert.assertNotNull(o);
-        Assert.assertEquals(Topics.ALERT_CEP_SOCRATES_Identity_Recommendation_Request,
+        Assert.assertEquals(Topics.ALERT_ALL_SOCRATES_Identity_Recommendation_Request,
                                         o.getBody()
                                         .getNotify()
                                         .getNotificationMessage()
@@ -59,7 +59,7 @@ public class RecommendIdentitiesRequestEnvelopeTest {
                                 .getMeta()
                                 .getType());
 
-        List<RecommendIdentityPayload.EventData.Issue> identities = o.getBody()
+        List<Issue> identities = o.getBody()
                                                                             .getNotify()
                                                                             .getNotificationMessage()
                                                                             .getMessage()
@@ -71,10 +71,10 @@ public class RecommendIdentitiesRequestEnvelopeTest {
         Assert.assertNotNull(identities);
         Assert.assertEquals(4,identities.size(),0);
 
-        Iterator<RecommendIdentityPayload.EventData.Issue> iterator = identities.iterator();
+        Iterator<Issue> iterator = identities.iterator();
 
-        RecommendIdentityPayload.EventData.Issue next = iterator.next();
-        Assert.assertEquals("1010", next.getUuid().trim());
+        Issue next = iterator.next();
+        Assert.assertEquals("274", next.getUuid().trim());
         Assert.assertEquals("owl#1", next.getBug().trim());
 
 
@@ -97,14 +97,13 @@ public class RecommendIdentitiesRequestEnvelopeTest {
     @Test
     public void testSerialize() throws IOException {
         
-        List<RecommendIdentityPayload.EventData.Issue> issues =
-                                        new ArrayList<RecommendIdentityPayload.EventData.Issue>();
+        List<Issue> issues =new ArrayList<Issue>();
 
 
-        issues.add(new RecommendIdentityPayload.EventData.Issue("1010","owl#1"));
-        issues.add(new RecommendIdentityPayload.EventData.Issue("2050","owl#2"));
-        issues.add(new RecommendIdentityPayload.EventData.Issue("2030","owl#3"));
-        issues.add(new RecommendIdentityPayload.EventData.Issue("2040","owl#4"));
+        issues.add(new Issue("1010","owl#1"));
+        issues.add(new Issue("2050","owl#2"));
+        issues.add(new Issue("2030","owl#3"));
+        issues.add(new Issue("2040","owl#4"));
 
         Assert.assertEquals(
                 EventFactory.createRecommendationIssuesEvent(

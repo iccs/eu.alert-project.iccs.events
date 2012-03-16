@@ -3,7 +3,7 @@
   <s:Body>
     <wsnt:Notify>
       <wsnt:NotificationMessage>
-        <wsnt:Topic>ALERT.STARDOM.Issue.Updated</wsnt:Topic>
+        <wsnt:Topic>ALERT.STARDOM.IssueUpdated</wsnt:Topic>
         <wsnt:ProducerReference>
           <wsa:Address>http://www.alert-project.eu/stardom</wsa:Address>
         </wsnt:ProducerReference>
@@ -18,27 +18,42 @@
               <ns1:meta>
                 <ns1:startTime>1331675854818</ns1:startTime>
                 <ns1:endTime>1331675854822</ns1:endTime>
-                <ns1:eventName>ALERT.STARDOM.Issue.Updated</ns1:eventName>
+                <ns1:eventName>ALERT.STARDOM.IssueUpdated</ns1:eventName>
                 <ns1:eventId>1697944231</ns1:eventId>
                 <ns1:eventType>Request</ns1:eventType>
               </ns1:meta>
               <ns1:eventData>
-                <sm:identities class="java.util.Arrays$ArrayList">
-                  <a class="sm:identity-array">
-                    <sm:identity>
-                      <sm:uuid>46daed6d-19f4-49ac-822c-3903e31daa18</sm:uuid>
-                      <sm:add>
-                        <sm:isnt>
-                          <o:person>http://www.alert-project.eu/ontologies/alert_scm.owl#Person12</o:person>
-                        </sm:isnt>
-                      </sm:add>
-                      <sm:remove>
-                        <sm:is>
-                          <o:person>http://www.alert-project.eu/ontologies/alert_scm.owl#Person12</o:person>
-                        </sm:is>
-                      </sm:remove>
-                    </sm:identity>
-                  </a>
+                <sm:identities>
+                  <sm:identity>
+                    <sm:uuid>51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0eb</sm:uuid>
+                    <sm:add>
+                      <sm:is>
+                        <sm:person>
+                          <sm:uri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</sm:uri>
+                          <sm:id>fotis@gmail.com</sm:id>
+                          <sm:firstname>Fotis</sm:firstname>
+                          <sm:lastname>Paraskevopoulos</sm:lastname>
+                          <sm:email>fotis@gmail.com</sm:email>
+                          <sm:username>fotakis</sm:username>
+                        </sm:person>
+                        <sm:person>
+                          <sm:uri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</sm:uri>
+                        </sm:person>
+                      </sm:is>
+                      <sm:isnt>
+                        <sm:person>
+                          <sm:uri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person12</sm:uri>
+                        </sm:person>
+                      </sm:isnt>
+                    </sm:add>
+                    <sm:remove>
+                      <sm:is>
+                        <sm:person>
+                          <sm:uri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person12</sm:uri>
+                        </sm:person>
+                      </sm:is>
+                    </sm:remove>
+                  </sm:identity>
                 </sm:identities>
               </ns1:eventData>
             </ns1:payload>

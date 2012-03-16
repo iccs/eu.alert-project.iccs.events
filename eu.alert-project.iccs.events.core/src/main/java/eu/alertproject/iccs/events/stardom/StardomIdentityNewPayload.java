@@ -61,10 +61,16 @@ public class StardomIdentityNewPayload{
             @XStreamAlias("sm:uuid")
             private String uuid;
 
-
             @XStreamAlias("sm:persons")
             private IdentityPersons persons;
 
+            public Identity() {
+            }
+
+            public Identity(String uuid, IdentityPersons persons) {
+                this.uuid = uuid;
+                this.persons = persons;
+            }
 
             public String getUuid() {
                 return uuid;
