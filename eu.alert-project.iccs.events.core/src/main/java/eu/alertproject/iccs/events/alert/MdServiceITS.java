@@ -14,135 +14,135 @@ import java.util.List;
 public class MdServiceITS {
     
     @XStreamAlias("o:issueUri")
-    private String issueUri;
+    private String uri;
     
     @XStreamAlias("o:issueComment")
-    private Comment issueComment;
+    private Comment comment;
 
-    @XStreamImplicit(itemFieldName = "o.issueActivity")
-    private List<IssueActivity> issueActivity;
+    @XStreamImplicit(itemFieldName = "o:issueActivity")
+    private List<Activity> activity;
 
     @XStreamAlias("o:issueAuthorUri")
-    private String issueAuthorUri;
+    private String authorUri;
     
     @XStreamAlias("o:issueProduct")
-    private Product issueProduct; 
+    private Product product;
     
     @XStreamAlias("o:issueComputerSystem")
-    private CommputerSystem issueCommputerSystem;
+    private CommputerSystem commputerSystem;
 
     @XStreamAlias("o:issueAssignedToUri")
-    private String issueAssignedToUri;
+    private String assignedToUri;
     
     @XStreamAlias("o:issueCCPersonUri")
-    private String issueCCPersonUri;
+    private String ccPersonUri;
 
     @XStreamAlias("o:issueDependsOnUri")
-    private String issueDependsOnUri;
+    private String dependsOnUri;
 
     @XStreamAlias("o:issueBlocksUri")
-    private String issueBlocksUri;
+    private String blocksUri;
 
     @XStreamAlias("o:issueAttachment")
-    private Attachment issueAttachment;
+    private Attachment attachment;
     
     @XStreamAlias("o:issueTracker")
-    private Tracker issueTracker;
+    private Tracker tracker;
 
-    public String getIssueUri() {
-        return issueUri;
+    public String getUri() {
+        return uri;
     }
 
-    public void setIssueUri(String issueUri) {
-        this.issueUri = issueUri;
+    public void setUri(String uri) {
+        this.uri = uri;
     }
 
-    public Comment getIssueComment() {
-        return issueComment;
+    public Comment getComment() {
+        return comment;
     }
 
-    public void setIssueComment(Comment issueComment) {
-        this.issueComment = issueComment;
+    public void setComment(Comment comment) {
+        this.comment = comment;
     }
 
-    public List<IssueActivity> getIssueActivity() {
-        return issueActivity;
+    public List<Activity> getActivity() {
+        return activity;
     }
 
-    public void setIssueActivity(List<IssueActivity> issueActivity) {
-        this.issueActivity = issueActivity;
+    public void setActivity(List<Activity> activity) {
+        this.activity = activity;
     }
 
-    public String getIssueAuthorUri() {
-        return issueAuthorUri;
+    public String getAuthorUri() {
+        return authorUri;
     }
 
-    public void setIssueAuthorUri(String issueAuthorUri) {
-        this.issueAuthorUri = issueAuthorUri;
+    public void setAuthorUri(String authorUri) {
+        this.authorUri = authorUri;
     }
 
-    public Product getIssueProduct() {
-        return issueProduct;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setIssueProduct(Product issueProduct) {
-        this.issueProduct = issueProduct;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
-    public CommputerSystem getIssueCommputerSystem() {
-        return issueCommputerSystem;
+    public CommputerSystem getCommputerSystem() {
+        return commputerSystem;
     }
 
-    public void setIssueCommputerSystem(CommputerSystem issueCommputerSystem) {
-        this.issueCommputerSystem = issueCommputerSystem;
+    public void setCommputerSystem(CommputerSystem commputerSystem) {
+        this.commputerSystem = commputerSystem;
     }
 
-    public String getIssueAssignedToUri() {
-        return issueAssignedToUri;
+    public String getAssignedToUri() {
+        return assignedToUri;
     }
 
-    public void setIssueAssignedToUri(String issueAssignedToUri) {
-        this.issueAssignedToUri = issueAssignedToUri;
+    public void setAssignedToUri(String assignedToUri) {
+        this.assignedToUri = assignedToUri;
     }
 
-    public String getIssueCCPersonUri() {
-        return issueCCPersonUri;
+    public String getCcPersonUri() {
+        return ccPersonUri;
     }
 
-    public void setIssueCCPersonUri(String issueCCPersonUri) {
-        this.issueCCPersonUri = issueCCPersonUri;
+    public void setCcPersonUri(String ccPersonUri) {
+        this.ccPersonUri = ccPersonUri;
     }
 
-    public String getIssueDependsOnUri() {
-        return issueDependsOnUri;
+    public String getDependsOnUri() {
+        return dependsOnUri;
     }
 
-    public void setIssueDependsOnUri(String issueDependsOnUri) {
-        this.issueDependsOnUri = issueDependsOnUri;
+    public void setDependsOnUri(String dependsOnUri) {
+        this.dependsOnUri = dependsOnUri;
     }
 
-    public String getIssueBlocksUri() {
-        return issueBlocksUri;
+    public String getBlocksUri() {
+        return blocksUri;
     }
 
-    public void setIssueBlocksUri(String issueBlocksUri) {
-        this.issueBlocksUri = issueBlocksUri;
+    public void setBlocksUri(String blocksUri) {
+        this.blocksUri = blocksUri;
     }
 
-    public Attachment getIssueAttachment() {
-        return issueAttachment;
+    public Attachment getAttachment() {
+        return attachment;
     }
 
-    public void setIssueAttachment(Attachment issueAttachment) {
-        this.issueAttachment = issueAttachment;
+    public void setAttachment(Attachment attachment) {
+        this.attachment = attachment;
     }
 
-    public Tracker getIssueTracker() {
-        return issueTracker;
+    public Tracker getTracker() {
+        return tracker;
     }
 
-    public void setIssueTracker(Tracker issueTracker) {
-        this.issueTracker = issueTracker;
+    public void setTracker(Tracker tracker) {
+        this.tracker = tracker;
     }
 
     public static class Tracker{
@@ -211,7 +211,7 @@ public class MdServiceITS {
     }
 
 
-    public static class IssueActivity{
+    public static class Activity {
         
         @XStreamAlias("o:activityUri")
         private String uri;

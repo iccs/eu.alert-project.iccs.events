@@ -88,19 +88,19 @@ public class ItsNewAnnotatedEnvelopeTest {
 
     private void assertMdService(MdServiceITS mdService){
 
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#Bug1",mdService.getIssueUri().trim());
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person1",mdService.getIssueAuthorUri().trim());
-        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Product1",mdService.getIssueProduct().getUri().trim());
-        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Component1",mdService.getIssueProduct().getComponentUri().trim());
-        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#ComputerSystem1",mdService.getIssueCommputerSystem().getUri().trim());
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person2",mdService.getIssueAssignedToUri().trim());
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person3",mdService.getIssueCCPersonUri().trim());
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#Bug2",mdService.getIssueDependsOnUri().trim());
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#Bug3",mdService.getIssueBlocksUri().trim());
-        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment1",mdService.getIssueComment().getUri().trim());
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person1",mdService.getIssueComment().getPersonUri().trim());
-        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Attachment1",mdService.getIssueAttachment().getUri().trim());
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#IssueTracker1",mdService.getIssueTracker().getUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#Bug1",mdService.getUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person1",mdService.getAuthorUri().trim());
+        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Product1",mdService.getProduct().getUri().trim());
+        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Component1",mdService.getProduct().getComponentUri().trim());
+        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#ComputerSystem1",mdService.getCommputerSystem().getUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person2",mdService.getAssignedToUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person3",mdService.getCcPersonUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#Bug2",mdService.getDependsOnUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#Bug3",mdService.getBlocksUri().trim());
+        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment1",mdService.getComment().getUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person1",mdService.getComment().getPersonUri().trim());
+        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Attachment1",mdService.getAttachment().getUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#IssueTracker1",mdService.getTracker().getUri().trim());
 
 
     }

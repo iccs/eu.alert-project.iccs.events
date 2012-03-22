@@ -87,8 +87,8 @@ public class KesiITS implements Serializable {
     @XStreamImplicit(itemFieldName="s:issueAttachment")
     private List<Attachement> attachements;
 
-    @XStreamImplicit(itemFieldName="s:issueActivity")
-    private List<Activity> activities;
+    @XStreamAlias("s:issueActivity")
+    private Activity activity;
 
     @XStreamAlias("s:issueTracker")
     private Tracker tracker;
@@ -269,12 +269,12 @@ public class KesiITS implements Serializable {
         this.attachements = attachements;
     }
 
-    public List<Activity> getActivities() {
-        return activities;
+    public Activity getActivity() {
+        return activity;
     }
 
-    public void setActivities(List<Activity> activities) {
-        this.activities = activities;
+    public void setActivity(Activity activity) {
+        this.activity = activity;
     }
 
     public Tracker getTracker() {
@@ -322,10 +322,10 @@ public class KesiITS implements Serializable {
     }
 
 
-    static class Activity implements Serializable{
+    public static class Activity implements Serializable{
 
         @XStreamAlias("s:activityId")
-        private String id;
+        private Integer id;
         
         @XStreamAlias("s:activityWho")
         private String who;
@@ -337,11 +337,11 @@ public class KesiITS implements Serializable {
         @XStreamImplicit(itemFieldName="s:activityWRA")
         private List<ActivityWRA> activityWRAs;
 
-        public String getId() {
+        public Integer getId() {
             return id;
         }
 
-        public void setId(String id) {
+        public void setId(Integer id) {
             this.id = id;
         }
 
@@ -369,7 +369,7 @@ public class KesiITS implements Serializable {
             this.activityWRAs = activityWRAs;
         }
 
-        static class ActivityWRA implements Serializable{
+        public static class ActivityWRA implements Serializable{
             
             @XStreamAlias("s:activityWhat")
             private String what;
@@ -380,6 +380,29 @@ public class KesiITS implements Serializable {
             @XStreamAlias("s:activityAdded")
             private String added;
 
+            public String getWhat() {
+                return what;
+            }
+
+            public void setWhat(String what) {
+                this.what = what;
+            }
+
+            public String getRemoved() {
+                return removed;
+            }
+
+            public void setRemoved(String removed) {
+                this.removed = removed;
+            }
+
+            public String getAdded() {
+                return added;
+            }
+
+            public void setAdded(String added) {
+                this.added = added;
+            }
         }
     }
 
