@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
+    <s:Header></s:Header>
+    <s:Body>
+        <wsnt:Notify>
+            <wsnt:NotificationMessage>
+                <wsnt:Topic></wsnt:Topic>
+                <wsnt:ProducerReference>
+                    <wsa:Address>http://www.alert-project.eu/metadata</wsa:Address>
+                </wsnt:ProducerReference>
+                <wsnt:Message>
+                    <ns1:event xmlns:ns1="http://www.alert-project.eu/" xmlns:o="http://www.alert-project.eu/ontoevents-mdservice" xmlns:r="http://www.alert-project.eu/rawevents-forum" xmlns:r1="http://www.alert-project.eu/rawevents-mailinglist" xmlns:r2="http://www.alert-project.eu/rawevents-wiki" xmlns:s="http://www.alert-project.eu/strevents-kesi" xmlns:s1="http://www.alert-project.eu/strevents-keui" xmlns:sm="http://www.alert-project.eu/stardom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.alert-project.eu/alert-root.xsd">
+                        <ns1:head>
+                            <ns1:sender>METADATASERVICE</ns1:sender>
+                            <ns1:timestamp>10003</ns1:timestamp>
+                            <ns1:sequencenumber>1</ns1:sequencenumber>
+                        </ns1:head>
+                        <ns1:payload>
+                            <ns1:meta>
+                                <ns1:startTime>10010</ns1:startTime>
+                                <ns1:endTime>10020</ns1:endTime>
+                                <ns1:eventName>ALERT.Metadata.ForumPostNew.Stored</ns1:eventName>
+                                <ns1:eventId>5748</ns1:eventId>
+                                <ns1:eventType>reply</ns1:eventType>
+                            </ns1:meta>
+                            <ns1:eventData>
+                                <r:forumSensor>
+                                    <!-- forum account id, specified by forum sensor -->
+                                    <r:forumSensorAccountId>0</r:forumSensorAccountId>
+                                    <!-- forum item ID -->
+                                    <r:forumItemId>1423</r:forumItemId>
+                                    <!-- forum ID -->
+                                    <r:forumId>3558</r:forumId>
+                                    <!-- forum name -->
+                                    <r:forumName>KDE Forums</r:forumName>
+                                    <!-- thread ID -->
+                                    <r:threadId>3559</r:threadId>
+                                    <!-- post ID -->
+                                    <r:postId>3560</r:postId>
+                                    <!-- time -->
+                                    <r:time>2011-04-15 10:55:57</r:time>
+                                    <!-- subject -->
+                                    <r:subject><![CDATA[Development :: Re:amaroK and Qt4]]></r:subject>
+                                    <!-- body -->
+                                    <r:body><![CDATA[good. Now, where is a good place to start? Maybe to load up the amaroK source code in kdevelop, and start experimenting by touching it here and there?]]></r:body>
+                                    <!-- author -->
+                                    <r:author>
+                                        <r:name>Angel Blue</r:name>
+                                        <r:id>angel_blue_co2004@yahoo.com</r:id>
+                                        <r:email>angel_blue_co2004@yahoo.com</r:email>
+                                    </r:author>
+                                    <!-- category -->
+                                    <r:category>Development</r:category>
+                                </r:forumSensor>
+                                <o:mdservice>
+                                    <o:postUri>http://www.alert-project.eu/ontologies/alert.owl#post1</o:postUri>
+                                    <o:threadUri>http://www.alert-project.eu/ontologies/alert.owl#threads1</o:threadUri>
+                                    <o:forumUri>http://www.alert-project.eu/ontologies/alert.owl#forum1</o:forumUri>
+                                    <o:authorUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:authorUri>
+                                </o:mdservice>
+
+								<s1:keui>
+									<s1:bodyAnnotated><![CDATA[good. Now, where is a good place to start? Maybe to <concept id="http://ailab.ijs.si/alert/resource/r17957">load</concept> <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept> the amaroK <concept id="http://ailab.ijs.si/alert/resource/r18057">source code</concept> in kdevelop, and start experimenting by touching it here and there?]]></s1:bodyAnnotated>
+									<s1:bodyConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17957</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8553</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18057</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:bodyConcepts>
+									<s1:subjectAnnotated><![CDATA[<concept id="KDE/development">Development</concept> :: Re:amaroK and <concept id="http://ailab.ijs.si/alert/resource/r17792">Qt4</concept>]]></s1:subjectAnnotated>
+									<s1:subjectConcepts><s1:concept><s1:uri>KDE/development</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17792</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:subjectConcepts>
+									<s1:itemId>7805</s1:itemId>
+									<s1:threadId>12</s1:threadId>
+								</s1:keui>
+							</ns1:eventData>
+                        </ns1:payload>
+                    </ns1:event>
+                </wsnt:Message>
+            </wsnt:NotificationMessage>
+        </wsnt:Notify>
+    </s:Body>
+</s:Envelope>

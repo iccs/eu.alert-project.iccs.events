@@ -1,4 +1,4 @@
-package eu.alertproject.iccs.events.jsi;
+package eu.alertproject.iccs.events.alert;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import eu.alertproject.iccs.events.api.Meta;
@@ -6,7 +6,6 @@ import eu.alertproject.iccs.events.api.Meta;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * User: fotis

@@ -1,4 +1,4 @@
-package eu.alertproject.iccs.events.jsi;
+package eu.alertproject.iccs.events.alert;
 
 /**
  * User: fotis
@@ -14,7 +14,7 @@ import eu.alertproject.iccs.events.api.Topics;
 import java.io.Serializable;
 
 @XStreamAlias("s:Envelope")
-public class TextToAnnotateReplyEnvelope implements Serializable{
+public class IssueNewAnnotatedEnvelope implements Serializable{
 
     @XStreamAlias("s:Header")
     private String header;
@@ -125,7 +125,7 @@ public class TextToAnnotateReplyEnvelope implements Serializable{
                         private Head head;
 
                         @XStreamAlias("ns1:payload")
-                        private TextToAnnotateReplyPayload payload;
+                        private IssueNewAnnotatedPayload payload;
 
                         public Head getHead() {
                             return head;
@@ -135,11 +135,11 @@ public class TextToAnnotateReplyEnvelope implements Serializable{
                             this.head = head;
                         }
 
-                        public TextToAnnotateReplyPayload getPayload() {
+                        public IssueNewAnnotatedPayload getPayload() {
                             return payload;
                         }
 
-                        public void setPayload(TextToAnnotateReplyPayload payload) {
+                        public void setPayload(IssueNewAnnotatedPayload payload) {
                             this.payload = payload;
                         }
 

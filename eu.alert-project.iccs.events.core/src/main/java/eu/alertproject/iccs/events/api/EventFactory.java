@@ -1,8 +1,8 @@
 package eu.alertproject.iccs.events.api;
 
 import com.thoughtworks.xstream.XStream;
-import eu.alertproject.iccs.events.jsi.TextToAnnotateRequestEnvelope;
-import eu.alertproject.iccs.events.jsi.TextToAnnotateRequestPayload;
+import eu.alertproject.iccs.events.alert.TextToAnnotateRequestEnvelope;
+import eu.alertproject.iccs.events.alert.TextToAnnotateRequestPayload;
 import eu.alertproject.iccs.events.socrates.*;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewEnvelope;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewPayload;

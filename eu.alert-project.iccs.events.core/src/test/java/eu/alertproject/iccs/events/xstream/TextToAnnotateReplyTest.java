@@ -1,9 +1,10 @@
 package eu.alertproject.iccs.events.xstream;
 
 import com.thoughtworks.xstream.XStream;
+import eu.alertproject.iccs.events.alert.Keui;
 import eu.alertproject.iccs.events.api.Topics;
-import eu.alertproject.iccs.events.jsi.TextToAnnotateReplyEnvelope;
-import eu.alertproject.iccs.events.jsi.TextToAnnotateReplyPayload;
+import eu.alertproject.iccs.events.alert.TextToAnnotateReplyEnvelope;
+import eu.alertproject.iccs.events.alert.TextToAnnotateReplyPayload;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -57,14 +58,14 @@ public class TextToAnnotateReplyTest {
         Assert.assertEquals("stardom", eventData.getGeneralText().getSource());
 
 
-        List<TextToAnnotateReplyPayload.EventData.Keui.Concept> textConcepts = eventData.getKeui().getTextConcepts();
+        List<Keui.Concept> textConcepts = eventData.getKeui().getTextConcepts();
         Assert.assertNotNull(textConcepts);
         
         Assert.assertEquals(textConcepts.size(),2);
 
-        Iterator<TextToAnnotateReplyPayload.EventData.Keui.Concept> iterator = textConcepts.iterator();
+        Iterator<Keui.Concept> iterator = textConcepts.iterator();
 
-        TextToAnnotateReplyPayload.EventData.Keui.Concept next = iterator.next();
+        Keui.Concept next = iterator.next();
         Assert.assertEquals("http://ailab.ijs.si/alert/resource/r18285",next.getUri());
         Assert.assertEquals(1,next.getWeight(),0);
 

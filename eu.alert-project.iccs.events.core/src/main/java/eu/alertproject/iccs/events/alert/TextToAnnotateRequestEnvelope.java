@@ -1,4 +1,4 @@
-package eu.alertproject.iccs.events.jsi;
+package eu.alertproject.iccs.events.alert;
 
 /**
  * User: fotis

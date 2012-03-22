@@ -2,8 +2,8 @@ package eu.alertproject.iccs.events.xstream;
 
 import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.api.EventFactory;
-import eu.alertproject.iccs.events.jsi.TextToAnnotateRequestEnvelope;
-import eu.alertproject.iccs.events.jsi.TextToAnnotateRequestPayload;
+import eu.alertproject.iccs.events.alert.TextToAnnotateRequestEnvelope;
+import eu.alertproject.iccs.events.alert.TextToAnnotateRequestPayload;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;

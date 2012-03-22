@@ -5,7 +5,6 @@ import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
 import eu.alertproject.iccs.events.socrates.Identity;
 import eu.alertproject.iccs.events.socrates.RecommendIssuesEnvelope;
-import eu.alertproject.iccs.events.socrates.RecommendIssuesPayload;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -34,7 +33,7 @@ public class RecommendIssuesRequestEvenlopeTest {
         RecommendIssuesEnvelope o = (RecommendIssuesEnvelope) xstream.fromXML(s);
         
         Assert.assertNotNull(o);
-        Assert.assertEquals(Topics.ALERT_SEARCH_SOCRATES_Issue_Recommendation_Request,
+        Assert.assertEquals(Topics.ALERT_ALL_SOCRATES_Issue_Recommendation_Request,
                                         o.getBody()
                                         .getNotify()
                                         .getNotificationMessage()

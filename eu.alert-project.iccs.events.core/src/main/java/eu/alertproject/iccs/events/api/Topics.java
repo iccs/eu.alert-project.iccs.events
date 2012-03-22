@@ -31,10 +31,9 @@ public class Topics {
     public static final String ALERT_STARDOM_TextToAnnotate ="ALERT.STARDOM.TextToAnnotate";
 
 
+    public static final String ALERT_ALL_SOCRATES_Issue_Recommendation_Request = "ALERT.*.Recommender.IssueRecommendationRequest";
     public static final String ALERT_ALL_SOCRATES_Identity_Recommendation_Request= "ALERT.*.Recommender.IdentitiesRecommendationRequest";
-    public static final String ALERT_ALL_SOCRATES_Identity_Verification_Request= "ALERT.*.Recommender.VerifyIdentitiesRequest.xml";
-
-    public static final String ALERT_SEARCH_SOCRATES_Issue_Recommendation_Request= "ALERT.Search.Recommender.IssueRecommendationRequest";
+    public static final String ALERT_ALL_SOCRATES_Identity_Verification_Request= "ALERT.*.Recommender.VerifyIdentitiesRequest";
     public static final String ALERT_SEARCH_SOCRATES_Identity_Recommendation_Request= "ALERT.Search.Recommender.RecommendationRequest";
 
     public static final String ALERT_SOCRATES_Issue_Recommendation= "ALERT.Recommender.IssueRecommendation";

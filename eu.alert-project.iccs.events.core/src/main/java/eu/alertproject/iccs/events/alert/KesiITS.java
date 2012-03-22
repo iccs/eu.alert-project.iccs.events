@@ -1,4 +1,4 @@
-package eu.alertproject.iccs.events;
+package eu.alertproject.iccs.events.alert;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
@@ -14,9 +14,10 @@ import java.util.List;
  * Date: 24/02/12
  * Time: 14:47
  */
-public class KesiEvent implements Serializable {
-    
-    
+
+@XStreamAlias("s:kesi")
+public class KesiITS implements Serializable {
+
     @XStreamAlias("s:issueId")
     private Integer Id;
     
@@ -41,7 +42,6 @@ public class KesiEvent implements Serializable {
     @XStreamAlias("s:issueComputerSystem")
     private ComputerSystem computerSystem;
 
-
     @XStreamAlias("s:issuePriority")
     private Integer priority;
 
@@ -58,11 +58,11 @@ public class KesiEvent implements Serializable {
     @XStreamAlias("s:issueUrl")
     private String url;
 
-    @XStreamImplicit(itemFieldName="s:issueDependsOnId")
-    private List<Integer> dependsOnId;
+    @XStreamAlias("s:issueDependsOnId")
+    private Integer dependsOnId;
 
-    @XStreamImplicit(itemFieldName="s:issueBlocksId")
-    private List<Integer> blocksId;
+    @XStreamAlias("s:issueBlocksId")
+    private Integer blocksId;
 
     @XStreamImplicit(itemFieldName="s:issueDuplicateOfId")
     private List<Integer> duplicateOfId;
@@ -85,13 +85,13 @@ public class KesiEvent implements Serializable {
     private List<Comment> comments;
 
     @XStreamImplicit(itemFieldName="s:issueAttachment")
-    private List<Attachement> issueAttachments;
+    private List<Attachement> attachements;
 
     @XStreamImplicit(itemFieldName="s:issueActivity")
-    private List<IssueActivity> issueActivities;
+    private List<Activity> activities;
 
     @XStreamAlias("s:issueTracker")
-    private IssueTracker issueTracker;
+    private Tracker tracker;
 
     public Integer getId() {
         return Id;
@@ -197,19 +197,19 @@ public class KesiEvent implements Serializable {
         this.url = url;
     }
 
-    public List<Integer> getDependsOnId() {
+    public Integer getDependsOnId() {
         return dependsOnId;
     }
 
-    public void setDependsOnId(List<Integer> dependsOnId) {
+    public void setDependsOnId(Integer dependsOnId) {
         this.dependsOnId = dependsOnId;
     }
 
-    public List<Integer> getBlocksId() {
+    public Integer getBlocksId() {
         return blocksId;
     }
 
-    public void setBlocksId(List<Integer> blocksId) {
+    public void setBlocksId(Integer blocksId) {
         this.blocksId = blocksId;
     }
 
@@ -261,31 +261,31 @@ public class KesiEvent implements Serializable {
         this.comments = comments;
     }
 
-    public List<Attachement> getIssueAttachments() {
-        return issueAttachments;
+    public List<Attachement> getAttachements() {
+        return attachements;
     }
 
-    public void setIssueAttachments(List<Attachement> issueAttachments) {
-        this.issueAttachments = issueAttachments;
+    public void setAttachements(List<Attachement> attachements) {
+        this.attachements = attachements;
     }
 
-    public List<IssueActivity> getIssueActivities() {
-        return issueActivities;
+    public List<Activity> getActivities() {
+        return activities;
     }
 
-    public void setIssueActivities(List<IssueActivity> issueActivities) {
-        this.issueActivities = issueActivities;
+    public void setActivities(List<Activity> activities) {
+        this.activities = activities;
     }
 
-    public IssueTracker getIssueTracker() {
-        return issueTracker;
+    public Tracker getTracker() {
+        return tracker;
     }
 
-    public void setIssueTracker(IssueTracker issueTracker) {
-        this.issueTracker = issueTracker;
+    public void setTracker(Tracker tracker) {
+        this.tracker = tracker;
     }
 
-    static class IssueTracker implements Serializable{
+    public static class Tracker implements Serializable{
         
         @XStreamAlias("s:issueTrackerId")
         private Integer id;
@@ -322,7 +322,7 @@ public class KesiEvent implements Serializable {
     }
 
 
-    static class IssueActivity implements Serializable{
+    static class Activity implements Serializable{
 
         @XStreamAlias("s:activityId")
         private String id;
@@ -385,10 +385,10 @@ public class KesiEvent implements Serializable {
 
 
     
-    static class Attachement implements Serializable{
+    public static class Attachement implements Serializable{
      
         @XStreamAlias("s:attachmentId")
-        private String id;
+        private Integer id;
         
         @XStreamAlias("s:attachmentType")
         private String type;
@@ -399,11 +399,11 @@ public class KesiEvent implements Serializable {
         @XStreamAlias("s:attachmentCreator")
         private Author creator;
 
-        public String getId() {
+        public Integer getId() {
             return id;
         }
 
-        public void setId(String id) {
+        public void setId(Integer id) {
             this.id = id;
         }
 
@@ -432,10 +432,7 @@ public class KesiEvent implements Serializable {
         }
     }
 
-
-
-
-    static class Comment implements Serializable{
+    public static class Comment implements Serializable{
 
         @XStreamAlias("s:commentId")
         private String id;
@@ -525,7 +522,7 @@ public class KesiEvent implements Serializable {
     }
 
 
-    static class ComputerSystem implements Serializable{
+    public static class ComputerSystem implements Serializable{
 
         @XStreamAlias("s:computerSystemId")
         private String id;
@@ -563,7 +560,7 @@ public class KesiEvent implements Serializable {
 
 
     
-    static class Product implements Serializable{
+    public static class Product implements Serializable{
         
         @XStreamAlias("s:productId")
         private String id;
@@ -598,20 +595,5 @@ public class KesiEvent implements Serializable {
             this.version = version;
         }
     }
-    
-    
-    static class Author implements Serializable{
-        
-        @XStreamAlias("s:name")
-        private String name;
-        
-        @XStreamAlias("s:id")
-        private String id;
-        
-        @XStreamAlias("s:email")
-        private String email;
 
-
-    }
-    
 }

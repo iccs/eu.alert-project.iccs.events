@@ -1,13 +1,11 @@
-package eu.alertproject.iccs.events.jsi;
+package eu.alertproject.iccs.events.alert;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import eu.alertproject.iccs.events.KeuiEvent;
 import eu.alertproject.iccs.events.api.Meta;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * User: fotis
@@ -92,58 +90,6 @@ public class TextToAnnotateReplyPayload {
         }
        
         
-        public static class Keui{
-            
-            @XStreamAlias("s1:textAnnotated")
-            private String textAnnotated;
-
-            @XStreamAlias("s1:textConcepts")
-            private List<Concept> textConcepts;
-
-
-            public String getTextAnnotated() {
-                return textAnnotated;
-            }
-
-            public void setTextAnnotated(String textAnnotated) {
-                this.textAnnotated = textAnnotated;
-            }
-
-            public List<Concept> getTextConcepts() {
-                return textConcepts;
-            }
-
-            public void setTextConcepts(List<Concept> textConcepts) {
-                this.textConcepts = textConcepts;
-            }
-
-            @XStreamAlias("s1:concept")
-            public static class Concept{
-
-                @XStreamAlias("s1:uri")
-                private String uri;
-                
-                @XStreamAlias("s1:weight")
-                private Integer weight;
-
-                public String getUri() {
-                    return uri;
-                }
-
-                public void setUri(String uri) {
-                    this.uri = uri;
-                }
-
-                public Integer getWeight() {
-                    return weight;
-                }
-
-                public void setWeight(Integer weight) {
-                    this.weight = weight;
-                }
-            }
-
-        }
     }
 
 }
