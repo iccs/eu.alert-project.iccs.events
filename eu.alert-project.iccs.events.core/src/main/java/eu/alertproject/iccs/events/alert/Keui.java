@@ -25,11 +25,25 @@ public class Keui{
     @XStreamAlias("s1:commentTextConcepts")
     private List<Concept> commentTextConcepts;
 
+    @XStreamAlias("s1:contentAnnotated")
+    private String contentAnnotated;
+
+    @XStreamAlias("s1:contentConcepts")
+    private List<Concept> contentConcepts;
+
     @XStreamAlias("s1:commitMessageLogAnnotated")
     private String commitMessageLogAnnotated;
 
     @XStreamAlias("s1:commitMessageLogConcepts")
     private List<Concept> commitMessageLogConcepts;
+
+
+    @XStreamAlias("s1:subjectAnnotated")
+    private String subjectAnnotated;
+
+    @XStreamAlias("s1:subjectConcepts")
+    private List<Concept> subjectConcepts;
+
 
     @XStreamAlias("s1:itemId")
     private Integer itemId;
@@ -85,6 +99,22 @@ public class Keui{
         this.commentTextConcepts = commentTextConcepts;
     }
 
+    public String getContentAnnotated() {
+        return contentAnnotated;
+    }
+
+    public void setContentAnnotated(String contentAnnotated) {
+        this.contentAnnotated = contentAnnotated;
+    }
+
+    public List<Concept> getContentConcepts() {
+        return contentConcepts;
+    }
+
+    public void setContentConcepts(List<Concept> contentConcepts) {
+        this.contentConcepts = contentConcepts;
+    }
+
     public String getCommitMessageLogAnnotated() {
         return commitMessageLogAnnotated;
     }
@@ -99,6 +129,22 @@ public class Keui{
 
     public void setCommitMessageLogConcepts(List<Concept> commitMessageLogConcepts) {
         this.commitMessageLogConcepts = commitMessageLogConcepts;
+    }
+
+    public String getSubjectAnnotated() {
+        return subjectAnnotated;
+    }
+
+    public void setSubjectAnnotated(String subjectAnnotated) {
+        this.subjectAnnotated = subjectAnnotated;
+    }
+
+    public List<Concept> getSubjectConcepts() {
+        return subjectConcepts;
+    }
+
+    public void setSubjectConcepts(List<Concept> subjectConcepts) {
+        this.subjectConcepts = subjectConcepts;
     }
 
     public Integer getItemId() {

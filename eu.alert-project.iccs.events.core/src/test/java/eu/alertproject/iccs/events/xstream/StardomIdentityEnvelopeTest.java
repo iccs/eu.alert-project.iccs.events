@@ -1,9 +1,10 @@
 package eu.alertproject.iccs.events.xstream;
 
-import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.IdentityPersons;
 import eu.alertproject.iccs.events.api.EventFactory;
-import eu.alertproject.iccs.events.stardom.*;
+import eu.alertproject.iccs.events.stardom.StardomIdentityNewEnvelope;
+import eu.alertproject.iccs.events.stardom.StardomIdentityNewPayload;
+import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatePayload;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -93,11 +94,11 @@ public class StardomIdentityEnvelopeTest {
     @Test
     public void testDeSerializeIdentityNew() throws ClassNotFoundException, IOException {
 
-        XStream xStream = new XStream();
-        xStream.processAnnotations(StardomIdentityNewEnvelope.class);
-
-        StardomIdentityNewEnvelope o = (StardomIdentityNewEnvelope) xStream.fromXML(this.getClass().getResourceAsStream("/ALERT.Stardom.IdentityNew.xml"));
-
+        StardomIdentityNewEnvelope o =
+                EventFactory.<StardomIdentityNewEnvelope>fromXml(
+                        IOUtils.toString(this.getClass().getResourceAsStream("/ALERT.Stardom.IdentityNew.xml")),
+                        StardomIdentityNewEnvelope.class
+                );
 
         List<StardomIdentityNewPayload.EventData.Identity> identities = o.getBody()
                 .getNotify()
@@ -210,4 +211,6 @@ public class StardomIdentityEnvelopeTest {
         Assert.assertEquals(IOUtils.toString(this.getClass().getResourceAsStream("/ALERT.Stardom.IdentityUpdated.xml")), identityUpdate);
 
     }
+
+
 }

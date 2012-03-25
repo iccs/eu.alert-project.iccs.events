@@ -1,10 +1,10 @@
 package eu.alertproject.iccs.events.xstream;
 
-import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.alert.Keui;
-import eu.alertproject.iccs.events.api.Topics;
 import eu.alertproject.iccs.events.alert.TextToAnnotateReplyEnvelope;
 import eu.alertproject.iccs.events.alert.TextToAnnotateReplyPayload;
+import eu.alertproject.iccs.events.api.EventFactory;
+import eu.alertproject.iccs.events.api.Topics;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -23,13 +23,10 @@ public class TextToAnnotateReplyTest {
     @Test
     public void testSerialize() throws IOException {
 
-        XStream xStream = new XStream();
-        xStream.processAnnotations(TextToAnnotateReplyEnvelope.class);
-
         TextToAnnotateReplyEnvelope textToAnnotateReplyEnvelope =
-                (TextToAnnotateReplyEnvelope) xStream.fromXML(
-                        IOUtils.toString(
-                                TextToAnnotateReplyEnvelope.class.getResourceAsStream("/ALERT.KEUI.TextToAnnotate.Annotated.xml")));
+                EventFactory.<TextToAnnotateReplyEnvelope>fromXml(
+                            IOUtils.toString(TextToAnnotateReplyTest.class.getResourceAsStream("/ALERT.KEUI.TextToAnnotate.Annotated.xml")),
+                            TextToAnnotateReplyEnvelope.class);
 
         
         Assert.assertEquals(

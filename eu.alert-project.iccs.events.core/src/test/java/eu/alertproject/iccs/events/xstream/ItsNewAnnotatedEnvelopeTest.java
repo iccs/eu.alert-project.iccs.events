@@ -2,6 +2,7 @@ package eu.alertproject.iccs.events.xstream;
 
 import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.alert.*;
+import eu.alertproject.iccs.events.api.EventFactory;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.time.DateFormatUtils;
 import org.junit.Assert;
@@ -20,16 +21,11 @@ public class ItsNewAnnotatedEnvelopeTest {
     
     @Test
     public void desirialize() throws IOException {
-        
-        XStream xstream = new XStream();
-        xstream.processAnnotations(IssueNewAnnotatedEnvelope.class);
 
         String s = IOUtils.toString(ItsNewAnnotatedEnvelopeTest.class.getResourceAsStream("/ALERT.KEUI.IssueNew.Annotated.xml"));
-
-        IssueNewAnnotatedEnvelope o = (IssueNewAnnotatedEnvelope) xstream.fromXML(s);
-
-
-        IssueNewAnnotatedPayload.EventData eventData = o.getBody()
+        IssueNewAnnotatedPayload.EventData eventData = EventFactory
+                .<IssueNewAnnotatedEnvelope>fromXml(s,IssueNewAnnotatedEnvelope.class)
+                .getBody()
                 .getNotify()
                 .getNotificationMessage()
                 .getMessage()

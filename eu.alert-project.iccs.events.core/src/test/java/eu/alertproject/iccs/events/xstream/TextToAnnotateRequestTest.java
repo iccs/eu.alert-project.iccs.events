@@ -1,9 +1,8 @@
 package eu.alertproject.iccs.events.xstream;
 
-import com.thoughtworks.xstream.XStream;
-import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.alert.TextToAnnotateRequestEnvelope;
 import eu.alertproject.iccs.events.alert.TextToAnnotateRequestPayload;
+import eu.alertproject.iccs.events.api.EventFactory;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
@@ -22,14 +21,10 @@ public class TextToAnnotateRequestTest {
     @Test
     public void testSerialize() throws IOException {
 
-        XStream xStream = new XStream();
-        xStream.processAnnotations(TextToAnnotateRequestEnvelope.class);
-
         TextToAnnotateRequestEnvelope textToAnnotateRequestEnvelope =
-                (TextToAnnotateRequestEnvelope) xStream.fromXML(
-                        IOUtils.toString(
-                                TextToAnnotateRequestTest.class.getResourceAsStream("/ALERT.Stardom.TextToAnnotate.xml")));
-
+                EventFactory.<TextToAnnotateRequestEnvelope>fromXml(
+                        IOUtils.toString(TextToAnnotateRequestTest.class.getResourceAsStream("/ALERT.Stardom.TextToAnnotate.xml")),
+                        TextToAnnotateRequestEnvelope.class);
 
         TextToAnnotateRequestPayload.EventData eventData = textToAnnotateRequestEnvelope
                 .getBody()

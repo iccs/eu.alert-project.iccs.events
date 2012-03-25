@@ -4,6 +4,7 @@ import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
 import eu.alertproject.iccs.events.socrates.Identity;
+import eu.alertproject.iccs.events.socrates.RecommendIdentityEnvelope;
 import eu.alertproject.iccs.events.socrates.RecommendIssuesEnvelope;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
@@ -30,8 +31,9 @@ public class RecommendIssuesRequestEvenlopeTest {
 
         String s = IOUtils.toString(RecommendIssuesRequestEvenlopeTest.class.getResourceAsStream("/ALERT.ALL.Recommender.IssueRecommendationRequest.xml"));
 
-        RecommendIssuesEnvelope o = (RecommendIssuesEnvelope) xstream.fromXML(s);
-        
+        RecommendIssuesEnvelope o = EventFactory
+                                .<RecommendIssuesEnvelope>fromXml(s, RecommendIssuesEnvelope.class);
+
         Assert.assertNotNull(o);
         Assert.assertEquals(Topics.ALERT_ALL_SOCRATES_Issue_Recommendation_Request,
                                         o.getBody()

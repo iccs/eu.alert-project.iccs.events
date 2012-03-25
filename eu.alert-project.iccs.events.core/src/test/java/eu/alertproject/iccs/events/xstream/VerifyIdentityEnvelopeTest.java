@@ -25,7 +25,7 @@ public class VerifyIdentityEnvelopeTest {
 
         String s = IOUtils.toString(VerifyIdentityEnvelopeTest.class.getResourceAsStream("/ALERT.ALL.Recommender.VerifyIdentitiesRequest.xml"));
 
-        VerifyIdentityEnvelope o = (VerifyIdentityEnvelope) xstream.fromXML(s);
+        VerifyIdentityEnvelope o = EventFactory.<VerifyIdentityEnvelope>fromXml(s,VerifyIdentityEnvelope.class);
 
         Assert.assertNotNull(o);
 

@@ -1,6 +1,7 @@
 package eu.alertproject.iccs.events.xstream;
 
 import com.thoughtworks.xstream.XStream;
+import eu.alertproject.iccs.events.alert.MailingListAnnotatedEnvelope;
 import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
 import eu.alertproject.iccs.events.socrates.Issue;
@@ -35,8 +36,9 @@ public class RecommendIdentitiesRequestEnvelopeTest {
 
         String s = IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/ALERT.ALL.Recommender.IdentitiesRecommendationRequest.xml"));
 
-        RecommendIdentityEnvelope o = (RecommendIdentityEnvelope) xstream.fromXML(s);
-        
+        RecommendIdentityEnvelope o =EventFactory
+                        .<RecommendIdentityEnvelope>fromXml(s, RecommendIdentityEnvelope.class);
+
         Assert.assertNotNull(o);
         Assert.assertEquals(Topics.ALERT_ALL_SOCRATES_Identity_Recommendation_Request,
                                         o.getBody()

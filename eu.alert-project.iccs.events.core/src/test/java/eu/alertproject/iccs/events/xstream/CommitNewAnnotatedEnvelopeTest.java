@@ -1,8 +1,7 @@
 package eu.alertproject.iccs.events.xstream;
 
-import com.thoughtworks.xstream.XStream;
 import eu.alertproject.iccs.events.alert.*;
-import eu.alertproject.iccs.events.socrates.RecommendIdentityEnvelope;
+import eu.alertproject.iccs.events.api.EventFactory;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.time.DateFormatUtils;
 import org.junit.Assert;
@@ -21,16 +20,15 @@ public class CommitNewAnnotatedEnvelopeTest {
     
     @Test
     public void desirialize() throws IOException {
-        
-        XStream xstream = new XStream();
-        xstream.processAnnotations(CommitNewAnnotatedEnvelope.class);
 
-        String s = IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/ALERT.KEUI.CommitNew.Annotated.xml"));
+        String s = IOUtils.toString(
+                RecommendIdentitiesRequestEnvelopeTest
+                        .class
+                        .getResourceAsStream("/ALERT.KEUI.CommitNew.Annotated.xml"));
 
-        CommitNewAnnotatedEnvelope o = (CommitNewAnnotatedEnvelope) xstream.fromXML(s);
-
-
-        CommitNewAnnotatedPayload.EventData eventData = o.getBody()
+        CommitNewAnnotatedPayload.EventData eventData = EventFactory
+                .<CommitNewAnnotatedEnvelope>fromXml(s,CommitNewAnnotatedEnvelope.class)
+                .getBody()
                 .getNotify()
                 .getNotificationMessage()
                 .getMessage()

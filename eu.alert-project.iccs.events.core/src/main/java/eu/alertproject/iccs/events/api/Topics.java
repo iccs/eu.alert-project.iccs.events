@@ -46,4 +46,7 @@ public class Topics {
     public static final String ALERT_Metadata_IssueNew_Updated = "ALERT.Metadata.IssueNew.Updated";
 
 
+    public static final String ALERT_MLSensor_Mail_New ="ALERT.MLSensor.MailNew";
+
+
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing"
+            xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
     <s:Header></s:Header>
     <s:Body>
         <wsnt:Notify>
@@ -9,7 +10,16 @@
                     <wsa:Address>http://www.alert-project.eu/metadata</wsa:Address>
                 </wsnt:ProducerReference>
                 <wsnt:Message>
-                    <ns1:event xmlns:ns1="http://www.alert-project.eu/" xmlns:o="http://www.alert-project.eu/ontoevents-mdservice" xmlns:r="http://www.alert-project.eu/rawevents-forum" xmlns:r1="http://www.alert-project.eu/rawevents-mailinglist" xmlns:r2="http://www.alert-project.eu/rawevents-wiki" xmlns:s="http://www.alert-project.eu/strevents-kesi" xmlns:s1="http://www.alert-project.eu/strevents-keui" xmlns:sm="http://www.alert-project.eu/stardom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.alert-project.eu/alert-root.xsd">
+                    <ns1:event xmlns:ns1="http://www.alert-project.eu/"
+                               xmlns:o="http://www.alert-project.eu/ontoevents-mdservice"
+                               xmlns:r="http://www.alert-project.eu/rawevents-forum"
+                               xmlns:r1="http://www.alert-project.eu/rawevents-mailinglist"
+                               xmlns:r2="http://www.alert-project.eu/rawevents-wiki"
+                               xmlns:s="http://www.alert-project.eu/strevents-kesi"
+                               xmlns:s1="http://www.alert-project.eu/strevents-keui"
+                               xmlns:sm="http://www.alert-project.eu/stardom"
+                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xsi:schemaLocation="http://www.alert-project.eu/alert-root.xsd">
                         <ns1:head>
                             <ns1:sender>METADATASERVICE</ns1:sender>
                             <ns1:timestamp>10003</ns1:timestamp>
@@ -27,12 +37,17 @@
                                 <r1:mlsensor>
                                     <r1:from>sasa.stojanovic@cimcollege.rs</r1:from>
                                     <r1:date>Sat, 05 Nov 2011 17:50:11 +0100</r1:date>
-                                    <r1:subject><![CDATA[[Kde-hardware-devel] Identifying iPod and iPhone-like devices using Solid (was: Amarok review request)]]></r1:subject>
-                                    <r1:inReplyTo><![CDATA[<CAMnMsSdoax0S14_fQe4woSLDhJYR0vc8wuZjKvsKqe7gVx1kxQ@mail.gmail.com>]]></r1:inReplyTo>
-                                    <r1:references><![CDATA[<20111025132029.15876.89012@vidsolbach.de><9102909.qJX79ctmp1@edgy><CAMnMsSdoax0S14_fQe4woSLDhJYR0vc8wuZjKvsKqe7gVx1kxQ@mail.gmail.com>]]></r1:references>
+                                    <r1:subject>
+                                        <![CDATA[[Kde-hardware-devel] Identifying iPod and iPhone-like devices using Solid (was: Amarok review request)]]></r1:subject>
+                                    <r1:inReplyTo>
+                                        <![CDATA[<CAMnMsSdoax0S14_fQe4woSLDhJYR0vc8wuZjKvsKqe7gVx1kxQ@mail.gmail.com>]]></r1:inReplyTo>
+                                    <r1:references>
+                                        <![CDATA[<20111025132029.15876.89012@vidsolbach.de><9102909.qJX79ctmp1@edgy><CAMnMsSdoax0S14_fQe4woSLDhJYR0vc8wuZjKvsKqe7gVx1kxQ@mail.gmail.com>]]></r1:references>
                                     <r1:messageId><![CDATA[<3674981.yjiqPb6iju@edgy>]]></r1:messageId>
                                     <r1:attachments>
-                                        <r1:attachment>http://mail.kde.org/pipermail/kde-hardware-devel/attachments/20111109/564d5259/attachment.html</r1:attachment>
+                                        <r1:attachment>
+                                            http://mail.kde.org/pipermail/kde-hardware-devel/attachments/20111109/564d5259/attachment.html
+                                        </r1:attachment>
                                     </r1:attachments>
                                     <r1:content><![CDATA[   A non-text attachment was scrubbed...
                                                 Name: signature.asc
@@ -96,14 +111,18 @@
                                 <o:mdservice>
                                     <o:emailUri>http://www.alert-project.eu/ontologies/alert.owl#Email1</o:emailUri>
                                     <o:fromUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:fromUri>
-                                    <o:inReplyToUri>http://www.alert-project.eu/ontologies/alert.owl#Email2</o:inReplyToUri>
-                                    <o:referencesUri>http://www.alert-project.eu/ontologies/alert.owl#Email3</o:referencesUri>
-                                    <o:referencesUri>http://www.alert-project.eu/ontologies/alert.owl#Email4</o:referencesUri>
-                                    <o:referencesUri>http://www.alert-project.eu/ontologies/alert.owl#Email2</o:referencesUri>
+                                    <o:inReplyToUri>http://www.alert-project.eu/ontologies/alert.owl#Email2
+                                    </o:inReplyToUri>
+                                    <o:referencesUri>http://www.alert-project.eu/ontologies/alert.owl#Email3
+                                    </o:referencesUri>
+                                    <o:referencesUri>http://www.alert-project.eu/ontologies/alert.owl#Email4
+                                    </o:referencesUri>
+                                    <o:referencesUri>http://www.alert-project.eu/ontologies/alert.owl#Email2
+                                    </o:referencesUri>
                                 </o:mdservice>
 
-								<s1:keui>
-									<s1:contentAnnotated><![CDATA[   A non-<concept id="KDE/text">text</concept> <concept id="http://ailab.ijs.si/alert/resource/r2199">attachment</concept> was <concept id="http://ailab.ijs.si/alert/resource/r4506">scrubbed</concept>...
+                                <s1:keui>
+                                    <s1:contentAnnotated><![CDATA[   A non-<concept id="KDE/text">text</concept> <concept id="http://ailab.ijs.si/alert/resource/r2199">attachment</concept> was <concept id="http://ailab.ijs.si/alert/resource/r4506">scrubbed</concept>...
                                                 <concept id="http://ailab.ijs.si/alert/resource/r8688">Name</concept>: signature.asc
                                                 <concept id="http://ailab.ijs.si/alert/resource/r9523">Type</concept>: <concept id="http://ailab.ijs.si/alert/resource/r2004">application</concept>/<concept id="KDE/pgp">pgp</concept>-signature
                                                 <concept id="http://ailab.ijs.si/alert/resource/r17591">Size</concept>: 198 <concept id="KDE/bytes">bytes</concept>
@@ -161,13 +180,170 @@
 
                                                 Nicolas L?cureuil
                                         ]]></s1:contentAnnotated>
-									<s1:contentConcepts><s1:concept><s1:uri>KDE/text</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r2199</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r4506</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8688</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9523</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r2004</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>KDE/pgp</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17591</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>KDE/bytes</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17308</s1:uri><s1:weight>4</s1:weight></s1:concept><s1:concept><s1:uri>http://ail
-ab.ijs.si/alert/resource/r10328</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>KDE/Messaging</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17494</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>KDE/KDE</s1:uri><s1:weight>4</s1:weight></s1:concept><s1:concept><s1:uri>KDE/free</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18311</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17672</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r364</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18495</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r469</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16058</s1:uri><s1:weight>3</
-s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17116</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17390</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17934</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>KDE/ps</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12321</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>KDE/Patch</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17650</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>KDE/Diff</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17396</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17619</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:contentConcepts>
-									<s1:subjectAnnotated><![CDATA[[Kde-<concept id="http://ailab.ijs.si/alert/resource/r364">hardware</concept>-devel] Identifying <concept id="http://ailab.ijs.si/alert/resource/r17167">iPod</concept> and <concept id="http://ailab.ijs.si/alert/resource/r17215">iPhone</concept>-<concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept> <concept id="KDE/devices">devices</concept> using <concept id="http://ailab.ijs.si/alert/resource/r12321">Solid</concept> (was: Amarok review <concept id="http://ailab.ijs.si/alert/resource/r18495">request</concept>)]]></s1:subjectAnnotated>
-									<s1:subjectConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r364</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17167</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17215</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17671</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>KDE/devices</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12321</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18495</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:subjectConcepts></s1:keui></ns1:eventData>
-									<s1:itemId>7805</s1:itemId>
-									<s1:threadId>123</s1:threadId>
+                                    <s1:contentConcepts>
+                                        <s1:concept>
+                                            <s1:uri>KDE/text</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r2199</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r4506</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r8688</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r9523</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r2004</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>KDE/pgp</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17591</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>KDE/bytes</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17308</s1:uri>
+                                            <s1:weight>4</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ail
+                                                ab.ijs.si/alert/resource/r10328
+                                            </s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>KDE/Messaging</s1:uri>
+                                            <s1:weight>2</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17494</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>KDE/KDE</s1:uri>
+                                            <s1:weight>4</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>KDE/free</s1:uri>
+                                            <s1:weight>2</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r18311</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17672</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r364</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r18495</s1:uri>
+                                            <s1:weight>2</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r469</s1:uri>
+                                            <s1:weight>2</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r16058</s1:uri>
+                                            <s1:weight>3</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17116</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17390</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17934</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>KDE/ps</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r12321</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>KDE/Patch</s1:uri>
+                                            <s1:weight>2</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17650</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>KDE/Diff</s1:uri>
+                                            <s1:weight>2</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17396</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17619</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                    </s1:contentConcepts>
+                                    <s1:subjectAnnotated>
+                                        <![CDATA[[Kde-<concept id="http://ailab.ijs.si/alert/resource/r364">hardware</concept>-devel] Identifying <concept id="http://ailab.ijs.si/alert/resource/r17167">iPod</concept> and <concept id="http://ailab.ijs.si/alert/resource/r17215">iPhone</concept>-<concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept> <concept id="KDE/devices">devices</concept> using <concept id="http://ailab.ijs.si/alert/resource/r12321">Solid</concept> (was: Amarok review <concept id="http://ailab.ijs.si/alert/resource/r18495">request</concept>)]]></s1:subjectAnnotated>
+                                    <s1:subjectConcepts>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r364</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17167</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17215</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r17671</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>KDE/devices</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r12321</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                        <s1:concept>
+                                            <s1:uri>http://ailab.ijs.si/alert/resource/r18495</s1:uri>
+                                            <s1:weight>1</s1:weight>
+                                        </s1:concept>
+                                    </s1:subjectConcepts>
+                                    <s1:itemId>7805</s1:itemId>
+                                    <s1:threadId>123</s1:threadId>
+                                </s1:keui>
+                            </ns1:eventData>
                         </ns1:payload>
                     </ns1:event>
                 </wsnt:Message>

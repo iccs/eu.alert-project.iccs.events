@@ -1,14 +1,26 @@
 package eu.alertproject.iccs.events.api;
 
 import com.thoughtworks.xstream.XStream;
-import eu.alertproject.iccs.events.alert.TextToAnnotateRequestEnvelope;
-import eu.alertproject.iccs.events.alert.TextToAnnotateRequestPayload;
+import com.thoughtworks.xstream.core.util.QuickWriter;
+import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+import com.thoughtworks.xstream.io.ReaderWrapper;
+import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
+import com.thoughtworks.xstream.io.xml.XppDomDriver;
+import com.thoughtworks.xstream.io.xml.XppDriver;
+import com.thoughtworks.xstream.io.xml.xppdom.Xpp3Dom;
+import com.thoughtworks.xstream.io.xml.xppdom.Xpp3DomBuilder;
+import eu.alertproject.iccs.events.alert.*;
 import eu.alertproject.iccs.events.socrates.*;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewEnvelope;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewPayload;
 import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatePayload;
 import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatedEnvelope;
+import org.apache.commons.lang.ArrayUtils;
 
+import java.io.Reader;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -35,7 +47,39 @@ public class EventFactory {
     private static String fixEvent(String str){
         return EventFactory.fixEvent(str, true);
     }
+    
+    private static XStream getMarshaller(Class<?> ...clazz){
 
+
+        XStream x = new XStream(
+                new XppDomDriver(){
+                    @Override
+                    public HierarchicalStreamReader createReader(Reader xml) {
+                        return new ReaderWrapper(super.createReader(xml)){
+                            @Override
+                            public String getValue() {
+
+                                String value = super.getValue();
+
+                                value = value.replaceAll("[\\s\\n]+"," ");
+                                value = value.trim();
+
+                                return value;
+                            }
+                        };
+                    }
+                }
+        );
+        x.processAnnotations(clazz);
+
+        return x;
+    }
+
+    
+    @SuppressWarnings("unchecked")
+    public static  <T>  T fromXml(String xml, Class<? extends T>...clazz){
+        return (T) getMarshaller(clazz).fromXML(xml);
+    } 
 
     public static String createStardomIdentityNew(Integer eventId,
                                                   long start,
@@ -407,6 +451,116 @@ public class EventFactory {
 
         return EventFactory.fixEvent(xstream.toXML(envelope));
 
+    }
+
+
+    public static String createMlSensorMailNewEvent(
+            Integer eventId,
+            long start,
+            long end,
+            int sequence,
+            MailingList mail) {
+
+        Head head = new Head();
+        head.setSender("MLSensor");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        MailingListNewPayload.EventData se = new MailingListNewPayload.EventData();
+
+        //fix cdata
+//        mail.setSubject("<[CDATA["+mail.getSubject()+"]]>");
+//        mail.setContent("<[CDATA[" + mail.getContent() + "]]>");
+//        mail.setInReplyTo("<[CDATA[" + mail.getInReplyTo() + "]]>");
+//        mail.setReference("<[CDATA[" + mail.getReference() + "]]>");
+//        mail.setMessageId("<[CDATA[" + mail.getMessageId() + "]]>");
+//        mail.setContent("<[CDATA[" + mail.getContent() + "]]>");
+
+        se.setMailingList(mail);
+
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_MLSensor_Mail_New);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
+        meta.setType("Request");
+
+        MailingListNewPayload payload = new MailingListNewPayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        MailingListNewEnvelope.Body.Notify.NotificationMessage.Message.Event event = new MailingListNewEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+
+
+        MailingListNewEnvelope.Body.Notify.NotificationMessage.Message message = new MailingListNewEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/MLSensor");
+
+        MailingListNewEnvelope.Body.Notify.NotificationMessage notificationMessage = new MailingListNewEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_MLSensor_Mail_New);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+
+        MailingListNewEnvelope.Body.Notify notify = new MailingListNewEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+
+        MailingListNewEnvelope.Body body = new MailingListNewEnvelope.Body();
+        body.setNotify(notify);
+
+        MailingListNewEnvelope envelope = new MailingListNewEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+        XStream xstream = new XStream(
+
+            new XppDomDriver() {
+                public HierarchicalStreamWriter createWriter(Writer out) {
+                    return new PrettyPrintWriter(out) {
+
+                        boolean cdata = false;
+
+                        //http://oktryitnow.com/?p=11
+                        public void startNode(String name, Class clazz) {
+                            super.startNode(name, clazz);
+                            cdata = (
+                                    ArrayUtils.contains(
+                                            new String[]{
+                                                "r1:subject",
+                                                "r1:inReplyTo",
+                                                "r1:references",
+                                                "r1:messageId",
+                                                "r1:content"
+                                            },
+                                            name
+                                    ));
+
+                        }
+
+                        protected void writeText(QuickWriter writer, String text) {
+                            if (cdata) {
+                                writer.write("<![CDATA[");
+                                writer.write(text);
+                                writer.write("]]>");
+                            } else {
+                                writer.write(text);
+                            }
+                        }
+                    };
+                }
+            }
+        );
+        xstream.processAnnotations(MailingListNewEnvelope.class);
+
+        return EventFactory.fixEvent(xstream.toXML(envelope));
 
     }
+
+
+    
 }
