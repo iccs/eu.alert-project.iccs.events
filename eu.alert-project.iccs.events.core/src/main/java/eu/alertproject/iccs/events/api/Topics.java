@@ -29,6 +29,7 @@ public class Topics {
     public static final String ALERT_STARDOM_New_Identity= "ALERT.STARDOM.IdentityNew";
     public static final String ALERT_STARDOM_Issue_Updated= "ALERT.STARDOM.IssueUpdated";
     public static final String ALERT_STARDOM_TextToAnnotate ="ALERT.STARDOM.TextToAnnotate";
+    public static final String ALERT_STARDOM_LoginVerify="ALERT.STARDOM.LoginVerify";
 
 
     public static final String ALERT_ALL_SOCRATES_Issue_Recommendation_Request = "ALERT.*.Recommender.IssueRecommendationRequest";

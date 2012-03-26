@@ -13,11 +13,9 @@ import com.thoughtworks.xstream.io.xml.xppdom.Xpp3Dom;
 import com.thoughtworks.xstream.io.xml.xppdom.Xpp3DomBuilder;
 import eu.alertproject.iccs.events.alert.*;
 import eu.alertproject.iccs.events.socrates.*;
-import eu.alertproject.iccs.events.stardom.StardomIdentityNewEnvelope;
-import eu.alertproject.iccs.events.stardom.StardomIdentityNewPayload;
-import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatePayload;
-import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatedEnvelope;
+import eu.alertproject.iccs.events.stardom.*;
 import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang.StringUtils;
 
 import java.io.Reader;
 import java.io.Writer;
@@ -32,10 +30,29 @@ import java.util.List;
  */
 public class EventFactory {
 
-    private static String fixEvent(String str,boolean appendHeader){
+    private static String fixEvent(String str,boolean appendHeader,String ...namespaces){
+
+
+        String namespacesStr = StringUtils.join(namespaces," ");
+        
+        String namespace = 
+                String.format(
+                "<ns1:event " +
+                    "xmlns:ns1=\"http://www.alert-project.eu/\" " +
+                    "xmlns:o=\"http://www.alert-project.eu/ontoevents-mdservice\" " +
+                "xmlns:r=\"http://www.alert-project.eu/rawevents-forum\" " +
+                "xmlns:r1=\"http://www.alert-project.eu/rawevents-mailinglist\" " +
+                "xmlns:r2=\"http://www.alert-project.eu/rawevents-wiki\" " +
+                "xmlns:s=\"http://www.alert-project.eu/strevents-kesi\" " +
+                "xmlns:sm=\"http://www.alert-project.eu/stardom\" " +
+                "xmlns:s1=\"http://www.alert-project.eu/strevents-keui\" " +
+                "xmlns:sc=\"http://www.alert-project.eu/socrates\" " +
+                "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" " +
+                "xsi:schemaLocation=\"http://www.alert-project.eu/alert-root.xsd\"" +
+                " %s >",namespacesStr);
         
         String eventStr = str.replace("<s:Envelope>","<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:wsnt=\"http://docs.oasis-open.org/wsn/b-2\" xmlns:wsa=\"http://www.w3.org/2005/08/addressing\">");
-        eventStr = eventStr.replace("<ns1:event>","<ns1:event xmlns:ns1=\"http://www.alert-project.eu/\" xmlns:o=\"http://www.alert-project.eu/ontoevents-mdservice\" xmlns:r=\"http://www.alert-project.eu/rawevents-forum\" xmlns:r1=\"http://www.alert-project.eu/rawevents-mailinglist\" xmlns:r2=\"http://www.alert-project.eu/rawevents-wiki\" xmlns:s=\"http://www.alert-project.eu/strevents-kesi\" xmlns:sm=\"http://www.alert-project.eu/stardom\" xmlns:s1=\"http://www.alert-project.eu/strevents-keui\" xmlns:sc=\"http://www.alert-project.eu/socrates\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.alert-project.eu/alert-root.xsd\">");
+        eventStr = eventStr.replace("<ns1:event>",namespace);
 
         if(appendHeader){
             eventStr = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+eventStr;
@@ -92,7 +109,7 @@ public class EventFactory {
         head.setSequenceNumber(sequence);
 
         List<StardomIdentityNewPayload.EventData.Identity> identityList = new ArrayList<StardomIdentityNewPayload.EventData.Identity>();
-        Collections.addAll(identityList,identities);
+        Collections.addAll(identityList, identities);
 
 
         StardomIdentityNewPayload.EventData se = new StardomIdentityNewPayload.EventData();
@@ -156,7 +173,7 @@ public class EventFactory {
 
 
         List<StardomIdentityUpdatePayload.EventData.Identity> identityList = new ArrayList<StardomIdentityUpdatePayload.EventData.Identity>();
-        Collections.addAll(identityList,identities);
+        Collections.addAll(identityList, identities);
 
 
         StardomIdentityUpdatePayload.EventData se = new StardomIdentityUpdatePayload.EventData();
@@ -562,5 +579,81 @@ public class EventFactory {
     }
 
 
-    
+    public static String createStardomLoginVerifyEnvelope(
+            Integer eventId,
+            long start,
+            long end,
+            int sequence,
+            String username,
+            String email,
+            String uuid) {
+
+
+
+        Head head = new Head();
+        head.setSender("STARDOM");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        LoginVerifyPayload.EventData se = new LoginVerifyPayload.EventData();
+
+
+        LoginVerifyPayload.EventData.Login login = new LoginVerifyPayload.EventData.Login();
+        login.setEmail(email);
+        login.setUsername(username);
+        login.setIdentity(new Identity(uuid,null));
+
+        
+        se.setLogin(login);
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_STARDOM_LoginVerify);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
+        meta.setType("Request");
+
+        LoginVerifyPayload payload = new LoginVerifyPayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        LoginVerifyEnvelope.Body.Notify.NotificationMessage.Message.Event event = new LoginVerifyEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+
+
+        LoginVerifyEnvelope.Body.Notify.NotificationMessage.Message message = new LoginVerifyEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/stardom");
+
+        LoginVerifyEnvelope.Body.Notify.NotificationMessage notificationMessage = new LoginVerifyEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_STARDOM_LoginVerify);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+
+        LoginVerifyEnvelope.Body.Notify notify = new LoginVerifyEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+
+        LoginVerifyEnvelope.Body body = new LoginVerifyEnvelope.Body();
+        body.setNotify(notify);
+
+        LoginVerifyEnvelope envelope = new LoginVerifyEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+
+        XStream x = new XStream();
+        x.processAnnotations(LoginVerifyEnvelope.class);
+
+        return EventFactory.fixEvent(
+                x.toXML(envelope),
+                true,
+                "xmlns:as=\"http://www.alert-project.eu/actionservice\""
+        );
+
+
+    }
 }

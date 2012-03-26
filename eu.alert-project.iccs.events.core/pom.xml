@@ -292,7 +292,6 @@
             <artifactId>activemq-camel</artifactId>
         </dependency>
 
-
     </dependencies>
         <repositories>
         <repository>
