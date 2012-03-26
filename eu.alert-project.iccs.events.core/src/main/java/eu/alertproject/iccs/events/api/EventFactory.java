@@ -6,9 +6,7 @@ import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.io.ReaderWrapper;
-import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
-import com.thoughtworks.xstream.io.xml.XppDomDriver;
-import com.thoughtworks.xstream.io.xml.XppDriver;
+import com.thoughtworks.xstream.io.xml.*;
 import com.thoughtworks.xstream.io.xml.xppdom.Xpp3Dom;
 import com.thoughtworks.xstream.io.xml.xppdom.Xpp3DomBuilder;
 import eu.alertproject.iccs.events.alert.*;
@@ -33,7 +31,7 @@ public class EventFactory {
     private static String fixEvent(String str,boolean appendHeader,String ...namespaces){
 
 
-        String namespacesStr = StringUtils.join(namespaces," ");
+        String namespacesStr = " "+StringUtils.join(namespaces," ")+" ";
         
         String namespace = 
                 String.format(
@@ -49,7 +47,7 @@ public class EventFactory {
                 "xmlns:sc=\"http://www.alert-project.eu/socrates\" " +
                 "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" " +
                 "xsi:schemaLocation=\"http://www.alert-project.eu/alert-root.xsd\"" +
-                " %s >",namespacesStr);
+                "%s>",namespacesStr);
         
         String eventStr = str.replace("<s:Envelope>","<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:wsnt=\"http://docs.oasis-open.org/wsn/b-2\" xmlns:wsa=\"http://www.w3.org/2005/08/addressing\">");
         eventStr = eventStr.replace("<ns1:event>",namespace);

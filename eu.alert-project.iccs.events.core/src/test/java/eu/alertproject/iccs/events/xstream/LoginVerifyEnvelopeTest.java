@@ -4,6 +4,7 @@ import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.stardom.LoginVerifyEnvelope;
 import eu.alertproject.iccs.events.stardom.LoginVerifyPayload;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.xml.sax.SAXException;
@@ -62,11 +63,17 @@ public class LoginVerifyEnvelopeTest{
 
 
         String control = IOUtils.toString(this.getClass().getResourceAsStream("/ALERT.Stardom.LoginVerify.xml"));
-        String test = verifyEnvelope;
+
+        System.out.println("===================================");
+        System.out.println(control);
+        System.out.println("===================================");
+        System.out.println(verifyEnvelope);
+        System.out.println("===================================");
+
 
         Assert.assertEquals(
                 control,
-                test
+                verifyEnvelope
         );
 
 
