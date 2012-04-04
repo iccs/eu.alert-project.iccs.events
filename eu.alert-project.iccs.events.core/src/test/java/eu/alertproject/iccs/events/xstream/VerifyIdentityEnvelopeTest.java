@@ -45,6 +45,7 @@ public class VerifyIdentityEnvelopeTest {
         Assert.assertEquals("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1",eventData.getIdentity().getUuid());
         Assert.assertEquals("274",eventData.getIssue().getUuid());
         Assert.assertEquals("owl#1",eventData.getIssue().getBug());
+        Assert.assertEquals("1234",eventData.getPatternId());
 
 
     }
@@ -63,6 +64,7 @@ public class VerifyIdentityEnvelopeTest {
                 1,
                 new Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1",null),
                 new Issue("274","owl#1"),
+                "1234",
                 true);
 
         Assert.assertEquals(

@@ -49,7 +49,7 @@ public class EventFactory {
                 "xsi:schemaLocation=\"http://www.alert-project.eu/alert-root.xsd\"" +
                 "%s>",namespacesStr);
         
-        String eventStr = str.replace("<s:Envelope>","<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:wsnt=\"http://docs.oasis-open.org/wsn/b-2\" xmlns:wsa=\"http://www.w3.org/2005/08/addressing\">");
+        String eventStr = str.replace("<soap:Envelope>","<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:wsnt=\"http://docs.oasis-open.org/wsn/b-2\" xmlns:wsa=\"http://www.w3.org/2005/08/addressing\">");
         eventStr = eventStr.replace("<ns1:event>",namespace);
 
         if(appendHeader){
@@ -409,6 +409,7 @@ public class EventFactory {
             int sequence,
             Identity identity,
             Issue issue,
+            String patternId,
             boolean verified) {
 
         Head head = new Head();
@@ -422,6 +423,7 @@ public class EventFactory {
         se.setIdentity(identity);
         se.setIssue(issue);
         se.setRespone(verified ? "yes":"no");
+        se.setPatternId(patternId);
 
 
         Meta meta = new Meta();

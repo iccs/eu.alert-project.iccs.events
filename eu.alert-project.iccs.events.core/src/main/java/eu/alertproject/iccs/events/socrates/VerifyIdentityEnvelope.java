@@ -12,13 +12,13 @@ import eu.alertproject.iccs.events.api.ProducerReference;
 
 import java.io.Serializable;
 
-@XStreamAlias("s:Envelope")
+@XStreamAlias("soap:Envelope")
 public class VerifyIdentityEnvelope implements Serializable{
 
-    @XStreamAlias("s:Header")
+    @XStreamAlias("soap:Header")
     private String header;
 
-    @XStreamAlias("s:Body")
+    @XStreamAlias("soap:Body")
     private Body body;
 
 

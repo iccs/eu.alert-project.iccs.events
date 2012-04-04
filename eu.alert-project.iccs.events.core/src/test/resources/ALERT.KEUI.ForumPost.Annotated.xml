@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
-    <s:Header></s:Header>
-    <s:Body>
+<soap:Envelope  xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
+    <soap:Header ></soap:Header >
+    <soap:Body >
         <wsnt:Notify>
             <wsnt:NotificationMessage>
                 <wsnt:Topic></wsnt:Topic>
@@ -73,5 +73,5 @@
                 </wsnt:Message>
             </wsnt:NotificationMessage>
         </wsnt:Notify>
-    </s:Body>
-</s:Envelope>
+    </soap:Body >
+</soap:Envelope >

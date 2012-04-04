@@ -49,6 +49,10 @@ public class VerifyIdentityPayload {
 
         @XStreamAlias("sc:response")
         private String respone;
+        
+        @XStreamAlias("sc:patternId")
+        private String patternId;
+
 
         public Issue getIssue() {
             return issue;
@@ -72,6 +76,14 @@ public class VerifyIdentityPayload {
 
         public void setRespone(String respone) {
             this.respone = respone;
+        }
+
+        public String getPatternId() {
+            return patternId;
+        }
+
+        public void setPatternId(String patternId) {
+            this.patternId = patternId;
         }
     }
 

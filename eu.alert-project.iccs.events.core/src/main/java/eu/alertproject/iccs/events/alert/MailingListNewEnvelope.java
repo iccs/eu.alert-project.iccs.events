@@ -13,13 +13,13 @@ import eu.alertproject.iccs.events.api.Topics;
 
 import java.io.Serializable;
 
-@XStreamAlias("s:Envelope")
+@XStreamAlias("soap:Envelope")
 public class MailingListNewEnvelope implements Serializable{
 
-    @XStreamAlias("s:Header")
+    @XStreamAlias("soap:Header")
     private String header;
 
-    @XStreamAlias("s:Body")
+    @XStreamAlias("soap:Body")
     private Body body;
 
 

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2" xmlns:wsa="http://www.w3.org/2005/08/addressing">
-  <s:Header>Header</s:Header>
-  <s:Body>
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soap:Header>Header</soap:Header>
+  <soap:Body>
     <wsnt:Notify>
       <wsnt:NotificationMessage>
         <wsnt:Topic>ALERT.STARDOM.LoginVerify</wsnt:Topic>
@@ -36,5 +36,5 @@
         </wsnt:Message>
       </wsnt:NotificationMessage>
     </wsnt:Notify>
-  </s:Body>
-</s:Envelope>
+  </soap:Body>
+</soap:Envelope>
