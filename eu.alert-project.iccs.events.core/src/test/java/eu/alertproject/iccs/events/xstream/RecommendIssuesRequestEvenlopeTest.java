@@ -85,6 +85,7 @@ public class RecommendIssuesRequestEvenlopeTest {
                                 10001L,
                                 10012L,
                                 1,
+                                null,
                                 identities),
                         IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/ALERT.Recommender.IdentityRecommendation.xml"))
                 );

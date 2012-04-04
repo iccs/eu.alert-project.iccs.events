@@ -45,6 +45,7 @@ public class EventFactory {
                 "xmlns:sm=\"http://www.alert-project.eu/stardom\" " +
                 "xmlns:s1=\"http://www.alert-project.eu/strevents-keui\" " +
                 "xmlns:sc=\"http://www.alert-project.eu/socrates\" " +
+                "xmlns:p=\"http://www.alert-project.eu/panteon\" " +
                 "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" " +
                 "xsi:schemaLocation=\"http://www.alert-project.eu/alert-root.xsd\"" +
                 "%s>",namespacesStr);
@@ -281,6 +282,7 @@ public class EventFactory {
 
     public static String createRecommendationIdentityEvent(
             Integer eventId, long start,long end, int sequence,
+            String patternId,
             List<Identity> identities) {
 
         Head head = new Head();
@@ -291,6 +293,7 @@ public class EventFactory {
 
         RecommendIssuesPayload.EventData se = new RecommendIssuesPayload.EventData();
         se.setIdentities(identities);
+        se.setPatternId(patternId);
 
         Meta meta = new Meta();
         meta.setEventName(Topics.ALERT_SOCRATES_Identity_Recommendation);
@@ -466,7 +469,7 @@ public class EventFactory {
         XStream xstream = new XStream();
         xstream.processAnnotations(VerifyIdentityEnvelope.class);
 
-        return EventFactory.fixEvent(xstream.toXML(envelope));
+        return EventFactory.fixEvent(xstream.toXML(envelope),true,"xmlns:p=\"http://www.alert-project.eu/panteon-events\"");
 
     }
 

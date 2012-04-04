@@ -50,7 +50,7 @@ public class VerifyIdentityPayload {
         @XStreamAlias("sc:response")
         private String respone;
         
-        @XStreamAlias("sc:patternId")
+        @XStreamAlias("p:patternId")
         private String patternId;
 
 

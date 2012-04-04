@@ -43,6 +43,8 @@ public class RecommendIssuesPayload {
         @XStreamAlias("sc:identities")
         private List<Identity> identities;
 
+        @XStreamAlias("p:patternId")
+        private String patternId;
 
         public List<Identity> getIdentities() {
             return identities;
@@ -52,7 +54,13 @@ public class RecommendIssuesPayload {
             this.identities = identities;
         }
 
+        public String getPatternId() {
+            return patternId;
+        }
 
+        public void setPatternId(String patternId) {
+            this.patternId = patternId;
+        }
     }
 
 }

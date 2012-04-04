@@ -55,6 +55,7 @@
                                         <o:bug>owl#4</o:bug>
                                     </sc:issue>
                                 </sc:issues>
+
                             </ns1:eventData>
                         </ns1:payload>
                     </ns1:event>

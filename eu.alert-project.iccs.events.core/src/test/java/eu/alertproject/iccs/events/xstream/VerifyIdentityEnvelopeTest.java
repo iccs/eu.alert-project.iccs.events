@@ -20,9 +20,6 @@ public class VerifyIdentityEnvelopeTest {
     @Test
     public void serialize() throws IOException {
 
-        XStream xstream = new XStream();
-        xstream.processAnnotations(VerifyIdentityEnvelope.class);
-
         String s = IOUtils.toString(VerifyIdentityEnvelopeTest.class.getResourceAsStream("/ALERT.ALL.Recommender.VerifyIdentitiesRequest.xml"));
 
         VerifyIdentityEnvelope o = EventFactory.<VerifyIdentityEnvelope>fromXml(s,VerifyIdentityEnvelope.class);
