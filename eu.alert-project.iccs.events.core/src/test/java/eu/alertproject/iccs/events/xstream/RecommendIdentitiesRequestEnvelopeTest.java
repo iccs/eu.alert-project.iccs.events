@@ -34,8 +34,7 @@ public class RecommendIdentitiesRequestEnvelopeTest {
         XStream xstream = new XStream();
         xstream.processAnnotations(RecommendIdentityEnvelope.class);
 
-//        String s = IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/ALERT.ALL.Recommender.IdentitiesRecommendationRequest.xml"));
-        String s = IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/fzi.xml"));
+        String s = IOUtils.toString(RecommendIdentitiesRequestEnvelopeTest.class.getResourceAsStream("/ALERT.ALL.Recommender.IdentitiesRecommendationRequest.xml"));
 
         RecommendIdentityEnvelope o =EventFactory
                         .<RecommendIdentityEnvelope>fromXml(s, RecommendIdentityEnvelope.class);

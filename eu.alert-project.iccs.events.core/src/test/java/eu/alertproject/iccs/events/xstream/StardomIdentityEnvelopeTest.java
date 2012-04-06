@@ -1,7 +1,7 @@
 package eu.alertproject.iccs.events.xstream;
 
-import eu.alertproject.iccs.events.IdentityPersons;
 import eu.alertproject.iccs.events.api.EventFactory;
+import eu.alertproject.iccs.events.stardom.IdentityPersons;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewEnvelope;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewPayload;
 import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatePayload;
@@ -18,11 +18,9 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Created by IntelliJ IDEA.
  * User: fotis
  * Date: 13/03/12
  * Time: 13:44
- * To change this template use File | Settings | File Templates.
  */
 public class StardomIdentityEnvelopeTest {
 
@@ -95,10 +93,11 @@ public class StardomIdentityEnvelopeTest {
     public void testDeSerializeIdentityNew() throws ClassNotFoundException, IOException {
 
         StardomIdentityNewEnvelope o =
-                EventFactory.<StardomIdentityNewEnvelope>fromXml(
+                EventFactory.fromXml(
                         IOUtils.toString(this.getClass().getResourceAsStream("/ALERT.Stardom.IdentityNew.xml")),
                         StardomIdentityNewEnvelope.class
                 );
+
 
         List<StardomIdentityNewPayload.EventData.Identity> identities = o.getBody()
                 .getNotify()

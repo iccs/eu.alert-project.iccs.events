@@ -1,9 +1,6 @@
 package eu.alertproject.iccs.events.activemq;
 
-import eu.alertproject.iccs.events.IdentityPersons;
-import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.api.Topics;
-import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatePayload;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +16,6 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
 import java.io.IOException;
-import java.util.Arrays;
 
 /**
  * User: fotis

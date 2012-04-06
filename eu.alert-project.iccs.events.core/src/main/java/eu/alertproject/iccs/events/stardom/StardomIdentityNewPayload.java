@@ -1,7 +1,6 @@
 package eu.alertproject.iccs.events.stardom;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import eu.alertproject.iccs.events.IdentityPersons;
 import eu.alertproject.iccs.events.api.Meta;
 
 import javax.xml.bind.annotation.XmlAccessType;

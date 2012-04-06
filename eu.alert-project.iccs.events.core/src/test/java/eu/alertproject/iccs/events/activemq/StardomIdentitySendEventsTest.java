@@ -1,18 +1,12 @@
 package eu.alertproject.iccs.events.activemq;
 
-import eu.alertproject.iccs.events.IdentityPersons;
+import eu.alertproject.iccs.events.stardom.IdentityPersons;
 import eu.alertproject.iccs.events.api.EventFactory;
 import eu.alertproject.iccs.events.stardom.StardomIdentityNewPayload;
-import eu.alertproject.iccs.events.stardom.StardomIdentityUpdatePayload;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.jms.JMSException;
 import javax.jms.Message;

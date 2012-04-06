@@ -469,7 +469,7 @@ public class EventFactory {
         XStream xstream = new XStream();
         xstream.processAnnotations(VerifyIdentityEnvelope.class);
 
-        return EventFactory.fixEvent(xstream.toXML(envelope),true,"xmlns:p=\"http://www.alert-project.eu/panteon-events\"");
+        return EventFactory.fixEvent(xstream.toXML(envelope));
 
     }
 
