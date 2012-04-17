@@ -24,6 +24,28 @@
               </ns1:meta>
               <ns1:eventData>
                 <sc:identities>
+                  <sc:issue>
+                    <sc:id>274</sc:id>
+                    <o:bug>owl#1</o:bug>
+                  </sc:issue>
+                  <sc:identity>
+                    <sc:uuid>51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1</sc:uuid>
+                    <sc:name>Fotis</sc:name>
+                  </sc:identity>
+                  <sc:identity>
+                    <sc:uuid>51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e3</sc:uuid>
+                    <sc:name>John</sc:name>
+                  </sc:identity>
+                  <sc:identity>
+                    <sc:uuid>51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e4</sc:uuid>
+                    <sc:name>Messi</sc:name>
+                  </sc:identity>
+                </sc:identities>
+                <sc:identities>
+                  <sc:issue>
+                    <sc:id>2050</sc:id>
+                    <o:bug>owl#2</o:bug>
+                  </sc:issue>
                   <sc:identity>
                     <sc:uuid>51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1</sc:uuid>
                     <sc:name>Fotis</sc:name>

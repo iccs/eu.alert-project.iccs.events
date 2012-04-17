@@ -1,6 +1,7 @@
 package eu.alertproject.iccs.events.socrates;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import eu.alertproject.iccs.events.api.Meta;
 
 import java.io.Serializable;
@@ -40,17 +41,17 @@ public class RecommendIssuesPayload {
 
     public static class EventData implements Serializable {
 
-        @XStreamAlias("sc:identities")
-        private List<Identity> identities;
+        @XStreamImplicit(itemFieldName = "sc:identities")
+        private List<IssueIdentities> identities;
 
         @XStreamAlias("p:patternId")
         private String patternId;
 
-        public List<Identity> getIdentities() {
+        public List<IssueIdentities> getIssueIdentities() {
             return identities;
         }
 
-        public void setIdentities(List<Identity> identities) {
+        public void setIssueIdentities(List<IssueIdentities> identities) {
             this.identities = identities;
         }
 

@@ -2,13 +2,10 @@ package eu.alertproject.iccs.events.api;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.core.util.QuickWriter;
-import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.io.ReaderWrapper;
 import com.thoughtworks.xstream.io.xml.*;
-import com.thoughtworks.xstream.io.xml.xppdom.Xpp3Dom;
-import com.thoughtworks.xstream.io.xml.xppdom.Xpp3DomBuilder;
 import eu.alertproject.iccs.events.alert.*;
 import eu.alertproject.iccs.events.socrates.*;
 import eu.alertproject.iccs.events.stardom.*;
@@ -283,7 +280,7 @@ public class EventFactory {
     public static String createRecommendationIdentityEvent(
             Integer eventId, long start,long end, int sequence,
             String patternId,
-            List<Identity> identities) {
+            List<IssueIdentities> identities) {
 
         Head head = new Head();
         head.setSender("SOCRATES");
@@ -292,7 +289,7 @@ public class EventFactory {
 
 
         RecommendIssuesPayload.EventData se = new RecommendIssuesPayload.EventData();
-        se.setIdentities(identities);
+        se.setIssueIdentities(identities);
         se.setPatternId(patternId);
 
         Meta meta = new Meta();
