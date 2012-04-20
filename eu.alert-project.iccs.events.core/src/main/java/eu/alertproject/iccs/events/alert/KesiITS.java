@@ -43,7 +43,7 @@ public class KesiITS implements Serializable {
     private ComputerSystem computerSystem;
 
     @XStreamAlias("s:issuePriority")
-    private Integer priority;
+    private String priority;
 
     @XStreamAlias("s:issueSeverity")
     private String severity;
@@ -52,8 +52,8 @@ public class KesiITS implements Serializable {
     @XStreamAlias("s:issueAssignedTo")
     private Author assignedTo;
 
-    @XStreamAlias("s:issueCCPerson")
-    private Author ccPerson;
+    @XStreamImplicit(itemFieldName = "s:issueCCPerson")
+    private List<Author> ccPerson;
 
     @XStreamAlias("s:issueUrl")
     private String url;
@@ -87,8 +87,8 @@ public class KesiITS implements Serializable {
     @XStreamImplicit(itemFieldName="s:issueAttachment")
     private List<Attachement> attachements;
 
-    @XStreamAlias("s:issueActivity")
-    private Activity activity;
+    @XStreamImplicit(itemFieldName = "s:issueActivity")
+    private List<Activity> activity;
 
     @XStreamAlias("s:issueTracker")
     private Tracker tracker;
@@ -157,11 +157,11 @@ public class KesiITS implements Serializable {
         this.computerSystem = computerSystem;
     }
 
-    public Integer getPriority() {
+    public String getPriority() {
         return priority;
     }
 
-    public void setPriority(Integer priority) {
+    public void setPriority(String priority) {
         this.priority = priority;
     }
 
@@ -181,11 +181,11 @@ public class KesiITS implements Serializable {
         this.assignedTo = assignedTo;
     }
 
-    public Author getCcPerson() {
+    public List<Author> getCcPerson() {
         return ccPerson;
     }
 
-    public void setCcPerson(Author ccPerson) {
+    public void setCcPerson(List<Author> ccPerson) {
         this.ccPerson = ccPerson;
     }
 
@@ -269,11 +269,11 @@ public class KesiITS implements Serializable {
         this.attachements = attachements;
     }
 
-    public Activity getActivity() {
+    public List<Activity> getActivity() {
         return activity;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(List<Activity> activity) {
         this.activity = activity;
     }
 
@@ -295,6 +295,12 @@ public class KesiITS implements Serializable {
         
         @XStreamAlias("s:issueTrackerURL")
         private String url;
+
+        @XStreamAlias("type")
+        private String type1;
+
+        @XStreamAlias("URI")
+        private String url1;
 
         public Integer getId() {
             return id;
@@ -324,9 +330,15 @@ public class KesiITS implements Serializable {
 
     public static class Activity implements Serializable{
 
-        @XStreamAlias("s:activityId")
-        private Integer id;
-        
+        @XStreamAlias("s:activityAdded")
+        private String activityAdded;
+
+        @XStreamAlias("s:activityRemoved")
+        private String activityRemoved;
+
+        @XStreamAlias("s:activityWhat")
+        private String activityWhat;
+
         @XStreamAlias("s:activityWho")
         private String who;
         
@@ -334,17 +346,6 @@ public class KesiITS implements Serializable {
         @XStreamConverter(KESIDateConverter.class)
         private Date date;
         
-        @XStreamImplicit(itemFieldName="s:activityWRA")
-        private List<ActivityWRA> activityWRAs;
-
-        public Integer getId() {
-            return id;
-        }
-
-        public void setId(Integer id) {
-            this.id = id;
-        }
-
         public String getWho() {
             return who;
         }
@@ -361,49 +362,30 @@ public class KesiITS implements Serializable {
             this.date = date;
         }
 
-        public List<ActivityWRA> getActivityWRAs() {
-            return activityWRAs;
+        public String getActivityAdded() {
+            return activityAdded;
         }
 
-        public void setActivityWRAs(List<ActivityWRA> activityWRAs) {
-            this.activityWRAs = activityWRAs;
+        public void setActivityAdded(String activityAdded) {
+            this.activityAdded = activityAdded;
         }
 
-        public static class ActivityWRA implements Serializable{
-            
-            @XStreamAlias("s:activityWhat")
-            private String what;
-            
-            @XStreamAlias("s:activityRemoved")
-            private String removed;
-            
-            @XStreamAlias("s:activityAdded")
-            private String added;
-
-            public String getWhat() {
-                return what;
-            }
-
-            public void setWhat(String what) {
-                this.what = what;
-            }
-
-            public String getRemoved() {
-                return removed;
-            }
-
-            public void setRemoved(String removed) {
-                this.removed = removed;
-            }
-
-            public String getAdded() {
-                return added;
-            }
-
-            public void setAdded(String added) {
-                this.added = added;
-            }
+        public String getActivityRemoved() {
+            return activityRemoved;
         }
+
+        public void setActivityRemoved(String activityRemoved) {
+            this.activityRemoved = activityRemoved;
+        }
+
+        public String getActivityWhat() {
+            return activityWhat;
+        }
+
+        public void setActivityWhat(String activityWhat) {
+            this.activityWhat = activityWhat;
+        }
+
     }
 
 

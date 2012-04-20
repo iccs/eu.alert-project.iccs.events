@@ -76,8 +76,8 @@ public class ItsNewAnnotatedEnvelopeTest {
         Assert.assertEquals("http://ailab.ijs.si/alert/resource/r17650",commentTextConcepts.get(6).getUri());
         Assert.assertEquals(1,commentTextConcepts.get(6).getWeight(),0);
 
-        Assert.assertEquals(7805,keui.getItemId(),0);
-        Assert.assertEquals(12,keui.getThreadId(),0);
+        Assert.assertEquals(7805,keui.getItemId().iterator().next(),0);
+        Assert.assertEquals(12,keui.getThreadId().iterator().next(),0);
 
     }
 
@@ -90,11 +90,11 @@ public class ItsNewAnnotatedEnvelopeTest {
         Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Component1",mdService.getProduct().getComponentUri().trim());
         Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#ComputerSystem1",mdService.getCommputerSystem().getUri().trim());
         Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person2",mdService.getAssignedToUri().trim());
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person3",mdService.getCcPersonUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person3",mdService.getCcPersonUri().iterator().next().trim());
         Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#Bug2",mdService.getDependsOnUri().trim());
         Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#Bug3",mdService.getBlocksUri().trim());
-        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment1",mdService.getComment().getUri().trim());
-        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person1",mdService.getComment().getPersonUri().trim());
+        Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment1",mdService.getComment().iterator().next().getUri().trim());
+        Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_scm.owl#Person1",mdService.getComment().iterator().next().getPersonUri().trim());
         Assert.assertEquals("http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Attachment1",mdService.getAttachment().getUri().trim());
         Assert.assertEquals("http://www.alert-project.eu/ontologies/alert_its.owl#IssueTracker1",mdService.getTracker().getUri().trim());
 
@@ -127,7 +127,7 @@ public class ItsNewAnnotatedEnvelopeTest {
             //<s:computerSystemOS>Linux</s:computerSystemOS>;
         Assert.assertEquals("Linux",kesi.getComputerSystem().getOs());
         //<s:issuePriority>4</s:issuePriority>;
-        Assert.assertEquals(4,kesi.getPriority(),0);
+        Assert.assertEquals("4",kesi.getPriority());
 
         //<s:issueSeverity>Blocker</s:issueSeverity>;
         Assert.assertEquals("Blocker",kesi.getSeverity());
@@ -142,11 +142,11 @@ public class ItsNewAnnotatedEnvelopeTest {
         //</s:issueAssignedTo>
         //<s:issueCCPerson>
             //<s:name>Angel Blue</s:name>;
-        Assert.assertEquals("Angel Blue",kesi.getCcPerson().getName());
+        Assert.assertEquals("Angel Blue",kesi.getCcPerson().iterator().next().getName());
             //<s:id>angel_blue_co2004@yahoo.com</s:id>;
-        Assert.assertEquals("angel_blue_co2004@yahoo.com",kesi.getCcPerson().getId());
+        Assert.assertEquals("angel_blue_co2004@yahoo.com",kesi.getCcPerson().iterator().next().getId());
             //<s:email>angel_blue_co2004@yahoo.com</s:email>;
-        Assert.assertEquals("angel_blue_co2004@yahoo.com",kesi.getCcPerson().getEmail());
+        Assert.assertEquals("angel_blue_co2004@yahoo.com",kesi.getCcPerson().iterator().next().getEmail());
         //</s:issueCCPerson>
         //<s:issueUrl>https://bugs.kde.org/show_bug.cgi?id=184671</s:issueUrl>;
         Assert.assertEquals("https://bugs.kde.org/show_bug.cgi?id=184671",kesi.getUrl());

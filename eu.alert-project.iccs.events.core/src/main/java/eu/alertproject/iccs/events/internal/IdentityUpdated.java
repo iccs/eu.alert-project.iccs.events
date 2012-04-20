@@ -10,7 +10,15 @@ import java.util.Map;
  */
 public class IdentityUpdated extends ArtefactUpdated{
     private Map<String, Double> cis;
+    private String name;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Map<String, Double> getCis() {
         return cis;

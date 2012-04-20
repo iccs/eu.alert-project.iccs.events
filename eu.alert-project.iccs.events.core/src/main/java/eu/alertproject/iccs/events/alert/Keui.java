@@ -1,12 +1,16 @@
 package eu.alertproject.iccs.events.alert;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 import java.util.List;
 
 
 public class Keui{
             
+    @XStreamImplicit(itemFieldName = "s1:issueComment")
+    private List<Comment> issueComment;
+
     @XStreamAlias("s1:textAnnotated")
     private String textAnnotated;
 
@@ -19,6 +23,9 @@ public class Keui{
     @XStreamAlias("s1:issueDescriptionConcepts")
     private List<Concept> issueDescriptionConcepts;
 
+    @XStreamAlias("s1:issueDescriptionReferences")
+    private List<References> issueDescriptionReferences;
+
     @XStreamAlias("s1:commentTextAnnotated")
     private String commentTextAnnotated;
 
@@ -27,6 +34,9 @@ public class Keui{
 
     @XStreamAlias("s1:contentAnnotated")
     private String contentAnnotated;
+
+    @XStreamAlias("s1:contentReferences")
+    private List<References> contentReferences;
 
     @XStreamAlias("s1:contentConcepts")
     private List<Concept> contentConcepts;
@@ -44,12 +54,23 @@ public class Keui{
     @XStreamAlias("s1:subjectConcepts")
     private List<Concept> subjectConcepts;
 
+    @XStreamAlias("s1:subjectReferences")
+    private List<References> subjectReferences;
 
-    @XStreamAlias("s1:itemId")
-    private Integer itemId;
 
-    @XStreamAlias("s1:threadId")
-    private Integer threadId;
+    @XStreamImplicit(itemFieldName = "s1:itemId")
+    private List<Integer> itemId;
+
+    @XStreamImplicit(itemFieldName = "s1:threadId")
+    private List<Integer> threadId;
+
+    public List<Comment> getIssueComment() {
+        return issueComment;
+    }
+
+    public void setIssueComment(List<Comment> issueComment) {
+        this.issueComment = issueComment;
+    }
 
     public String getTextAnnotated() {
         return textAnnotated;
@@ -83,6 +104,14 @@ public class Keui{
         this.issueDescriptionConcepts = issueDescriptionConcepts;
     }
 
+    public List<References> getIssueDescriptionReferences() {
+        return issueDescriptionReferences;
+    }
+
+    public void setIssueDescriptionReferences(List<References> issueDescriptionReferences) {
+        this.issueDescriptionReferences = issueDescriptionReferences;
+    }
+
     public String getCommentTextAnnotated() {
         return commentTextAnnotated;
     }
@@ -101,6 +130,14 @@ public class Keui{
 
     public String getContentAnnotated() {
         return contentAnnotated;
+    }
+
+    public List<References> getContentReferences() {
+        return contentReferences;
+    }
+
+    public void setContentReferences(List<References> contentReferences) {
+        this.contentReferences = contentReferences;
     }
 
     public void setContentAnnotated(String contentAnnotated) {
@@ -147,19 +184,27 @@ public class Keui{
         this.subjectConcepts = subjectConcepts;
     }
 
-    public Integer getItemId() {
+    public List<References> getSubjectReferences() {
+        return subjectReferences;
+    }
+
+    public void setSubjectReferences(List<References> subjectReferences) {
+        this.subjectReferences = subjectReferences;
+    }
+
+    public List<Integer> getItemId() {
         return itemId;
     }
 
-    public void setItemId(Integer itemId) {
+    public void setItemId(List<Integer> itemId) {
         this.itemId = itemId;
     }
 
-    public Integer getThreadId() {
+    public List<Integer> getThreadId() {
         return threadId;
     }
 
-    public void setThreadId(Integer threadId) {
+    public void setThreadId(List<Integer> threadId) {
         this.threadId = threadId;
     }
 
@@ -186,6 +231,69 @@ public class Keui{
 
         public void setWeight(Integer weight) {
             this.weight = weight;
+        }
+    }
+
+
+    public static class Comment{
+
+        @XStreamAlias("s1:itemId")
+        public Integer itemId;
+
+        @XStreamAlias("s1:commentTextAnnotated")
+        public String annotatedText;
+
+        @XStreamAlias("s1:commentTextConcepts")
+        public List<Concept> concepts;
+
+        @XStreamAlias("s1:commentTextReferences")
+        private List<References> references;
+
+        public Integer getItemId() {
+            return itemId;
+        }
+
+        public void setItemId(Integer itemId) {
+            this.itemId = itemId;
+        }
+
+        public String getAnnotatedText() {
+            return annotatedText;
+        }
+
+        public void setAnnotatedText(String annotatedText) {
+            this.annotatedText = annotatedText;
+        }
+
+        public List<Concept> getConcepts() {
+            return concepts;
+        }
+
+        public void setConcepts(List<Concept> concepts) {
+            this.concepts = concepts;
+        }
+
+
+        public List<References> getReferences() {
+            return references;
+        }
+
+        public void setReferences(List<References> references) {
+            this.references = references;
+        }
+        
+    }
+    @XStreamAlias("s1:referenceUri")
+    public static class References{
+
+        private String references;
+
+        public String getReferences() {
+            return references;
+        }
+
+        public void setReferences(String references) {
+            this.references = references;
         }
     }
 }

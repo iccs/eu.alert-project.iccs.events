@@ -16,8 +16,8 @@ public class MdServiceITS {
     @XStreamAlias("o:issueUri")
     private String uri;
     
-    @XStreamAlias("o:issueComment")
-    private Comment comment;
+    @XStreamImplicit(itemFieldName = "o:issueComment")
+    private List<Comment> comment;
 
     @XStreamImplicit(itemFieldName = "o:issueActivity")
     private List<Activity> activity;
@@ -34,8 +34,8 @@ public class MdServiceITS {
     @XStreamAlias("o:issueAssignedToUri")
     private String assignedToUri;
     
-    @XStreamAlias("o:issueCCPersonUri")
-    private String ccPersonUri;
+    @XStreamImplicit(itemFieldName = "o:issueCCPersonUri")
+    private List<String> ccPersonUri;
 
     @XStreamAlias("o:issueDependsOnUri")
     private String dependsOnUri;
@@ -48,6 +48,9 @@ public class MdServiceITS {
     
     @XStreamAlias("o:issueTracker")
     private Tracker tracker;
+    
+    @XStreamAlias("o:issueMilestone")
+    private Milestone milestone; 
 
     public String getUri() {
         return uri;
@@ -57,11 +60,11 @@ public class MdServiceITS {
         this.uri = uri;
     }
 
-    public Comment getComment() {
+    public List<Comment> getComment() {
         return comment;
     }
 
-    public void setComment(Comment comment) {
+    public void setComment(List<Comment> comment) {
         this.comment = comment;
     }
 
@@ -105,11 +108,11 @@ public class MdServiceITS {
         this.assignedToUri = assignedToUri;
     }
 
-    public String getCcPersonUri() {
+    public List<String> getCcPersonUri() {
         return ccPersonUri;
     }
 
-    public void setCcPersonUri(String ccPersonUri) {
+    public void setCcPersonUri(List<String> ccPersonUri) {
         this.ccPersonUri = ccPersonUri;
     }
 
@@ -173,7 +176,7 @@ public class MdServiceITS {
     
     public static class CommputerSystem{
 
-        @XStreamAlias("o:computerSystemUri")
+        @XStreamAlias("o:issueComputerSystemUri")
         private String uri;
 
         public String getUri() {
@@ -258,6 +261,20 @@ public class MdServiceITS {
 
         public void setPersonUri(String personUri) {
             this.personUri = personUri;
+        }
+    }
+    
+    public static class Milestone{
+
+        @XStreamAlias("o:issueMilestoneUri")
+        private String uri;
+
+        public String getUri() {
+            return uri;
+        }
+
+        public void setUri(String uri) {
+            this.uri = uri;
         }
     }
     
