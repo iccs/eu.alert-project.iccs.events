@@ -9,7 +9,7 @@ public class Topics {
 
 
     public static final String ICCS_STARDOM_Identity_Updated= "ICCS.IdentityUpdated";
-    public static final String ICCS_STARDOM_Issue_Updated= "ICCS.IdentityNew";
+    public static final String ICCS_STARDOM_Issue_Updated= "ICCS.IssueUpdated";
 
 
     public static final String ALERT_STARDOM_Identity_Updated= "ALERT.STARDOM.IdentityUpdated";
