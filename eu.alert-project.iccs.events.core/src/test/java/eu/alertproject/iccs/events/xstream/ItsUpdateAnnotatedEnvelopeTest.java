@@ -23,6 +23,7 @@ public class ItsUpdateAnnotatedEnvelopeTest {
     public void desirialize() throws IOException {
         
         String s = IOUtils.toString(ItsUpdateAnnotatedEnvelopeTest.class.getResourceAsStream("/ALERT.KEUI.IssueUpdate.Annotated.xml"));
+//        String s = IOUtils.toString(ItsUpdateAnnotatedEnvelopeTest.class.getResourceAsStream("/ALERT.KESI.IssueUpdated.xml"));
         IssueUpdateAnnotatedPayload.EventData eventData = EventFactory
                 .<IssueUpdateAnnotatedEnvelope>fromXml(s, IssueUpdateAnnotatedEnvelope.class)
                 .getBody()

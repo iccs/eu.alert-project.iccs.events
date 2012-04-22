@@ -176,7 +176,7 @@ public class EventFactory {
         se.setIdentities(identityList);
 
         Meta meta = new Meta();
-        meta.setEventName(Topics.ALERT_STARDOM_Issue_Updated);
+        meta.setEventName(Topics.ALERT_STARDOM_Identity_Updated);
         meta.setStartTime(start);
         meta.setEndTime(end);
         meta.setEventId(eventId);
@@ -198,7 +198,7 @@ public class EventFactory {
         producerReference.setAddress("http://www.alert-project.eu/stardom");
 
         StardomIdentityUpdatedEnvelope.Body.Notify.NotificationMessage notificationMessage = new StardomIdentityUpdatedEnvelope.Body.Notify.NotificationMessage();
-        notificationMessage.setTopic(Topics.ALERT_STARDOM_Issue_Updated);
+        notificationMessage.setTopic(Topics.ALERT_STARDOM_Identity_Updated);
         notificationMessage.setProducerReference(producerReference);
         notificationMessage.setMessage(message);
 

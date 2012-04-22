@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
+    <soap:Header></soap:Header>
+    <soap:Body>
+        <wsnt:Notify>
+            <wsnt:NotificationMessage>
+                <wsnt:Topic></wsnt:Topic>
+                <wsnt:ProducerReference>
+                    <wsa:Address>http://www.alert-project.eu/metadata</wsa:Address>
+                </wsnt:ProducerReference>
+                <wsnt:Message>
+                    <ns1:event xmlns:ns1="http://www.alert-project.eu/" xmlns:o="http://www.alert-project.eu/ontoevents-mdservice" xmlns:r="http://www.alert-project.eu/rawevents-forum" xmlns:r1="http://www.alert-project.eu/rawevents-mailinglist" xmlns:r2="http://www.alert-project.eu/rawevents-wiki" xmlns:s="http://www.alert-project.eu/strevents-kesi" xmlns:s1="http://www.alert-project.eu/strevents-keui" xmlns:sm="http://www.alert-project.eu/stardom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.alert-project.eu/alert-root.xsd">
+                        <ns1:head>
+                            <ns1:sender>METADATASERVICE</ns1:sender>
+                            <ns1:timestamp>10003</ns1:timestamp>
+                            <ns1:sequencenumber>1</ns1:sequencenumber>
+                        </ns1:head>
+                        <ns1:payload>
+                            <ns1:meta>
+                                <ns1:startTime>10010</ns1:startTime>
+                                <ns1:endTime>10020</ns1:endTime>
+                                <ns1:eventName>ALERT.KEUI.IssueNew</ns1:eventName>
+                                <ns1:eventId>5748</ns1:eventId>
+                                <ns1:eventType>reply</ns1:eventType>
+                            </ns1:meta>
+                            <ns1:eventData>
+                                <s:kesi>
+    <s:issueActivity>
+        <s:activityAdded>drf54321</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2008-11-01 14:15:23.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>NEW</s:activityAdded>
+        <s:activityRemoved>UNCONFIRMED</s:activityRemoved>
+        <s:activityWhat>status</s:activityWhat>
+        <s:activityWhen>2008-11-01 14:15:23.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>1</s:activityAdded>
+        <s:activityRemoved>0</s:activityRemoved>
+        <s:activityWhat>Ever confirmed</s:activityWhat>
+        <s:activityWhen>2008-11-01 14:15:23.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>powerdevil-daemon</s:activityAdded>
+        <s:activityRemoved>general</s:activityRemoved>
+        <s:activityWhat>Component</s:activityWhat>
+        <s:activityWhen>2008-11-15 12:27:42.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>solid</s:activityAdded>
+        <s:activityRemoved>powerdevil</s:activityRemoved>
+        <s:activityWhat>Product</s:activityWhat>
+        <s:activityWhen>2008-11-15 12:27:42.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>bymenda</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2008-12-23 21:00:10.0</s:activityWhen>
+        <s:activityWho>bymenda</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>sven.burmeister</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2008-12-29 13:59:59.0</s:activityWhen>
+        <s:activityWho>sven.burmeister</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>ASSIGNED</s:activityAdded>
+        <s:activityRemoved>NEW</s:activityRemoved>
+        <s:activityWhat>status</s:activityWhat>
+        <s:activityWhen>2008-12-30 12:40:19.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>bluedzins</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2008-12-31 08:29:54.0</s:activityWhen>
+        <s:activityWho>bluedzins</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>andreas</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2009-01-31 19:39:28.0</s:activityWhen>
+        <s:activityWho>None</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>naught101</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2009-04-07 12:27:11.0</s:activityWhen>
+        <s:activityWho>naught101</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>szepesvari.david</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2009-09-14 05:36:03.0</s:activityWhen>
+        <s:activityWho>szepesvari.david</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>RESOLVED</s:activityAdded>
+        <s:activityRemoved>ASSIGNED</s:activityRemoved>
+        <s:activityWhat>status</s:activityWhat>
+        <s:activityWhen>2009-10-11 16:21:05.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>FIXED</s:activityAdded>
+        <s:activityRemoved>---</s:activityRemoved>
+        <s:activityWhat>resolution</s:activityWhat>
+        <s:activityWhen>2009-10-11 16:21:05.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>senjas</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2010-04-12 21:17:48.0</s:activityWhen>
+        <s:activityWho>senjas</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>REOPENED</s:activityAdded>
+        <s:activityRemoved>RESOLVED</s:activityRemoved>
+        <s:activityWhat>status</s:activityWhat>
+        <s:activityWhen>2010-05-03 03:09:14.0</s:activityWhen>
+        <s:activityWho>alex</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>---</s:activityAdded>
+        <s:activityRemoved>FIXED</s:activityRemoved>
+        <s:activityWhat>resolution</s:activityWhat>
+        <s:activityWhen>2010-05-03 03:09:14.0</s:activityWhen>
+        <s:activityWho>alex</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>CaptainSifff</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2010-08-07 21:20:58.0</s:activityWhen>
+        <s:activityWho>CaptainSifff</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>powermanagement-daemon</s:activityAdded>
+        <s:activityRemoved>powerdevil-daemon</s:activityRemoved>
+        <s:activityWhat>Component</s:activityWhat>
+        <s:activityWhen>2010-10-02 12:49:25.0</s:activityWhen>
+        <s:activityWho>ervin</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>piekarzarkadiusz</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2010-11-08 10:39:54.0</s:activityWhen>
+        <s:activityWho>piekarzarkadiusz</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>RESOLVED</s:activityAdded>
+        <s:activityRemoved>REOPENED</s:activityRemoved>
+        <s:activityWhat>status</s:activityWhat>
+        <s:activityWhen>2010-11-09 13:24:48.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueActivity>
+        <s:activityAdded>FIXED</s:activityAdded>
+        <s:activityRemoved>---</s:activityRemoved>
+        <s:activityWhat>resolution</s:activityWhat>
+        <s:activityWhen>2010-11-09 13:24:48.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueAssignedTo>
+        <s:email>drf</s:email>
+        <s:name>Dario Freddi</s:name>
+        <s:id>drf</s:id>
+    </s:issueAssignedTo>
+    <s:issueCCPerson>
+        <s:email>sven.burmeister</s:email>
+        <s:name>S. Burmeister</s:name>
+        <s:id>sven.burmeister</s:id>
+    </s:issueCCPerson>
+    <s:issueCCPerson>
+        <s:email>drf</s:email>
+        <s:name>Dario Freddi</s:name>
+        <s:id>drf</s:id>
+    </s:issueCCPerson>
+    <s:issueCCPerson>
+        <s:email>None</s:email>
+        <s:name>None</s:name>
+        <s:id>andreas</s:id>
+    </s:issueCCPerson>
+    <s:issueCCPerson>
+        <s:email>bymenda</s:email>
+        <s:name>Rafa Mu?oz C?rdenas</s:name>
+        <s:id>bymenda</s:id>
+    </s:issueCCPerson>
+    <s:issueCCPerson>
+        <s:email>bluedzins</s:email>
+        <s:name>Maciej Pilichowski</s:name>
+        <s:id>bluedzins</s:id>
+    </s:issueCCPerson>
+    <s:issueCCPerson>
+        <s:email>naught101</s:email>
+        <s:name>ned</s:name>
+        <s:id>naught101</s:id>
+    </s:issueCCPerson>
+    <s:issueCCPerson>
+        <s:email>szepesvari.david</s:email>
+        <s:name>David</s:name>
+        <s:id>szepesvari.david</s:id>
+    </s:issueCCPerson>
+    <s:issueCCPerson>
+        <s:email>senjas</s:email>
+        <s:name>Andrey</s:name>
+        <s:id>senjas</s:id>
+    </s:issueCCPerson>
+    <s:issueCCPerson>
+        <s:email>CaptainSifff</s:email>
+        <s:name>Florian Goth</s:name>
+        <s:id>CaptainSifff</s:id>
+    </s:issueCCPerson>
+    <s:issueCCPerson>
+        <s:email>piekarzarkadiusz</s:email>
+        <s:name>Arkadiusz Piekarz</s:name>
+        <s:id>piekarzarkadiusz</s:id>
+    </s:issueCCPerson>
+    <s:issueComment>
+        <s:commentText>Version:            (using KDE 4.1.2)
+ OS:                Linux
+ Installed from:    SuSE RPMs
+
+ Currently, Powerdevil will set the brightness of the screen to a certain level according to the profile that corresponds to the battery state.  This is fine... for most situations.  However, there are some situations where it runs counter to what the user obviously wants.
+
+ Key point:
+ If I have lowered the brightness of my screen (to reduce glare, or because it ' s dark), and my battery level lowers enough to trigger a new Powerdevil profile, the brightness will be _set_ to the level specified by the profile, which is, in most cases, _higher_ than what I had set it to manually.  This obviously runs /counter/ to preserving battery life, as the screen suddenly becomes _brighter_.
+
+ Suggested solution:
+ I feel that it would be better for Powerdevil to first check if the brightness level is already lower than that of the next profile, and if it is, not to set the brightness.
+ Alternatively, it would be even nicer if the brightness slider had an  " advanced "  option showing a max setting for brightness, allowing one to set the max end of the range of possible brightness for a profile, the default one being specified by the normal slider.  This would be difficult to be done in a nice-UI fashion, but might offer just the right level of flexibility most users would want in this situation.  (As a disclaimer, whatever solution taken is obviously up to the developer, I ' m just throwing out ideas.)</s:commentText>
+        <s:commentPerson>
+            <s:email>alex</s:email>
+            <s:name>Nicholas Marquez</s:name>
+            <s:id>alex</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-10-30T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>What you say is a scenario that happens lots of times, though you forgot that sometimes exactly the opposite happens, e.g.: you set brightness to an higher level and an automatic profile change lowers it.
+
+ This is quite normal imho, but I recognize some people could be annoyed by that. What if I added a checkbox  " Lock brightness "  to the applet, that when in effect, prevents brightness from being automatically changed?</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-11-01T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Thanks for the prompt response.  Unfortunately, I wasn ' t notified of one. :/
+
+ Anyway, I actually take a different stance than those who seem to have been... suggesting things to you.  ^^;  The application is /inherently/ about power management and thus is more concerned with battery life than anything else.  Therefore, I feel that the case that I described, where the backlight ends up higher than it was, should be handled (as it clearly is /contrary/ to saving power), versus the case where the backlight ends up lower than it was, which should be expected.
+
+ However, there are cases where one needs the backlight higher for sheer visibility, regardless of power.  For those, I think the proper approach would be to expose such locking functionality as you describe and allow a global keybinding for it. Whether this goes into the applet is up to you.  If people keep complaining, you could always put a set of checkboxes in the General Settings tab that allows one to select what things Powerdevil controls (with all on by default), and simply not showing those options in the profile management (but keeping any settings for them, in case the control is reenabled).
+
+ Personally, the case of the backlight lowering when I don ' t want it to can be handled perfectly with the locking functionality that you described, though I haven ' t had such a need yet.  Again, the opposite case of the backlight getting brighter is what was troubling.  It goes contrary to the clear goals of this program and I feel should be handled appropriately and by default, regardless of a locking mechanism.
+
+ On a side-note, I for one am a big fan of the direction KDE4 is headed (though a realistic one; i.e. KDE4.0 was a technical preview, don ' t be an idiot and complain) and very much like your approach with Powerdevil.  It ' s very well-designed and elegant.  (No matter what the peanut gallery cares to gripe about.)</s:commentText>
+        <s:commentPerson>
+            <s:email>alex</s:email>
+            <s:name>Nicholas Marquez</s:name>
+            <s:id>alex</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-11-10T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Hi. This issue is really annoying for me as well. Sometimes my eyes are a bit tired, so I have to set the brightness of the screen lower. Unfortunately, it takes just 2/3 seconds for Powerdevil to change the brightness without my consent.
+
+ A fix for this situation would be really good :)</s:commentText>
+        <s:commentPerson>
+            <s:email>bymenda</s:email>
+            <s:name>Rafa Mu?oz C?rdenas</s:name>
+            <s:id>bymenda</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-23T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>This issue is a bug! If a brightness level was set manually, e.g. via the slider powerdevil must only decrease it and never increase it. this is quite easy to check: if the brightness currently set is lower than the one set in the profile, do not change the brightness.
+
+ Connected to this is that the slider in the battery applet ' s pop-up is not changed to the new level, but remains where it was set manually, i.e. does not even show the correct brightness level.</s:commentText>
+        <s:commentPerson>
+            <s:email>sven.burmeister</s:email>
+            <s:name>S. Burmeister</s:name>
+            <s:id>sven.burmeister</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-29T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Guys, unfortunately not everyone thinks about that this way, though I recognize that for some people such an issue can be annoying. So I ' m accepting it, and I ' ll add an option in PowerDevil. I can ' t change a default behavior this way, but in 4.3 (feature freeze...) I ' ll add an option for keeping the brightness never over the last manual set level.</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>So what is the reason that a majority (otherwise it should not be default) thinks that this is not the right way?
+
+ What you are saying is that the majority expects the brightness to go up, if the power level goes down and that even though they set the brightness level lower than the current scheme, they want it higher again for the next scheme which is supposed to save as much or more power (battery is decharching).
+
+ So why would one want to have the next scheme having a higher brightness level?
+
+ AFAIK there are only two reasons to change the brightness level lower than the active power scheme, 1. to save power, 2. to adjust it to the current environment (dark room) or personal liking (tired eyes).
+
+ So if the user set the brightness lower for powersaving reasons, who would claim that it makes sense to the same user that the next scheme, which is supposed to save more power than the last, increases brightness?
+
+ If the user has lowered the brightness because of the environment, why would the same user want it to increase, if the environment did not change. He might want it to decrease because 1. comes into play as well though, but that is another issue.
+
+ If the user has lowered the brightness because of personla liking, why would the same user want it to increase with the next power saving scheme?
+
+ What is the use-case you are refering to, i.e. in what situation, would the user first lower the brigthness level manually and then wants it to be increased by the next lower (more powersaving) powersaving scheme?</s:commentText>
+        <s:commentPerson>
+            <s:email>sven.burmeister</s:email>
+            <s:name>S. Burmeister</s:name>
+            <s:id>sven.burmeister</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Because your analysis is simply wrong: power schemes can also go up. If you shut your brightness to 10% manually and then plug in your AC adaptor, 99% of people expect brightness to arise. With this settings, brightness would stay at 10%, and that ' s really annoying.
+
+ I think this one alone is more than a good reason, but anyway, I can ' t change default behavior to something unexpected: the average user expects brightness to reflect profile ' s one. I am saying I am adding it as an option because not everyone uses the PC as you like, and default behavior should be as much predictable as possible. (And also, I can ' t change such an important behavior right before releasing)
+
+ More over, consider that there is not a way to determine which profile aims to save more power on the code side, since profiles are dynamic.
+
+ Anyway, I ' ll surely add an option to behave like this in KDE 4.3</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Sorry, but my analysis is not wrong because I never ever stated that this should be true for charging batteries, neither did the reporter. In fact he stated:  " If I have lowered the brightness of my screen... "
+
+ So unless you are trying to tell me that it is impossible to check whether the battery is discharging while the profile is changed, your assumptions about the defaults and what the majority wants are not valid. You could not state a use case where the user wants an increased brightness although the battery is discharging.
+
+ And it is quite easy to determine which profile saves power, in terms of brightness. If profile x has a brightness of 80% and profile y has a brightness of 50%, then profile y is saving more power regarding the brightness and that is all that matters when discussing  " changing the brigthness level " .
+
+ So unless you can provide some use case, the current default is wrong and fixing it is not a feature and does not require any new strings.
+
+ If powerdevil does the following check before applying the brightness level of the new profile it would work as expected.
+
+ - If battery is discharging (power not plugged in) and the current brightness level is lower than the brightness level to be applied, do not change the brightness level.
+ - If the new brightness level is lower, apply it. (this is debateable, since some people might argue that a manually set brightness level should never be changed)
+ - If the battery is charging, i.e. the power is plugged in, and the brightness level of the new profile is lower then the current, do not apply the change, if it is higher apply it.
+
+ A new setting to  " never change manually set brightness level "  is only needed for people who do not want the brightness to be set automatically, even if power is plugged in. Yet although I do not have any figures I agree with you that those are likely to be a minority and this should not be the default behaviour.</s:commentText>
+        <s:commentPerson>
+            <s:email>sven.burmeister</s:email>
+            <s:name>S. Burmeister</s:name>
+            <s:id>sven.burmeister</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>You caught the point by saying:
+
+ " (this is debateable, since
+ some people might argue that a manually set brightness level should never be
+ changed) "
+
+ Now, as a programmer I know that every default has someone against it, and that ' s pretty normal. If I changed the behavior to reflect what you say, I ' d have another ton of people asking me  " why does it behave this way? "
+
+ The current default suits me and most of the other users (you see, this bug has been reported by 3 people only, and consider how many people are using KDE on their laptop...), this leads me to say that is the most sane default, since it strictly fits most of the people.
+
+ I ' m not showing you use cases because here we are not talking about use cases: some people might prefer having it this way, some other people not. Some people wouldn ' t even want to have their brightness changed, some other might want a completely different behavior, it ' s impossible to find a standard that suits everyone, that ' s the point.
+
+ Now, ok, I see your points, and to some extents I agree with you, though I find myself comfortable with the current settings, so here are my points in favour to provide this as an option:
+
+  - A simplicistic one: you can ' t change such an important behavior right before releasing a major version. Now every user expects Powerdevil to behave like this, and it would be rather confusing for them.
+  - Brightness is not the only component concurring in saving power. More than that, as I (and you) said before,  " locking "  the brightness to a certain level might leave some people unhappy with that anyway
+  - Providing this as an option and not as a default makes everyone happy. I already agreed that with the original reporter that was more than fine with it, though I simply had not enough time to implement it.
+
+ I am sorry, but I think I won ' t change it. More than that, KDE 4.2 is just a few days away, and since such a feature would require a decent amount of code + testing (and I ' m also in some kind of holidays, like I suppose everyone), I wouldn ' t have a sufficient testing period for releasing it as  " stable " .
+
+ Though, I can surely assure you it will be there for KDE 4.3</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Well, then you need two new settings:
+
+ 1. Current behaviour
+ 2. Never ever change a manually set brightness
+ 3. never change the brightness to a higher level then set manually if discharging.
+
+ I ' ll send an email to the usability mailinglist, maybe that helps us both understanding the matter.</s:commentText>
+        <s:commentPerson>
+            <s:email>sven.burmeister</s:email>
+            <s:name>S. Burmeister</s:name>
+            <s:id>sven.burmeister</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Seems to me the most reasonable decision, thanks for caring about this</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Sounds great.  I didn ' t expect it to go into 4.2 anyway.  As long as it happens in a reasonable manner in a reasonable amount of time, I ' m fine.  My only concern is that it may hamper usability, but that seems to be being taken care of, so all ' s well and right with the world.  Thank you for your efforts, Dario.</s:commentText>
+        <s:commentPerson>
+            <s:email>alex</s:email>
+            <s:name>Nicholas Marquez</s:name>
+            <s:id>alex</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-12-31T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Ok, seems like people regard the current behaviour as bug. Nobody opted for the current behaviour. Hence the severity of this bug has to be changed and the issue fixed for KDE 4.2.
+
+ The only thing that seems be worth a discussion is if the default for manual settings handling is to:
+
+ a) do not change the manually set brightness until the user logs out or selects a profile manually.
+
+ b) change the brightness to lower level, if the next profile has a lower setting and increase the brightness if the power is plugged-in
+
+ The switch for the latter has to wait until KDE 4.3 though, so for KDE 4.2 you have to decide for one of them.
+
+ http://lists.kde.org/?t=123067791200003 &amp; r=1 &amp; w=2
+</s:commentText>
+        <s:commentPerson>
+            <s:email>sven.burmeister</s:email>
+            <s:name>S. Burmeister</s:name>
+            <s:id>sven.burmeister</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-01-11T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>There is still some room for being smart. Back to profiles design (automatic change) -- this settings only cover the state of power. When user makes some manual changes while system is running it could be caused by two things only (I didn ' t notice other case):
+ * light
+ * power
+
+ So if user increases the brightness it could be caused only by light conditions, if she/he decreases it is either by light or by power conditions.
+
+ Having this in mind, powerdevil could come up with really smart behaviour.
+
+ ad.a) this means light takes precedence so at the same time it denies the need for automatic change of brightness at all
+
+ But even such case (a) can be cover up. If the source and target profile have different levels of brightness user takes into account power considerations. If they are the same -- not, so then brightness could stay the same even after manual change.
+
+ I hope I expressed myself in an understandable fashion :-)</s:commentText>
+        <s:commentPerson>
+            <s:email>bluedzins</s:email>
+            <s:name>Maciej Pilichowski</s:name>
+            <s:id>bluedzins</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-01-11T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Thanks for bringing up the discussion. Unfortunately I don ' t think it will make it for 4.2.0, since time is really running out and this would require a decent amount of code for working. I ' ll try gathering up the suggestions and work on it in trunk.</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-01-11T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>(In reply to comment #13)
+ &gt;  Ok, seems like people regard the current behaviour as bug. Nobody opted for the
+ &gt;  current behaviour. Hence the severity of this bug has to be changed and the
+ &gt;  issue fixed for KDE 4.2.
+ &gt;
+ &gt;  The only thing that seems be worth a discussion is if the default for manual
+ &gt;  settings handling is to:
+ &gt;
+ &gt;  a) do not change the manually set brightness until the user logs out or selects
+ &gt;  a profile manually.
+ &gt;
+ &gt;  b) change the brightness to lower level, if the next profile has a lower
+ &gt;  setting and increase the brightness if the power is plugged-in
+ &gt;
+ &gt;  The switch for the latter has to wait until KDE 4.3 though, so for KDE 4.2 you
+ &gt;  have to decide for one of them.
+ &gt;
+ &gt;  http://lists.kde.org/?t=123067791200003 &amp; r=1 &amp; w=2
+ &gt;
+
+ For what it ' s worth, I concur with Sven ' s choice B.  Choice A is cumbersome and anal, effectively circumventing Powerdevil period.  (But perhaps I misunderstand the proposal.)  It would be a mistake to set such a thing to a default.  For example, the user could accidentally raise the brightness or have done so in a bright room to be able to see, then move to a room that ' s not so bright.  The brightness doesn ' t bother them, but the higher level is straining the battery more than it should be.  Given the /Power/devil is about power, I feel that it is in the right to take intelligent, discretionary action towards preserving the battery life.  Sure, if the user has raised the light, they want it to stay raised.  I doubt, however, that they ' d very much like their laptop/device dying on them because of poor judgment.  A switch can be used in that use-case (to be brought up for 4.3) or perhaps the backlight stepped down an equivalent amount from the previous profile, e.g.:
+ Profile A = 80%, B = 60%
+ User starts off in A (due to battery level) and ups backlight to 90%.  After some use, B gets activated.  Powerdevil notes that the backlight is higher than it was supposed to be in A, and so keeps that offset (10%), yielding a resulting level of 70%.  If the backlight is lower than it was supposed to be in A, and is lower than B would expect, then it stays the same.  If it was lower than in A, but higher than in B, the same scaling could be applied.
+ Anyway, that ' s my two-cents. Choice B was perfectly fine.  I was just again throwing ideas out there.
+
+ (Out of curiousity, it seems this would be a much smaller issue if Powerdevil made use of ambient light sensors.  Has this feature been considered?  Granted, the platforms that use such things are few and far between.)</s:commentText>
+        <s:commentPerson>
+            <s:email>alex</s:email>
+            <s:name>Nicholas Marquez</s:name>
+            <s:id>alex</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-01-12T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>I miss the option from KDE 3.5/kpowersave to completely disable brightness modifications in a specific profile. With such an option it ' s possible to let the user choose his preferred brightness, and only in situation the battery runs low, also lowering the brightness automatically.</s:commentText>
+        <s:commentPerson>
+            <s:email>None</s:email>
+            <s:name>None</s:name>
+            <s:id>andreas</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-01-31T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Would it be possible to simply return to user-set brightness after an automatic inactivity-caused screen-dim?
+ And then simply reset the user input on automatic battery-caused profile changes.
+
+ In other words:
+ Profile1 brightness  &gt;  inactivity dim
+ activity  &gt;  Back to Profile1 brightness
+ User changes brightness  &gt;  inactivity dim
+ activity  &gt;  back to User-set brightness
+ battery causes profile change  &gt;  Profile2 brightness
+
+ This means that by default, battery will be maximised, by decreasing brightness at appropriate times, but user preferences will override default.
+
+ It would also be very useful to have a  " do no change brightness "  or  " no associates brightness "  option on each profile.</s:commentText>
+        <s:commentPerson>
+            <s:email>naught101</s:email>
+            <s:name>ned</s:name>
+            <s:id>naught101</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-04-07T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Is this going to be fixed in KDE 4.3?</s:commentText>
+        <s:commentPerson>
+            <s:email>sven.burmeister</s:email>
+            <s:name>S. Burmeister</s:name>
+            <s:id>sven.burmeister</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-05-04T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>&gt;  Connected to this is that the slider in the battery applet ' s pop-up is not
+ &gt;  changed to the new level, but remains where it was set manually, i.e. does not
+ &gt;  even show the correct brightness level.
+
+ I have this same bug even in KDE 4.2.2</s:commentText>
+        <s:commentPerson>
+            <s:email>szepesvari.david</s:email>
+            <s:name>David</s:name>
+            <s:id>szepesvari.david</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-09-14T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>This bug was actually fixed</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-10-11T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Which KDE version has that fix?</s:commentText>
+        <s:commentPerson>
+            <s:email>sven.burmeister</s:email>
+            <s:name>S. Burmeister</s:name>
+            <s:id>sven.burmeister</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-10-11T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>This one was fixed at Tokamak, if I recall correctly 4.3.2 should have it, trunk has it for sure.</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2009-10-11T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Can someone please clarify status of this bug?
+
+ As far as I can see it still present:
+ https://bugs.kde.org/show_bug.cgi?id=198463
+
+ Combine this bug (brightness level resets to profile default after 30 seconds of idle time):
+ https://bugs.kde.org/show_bug.cgi?id=216675
+
+ And you will get pretty unusable brightness management (and just forget about ambient light sensor - it will make things even worse).
+ _______________________________________________________________
+ On a side-note:
+
+ Is there any way to disable brightness management by Powerdevil?
+ Some kind of  " Leave my freaking brightness alone "  option.
+ Maybe I can edit some configuration file?
+
+ I tried disabling
+ 1)  " Let PowerDevil manage screen powersaving "
+ 2)  " Dim display when idle for more than ... mins "
+ 3)  " Enable diplay power management "  in  " Screen "  profile tab
+ And setting  " When the system is idle for more than ... "  to  " Do Nothing " .
+
+ Neither helps.
+
+ So I have to set screen brightness in profile. And then change it in profile every time lighting conditions change.
+
+ Of course, I can just set brightness to 100% and burn my eyes at night, so later I won ' t have to change the settings to see anything in daylight.
+
+ Is this a bug? Should I report it?</s:commentText>
+        <s:commentPerson>
+            <s:email>senjas</s:email>
+            <s:name>Andrey</s:name>
+            <s:id>senjas</s:id>
+        </s:commentPerson>
+        <s:commentDate>2010-04-12T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>This bug is back with KDE 4.5 trunk. Could the reporter please re-open?</s:commentText>
+        <s:commentPerson>
+            <s:email>sven.burmeister</s:email>
+            <s:name>S. Burmeister</s:name>
+            <s:id>sven.burmeister</s:id>
+        </s:commentPerson>
+        <s:commentDate>2010-04-29T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>Re-opened bug at Sven ' s request.</s:commentText>
+        <s:commentPerson>
+            <s:email>alex</s:email>
+            <s:name>Nicholas Marquez</s:name>
+            <s:id>alex</s:id>
+        </s:commentPerson>
+        <s:commentDate>2010-05-03T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>I also see this issue in KDE 4.4.5. But I won ' t join on the discussion what constitutes a sane default...</s:commentText>
+        <s:commentPerson>
+            <s:email>CaptainSifff</s:email>
+            <s:name>Florian Goth</s:name>
+            <s:id>CaptainSifff</s:id>
+        </s:commentPerson>
+        <s:commentDate>2010-08-07T00:00:00+02:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>This bug is still present in KDE 4.5.1 (Kubuntu 10.10).
+
+ Imho there should be an option to disable changing brightness by Powerdevil. The most common annoyances that it creates are:
+ - making the screen brighter when the battery is low -  " to save energy "
+ - changing the brigthness when plugging in power supply
+ - changing the brightness while KDE is loading during system start.</s:commentText>
+        <s:commentPerson>
+            <s:email>piekarzarkadiusz</s:email>
+            <s:name>Arkadiusz Piekarz</s:name>
+            <s:id>piekarzarkadiusz</s:id>
+        </s:commentPerson>
+        <s:commentDate>2010-11-08T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>In 4.6, the new Power Management System has an option not to control brightness.</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2010-11-09T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>(In reply to comment #29)
+ &gt;  In 4.6, the new Power Management System has an option not to control
+ &gt;  brightness.
+
+ How does that fix the actual bug, i.e. that if enabled powerdevil does not consider the current brightness level?</s:commentText>
+        <s:commentPerson>
+            <s:email>sven.burmeister</s:email>
+            <s:name>S. Burmeister</s:name>
+            <s:id>sven.burmeister</s:id>
+        </s:commentPerson>
+        <s:commentDate>2010-11-09T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComment>
+        <s:commentText>The behavior is consistent with the previous version, and some more intelligent behavior to the brightness control plugin is being added (even if it might not make it into Beta 1 given that I ' ll be travelling the next days).
+
+ Btw, feel free to reopen and restart a discussion if behavior in Beta 1 won ' t be what you expect. TBH, the bug description diverged a lot from the original, hence my closing message.</s:commentText>
+        <s:commentPerson>
+            <s:email>drf</s:email>
+            <s:name>Dario Freddi</s:name>
+            <s:id>drf</s:id>
+        </s:commentPerson>
+        <s:commentDate>2010-11-09T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComputerSystem>
+        <s:computerSystemOS>Linux</s:computerSystemOS>
+        <s:computerSystemPlatform>openSUSE RPMs</s:computerSystemPlatform>
+    </s:issueComputerSystem>
+    <s:issueDateOpened>2008-10-30T00:00:00+01:00</s:issueDateOpened>
+    <s:issueDescription>Powerdevil sets backlight without regards to current level</s:issueDescription>
+    <s:issueId>173930</s:issueId>
+    <s:issueTracker>
+        <type>bugzilla</type>
+        <URI>https://bugs.kde.org/</URI>
+        <s:issueTrackerType>bugzilla</s:issueTrackerType>
+        <s:issueTrackerURL>https://bugs.kde.org/</s:issueTrackerURL>
+    </s:issueTracker>
+    <s:issueUrl>https://bugs.kde.org/show_bug.cgi?id=173930</s:issueUrl>
+    <s:issueLastModified>2010-11-09T00:00:00+01:00</s:issueLastModified>
+    <s:issueMilestone>
+        <s:milestoneId>---</s:milestoneId>
+    </s:issueMilestone>
+    <s:issuePriority></s:issuePriority>
+    <s:issueProduct>
+        <s:productComponentId>powermanagement-daemon</s:productComponentId>
+        <s:productId>solid</s:productId>
+        <s:productVersion>unspecified</s:productVersion>
+    </s:issueProduct>
+    <s:issueAuthor>
+        <s:email>alex</s:email>
+        <s:name>Nicholas Marquez</s:name>
+        <s:id>alex</s:id>
+    </s:issueAuthor>
+    <s:issueResolution>FIXED</s:issueResolution>
+    <s:issueSeverity></s:issueSeverity>
+    <s:issueStatus>Resolved</s:issueStatus>
+</s:kesi>
+
+								</ns1:eventData>
+                        </ns1:payload>
+                    </ns1:event>
+                </wsnt:Message>
+            </wsnt:NotificationMessage>
+        </wsnt:Notify>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
+    <soap:Header></soap:Header>
+    <soap:Body>
+        <wsnt:Notify>
+            <wsnt:NotificationMessage>
+                <wsnt:Topic></wsnt:Topic>
+                <wsnt:ProducerReference>
+                    <wsa:Address>http://www.alert-project.eu/metadata</wsa:Address>
+                </wsnt:ProducerReference>
+                <wsnt:Message>
+                    <ns1:event xmlns:ns1="http://www.alert-project.eu/"
+                               xmlns:o="http://www.alert-project.eu/ontoevents-mdservice"
+                               xmlns:s="http://www.alert-project.eu/strevents-kesi"
+                               xmlns:s1="http://www.alert-project.eu/strevents-keui"
+                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <ns1:head>
+                            <ns1:sender>METADATASERVICE</ns1:sender>
+                            <ns1:timestamp>10003</ns1:timestamp>
+                            <ns1:sequencenumber>1</ns1:sequencenumber>
+                        </ns1:head>
+                        <ns1:payload>
+                            <ns1:meta>
+                                <ns1:startTime>10010</ns1:startTime>
+                                <ns1:endTime>10020</ns1:endTime>
+                                <ns1:eventName>ALERT.KESI.IssueUpdate</ns1:eventName>
+                                <ns1:eventId>5748</ns1:eventId>
+                                <ns1:eventType>reply</ns1:eventType>
+                            </ns1:meta>
+                            <ns1:eventData>
+                                <s:issue>
+    <s:issueActivity>
+        <s:activityAdded>drf54321</s:activityAdded>
+        <s:activityRemoved></s:activityRemoved>
+        <s:activityWhat>CC</s:activityWhat>
+        <s:activityWhen>2008-11-01 14:15:23.0</s:activityWhen>
+        <s:activityWho>drf</s:activityWho>
+    </s:issueActivity>
+    <s:issueAssignedTo>
+        <s:email>drf</s:email>
+        <s:name>Dario Freddi</s:name>
+        <s:id>drf</s:id>
+    </s:issueAssignedTo>
+    <s:issueComment>
+        <s:commentText>Version:            (using KDE 4.1.2) 
+ OS:                Linux 
+ Installed from:    SuSE RPMs 
+ 
+ Currently, Powerdevil will set the brightness of the screen to a certain level according to the profile that corresponds to the battery state.  This is fine... for most situations.  However, there are some situations where it runs counter to what the user obviously wants. 
+ 
+ Key point: 
+ If I have lowered the brightness of my screen (to reduce glare, or because it ' s dark), and my battery level lowers enough to trigger a new Powerdevil profile, the brightness will be _set_ to the level specified by the profile, which is, in most cases, _higher_ than what I had set it to manually.  This obviously runs /counter/ to preserving battery life, as the screen suddenly becomes _brighter_. 
+ 
+ Suggested solution: 
+ I feel that it would be better for Powerdevil to first check if the brightness level is already lower than that of the next profile, and if it is, not to set the brightness. 
+ Alternatively, it would be even nicer if the brightness slider had an  " advanced "  option showing a max setting for brightness, allowing one to set the max end of the range of possible brightness for a profile, the default one being specified by the normal slider.  This would be difficult to be done in a nice-UI fashion, but might offer just the right level of flexibility most users would want in this situation.  (As a disclaimer, whatever solution taken is obviously up to the developer, I ' m just throwing out ideas.)</s:commentText>
+        <s:commentPerson>
+            <s:email>alex</s:email>
+            <s:name>Nicholas Marquez</s:name>
+            <s:id>alex</s:id>
+        </s:commentPerson>
+        <s:commentDate>2008-10-30T00:00:00+01:00</s:commentDate>
+    </s:issueComment>
+    <s:issueComputerSystem>
+        <s:computerSystemOS>Linux</s:computerSystemOS>
+        <s:computerSystemPlatform>openSUSE RPMs</s:computerSystemPlatform>
+    </s:issueComputerSystem>
+    <s:issueDateOpened>2008-10-30T00:00:00+01:00</s:issueDateOpened>
+    <s:issueDescription>Powerdevil sets backlight without regards to current level</s:issueDescription>
+    <s:issueId>173930</s:issueId>
+    <s:issueTracker>
+        <type>bugzilla</type>
+        <URI>https://bugs.kde.org/</URI>
+        <s:issueTrackerType>bugzilla</s:issueTrackerType>
+        <s:issueTrackerURL>https://bugs.kde.org/</s:issueTrackerURL>
+    </s:issueTracker>
+    <s:issueUrl>https://bugs.kde.org/show_bug.cgi?id=173930</s:issueUrl>
+    <s:issueLastModified>2010-11-09T00:00:00+01:00</s:issueLastModified>
+    <s:issueMilestone>
+        <s:milestoneId>---</s:milestoneId>
+    </s:issueMilestone>
+    <s:issuePriority></s:issuePriority>
+    <s:issueProduct>
+        <s:productComponentId>powermanagement-daemon</s:productComponentId>
+        <s:productId>solid</s:productId>
+        <s:productVersion>unspecified</s:productVersion>
+    </s:issueProduct>
+    <s:issueAuthor>
+        <s:email>alex</s:email>
+        <s:name>Nicholas Marquez</s:name>
+        <s:id>alex</s:id>
+    </s:issueAuthor>
+    <s:issueResolution>OPEN</s:issueResolution>
+    <s:issueSeverity></s:issueSeverity>
+    <s:issueStatus>Open</s:issueStatus>
+</s:issue>
+							</ns1:eventData>
+                        </ns1:payload>
+                    </ns1:event>
+                </wsnt:Message>
+            </wsnt:NotificationMessage>
+        </wsnt:Notify>
+    </soap:Body>
+</soap:Envelope>

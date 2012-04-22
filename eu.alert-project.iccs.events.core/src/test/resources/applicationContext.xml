@@ -13,17 +13,11 @@
     </bean>
 
 
-    <bean id="marshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
-        <property name="annotatedClasses">
-            <array>
-            </array>
-        </property>
-    </bean>
-
     <!-- ActiveMQ -->
     <bean   id="jmsConnectionFactory"
             class="org.apache.activemq.ActiveMQConnectionFactory" >
-        <property name="brokerURL" value="tcp://www.cimcollege.rs:61616" />
+        <property name="brokerURL" value="tcp://laus.perimeter.fzi.de:61616" />
+        <!--<property name="brokerURL" value="tcp://localhost:61616" />-->
         <property name="userName" value="" />
         <property name="password" value="" />
     </bean>

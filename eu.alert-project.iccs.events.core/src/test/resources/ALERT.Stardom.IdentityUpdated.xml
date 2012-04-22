@@ -3,7 +3,7 @@
   <soap:Body>
     <wsnt:Notify>
       <wsnt:NotificationMessage>
-        <wsnt:Topic>ALERT.STARDOM.IssueUpdated</wsnt:Topic>
+        <wsnt:Topic>ALERT.STARDOM.IdentityUpdate</wsnt:Topic>
         <wsnt:ProducerReference>
           <wsa:Address>http://www.alert-project.eu/stardom</wsa:Address>
         </wsnt:ProducerReference>
@@ -18,7 +18,7 @@
               <ns1:meta>
                 <ns1:startTime>1331675854818</ns1:startTime>
                 <ns1:endTime>1331675854822</ns1:endTime>
-                <ns1:eventName>ALERT.STARDOM.IssueUpdated</ns1:eventName>
+                <ns1:eventName>ALERT.STARDOM.IdentityUpdate</ns1:eventName>
                 <ns1:eventId>1697944231</ns1:eventId>
                 <ns1:eventType>Request</ns1:eventType>
               </ns1:meta>
