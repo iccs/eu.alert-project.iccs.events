@@ -578,6 +578,113 @@ public class EventFactory {
 
     }
 
+    public static String createMlSensorForumNewEvent(
+            Integer eventId,
+            long start,
+            long end,
+            int sequence,
+            MailingList mail) {
+
+        Head head = new Head();
+        head.setSender("MLSensor");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        MailingListNewPayload.EventData se = new MailingListNewPayload.EventData();
+
+        //fix cdata
+//        mail.setSubject("<[CDATA["+mail.getSubject()+"]]>");
+//        mail.setContent("<[CDATA[" + mail.getContent() + "]]>");
+//        mail.setInReplyTo("<[CDATA[" + mail.getInReplyTo() + "]]>");
+//        mail.setReference("<[CDATA[" + mail.getReference() + "]]>");
+//        mail.setMessageId("<[CDATA[" + mail.getMessageId() + "]]>");
+//        mail.setContent("<[CDATA[" + mail.getContent() + "]]>");
+
+        se.setMailingList(mail);
+
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_MLSensor_Forum_Post_New);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
+        meta.setType("Request");
+
+        MailingListNewPayload payload = new MailingListNewPayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        MailingListNewEnvelope.Body.Notify.NotificationMessage.Message.Event event = new MailingListNewEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+
+
+        MailingListNewEnvelope.Body.Notify.NotificationMessage.Message message = new MailingListNewEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/MLSensor");
+
+        MailingListNewEnvelope.Body.Notify.NotificationMessage notificationMessage = new MailingListNewEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_MLSensor_Forum_Post_New);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+
+        MailingListNewEnvelope.Body.Notify notify = new MailingListNewEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+
+        MailingListNewEnvelope.Body body = new MailingListNewEnvelope.Body();
+        body.setNotify(notify);
+
+        MailingListNewEnvelope envelope = new MailingListNewEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+        XStream xstream = new XStream(
+
+            new XppDomDriver() {
+                public HierarchicalStreamWriter createWriter(Writer out) {
+                    return new PrettyPrintWriter(out) {
+
+                        boolean cdata = false;
+
+                        //http://oktryitnow.com/?p=11
+                        public void startNode(String name, Class clazz) {
+                            super.startNode(name, clazz);
+                            cdata = (
+                                    ArrayUtils.contains(
+                                            new String[]{
+                                                "r1:subject",
+                                                "r1:inReplyTo",
+                                                "r1:references",
+                                                "r1:messageId",
+                                                "r1:content"
+                                            },
+                                            name
+                                    ));
+
+                        }
+
+                        protected void writeText(QuickWriter writer, String text) {
+                            if (cdata) {
+                                writer.write("<![CDATA[");
+                                writer.write(text);
+                                writer.write("]]>");
+                            } else {
+                                writer.write(text);
+                            }
+                        }
+                    };
+                }
+            }
+        );
+        xstream.processAnnotations(MailingListNewEnvelope.class);
+
+        return EventFactory.fixEvent(xstream.toXML(envelope));
+
+    }
+
 
     public static String createStardomLoginVerifyEnvelope(
             Integer eventId,

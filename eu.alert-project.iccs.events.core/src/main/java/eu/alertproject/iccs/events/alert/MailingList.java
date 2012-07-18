@@ -41,6 +41,9 @@ public class MailingList {
 
     @XStreamAlias("r1:content")
     private String content;
+    
+    @XStreamAlias("r1:url")
+    private String url;
 
     public String getFrom() {
         return from;
@@ -104,6 +107,14 @@ public class MailingList {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
     public static class Attachments{
