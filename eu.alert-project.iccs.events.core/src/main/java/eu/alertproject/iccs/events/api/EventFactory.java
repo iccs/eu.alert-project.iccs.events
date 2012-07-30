@@ -6,6 +6,8 @@ import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.io.ReaderWrapper;
 import com.thoughtworks.xstream.io.xml.*;
+import com.thoughtworks.xstream.mapper.CannotResolveClassException;
+import com.thoughtworks.xstream.mapper.MapperWrapper;
 import eu.alertproject.iccs.events.alert.*;
 import eu.alertproject.iccs.events.socrates.*;
 import eu.alertproject.iccs.events.stardom.*;
@@ -82,7 +84,20 @@ public class EventFactory {
                         };
                     }
                 }
-        );
+        ){
+			protected MapperWrapper wrapMapper(MapperWrapper next) {
+			        return new MapperWrapper(next) {
+			            @SuppressWarnings("unchecked")
+			            public boolean shouldSerializeMember(Class definedIn, String fieldName) {
+			                try {
+			                    return definedIn != Object.class || realClass(fieldName) != null;
+			                } catch(CannotResolveClassException cnrce) {
+			                    return false;
+			                }
+			            }
+			        };
+			    }
+		};
         x.processAnnotations(clazz);
 
         return x;

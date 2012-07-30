@@ -42,6 +42,29 @@ public class ItsNewAnnotatedEnvelopeTest {
 
     }
 
+    @Test
+    public void testDesirializeInvalidNodes() throws IOException{
+
+        String s = IOUtils.toString(ItsNewAnnotatedEnvelopeTest.class.getResourceAsStream("/ALERT.KEUI.IssueNew.AnnotatedInvalidNodes.xml"));
+        IssueNewAnnotatedPayload.EventData eventData = EventFactory
+                .<IssueNewAnnotatedEnvelope>fromXml(s,IssueNewAnnotatedEnvelope.class)
+                .getBody()
+                .getNotify()
+                .getNotificationMessage()
+                .getMessage()
+                .getEvent()
+                .getPayload()
+                .getEventData();
+
+
+        assertKesi(eventData.getKesi());
+
+        assertMdService(eventData.getMdService());
+
+        assertKeui(eventData.getKeui());
+
+    }
+
     private void assertKeui(Keui keui) {
 
         Assert.assertEquals("Notify <concept id=\"KDE/user\">user</concept> on <concept id=\"http://ailab.ijs.si/alert/resource/r364\">hardware</concept> changes <concept id=\"http://ailab.ijs.si/alert/resource/r17814\">2</concept>",
