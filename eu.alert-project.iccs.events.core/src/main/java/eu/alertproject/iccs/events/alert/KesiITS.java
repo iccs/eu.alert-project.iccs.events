@@ -15,45 +15,11 @@ import java.util.List;
  * Time: 14:47
  */
 
-@XStreamAlias("s:kesi")
+@XStreamAlias("s:issue")
 public class KesiITS implements Serializable {
 
     @XStreamAlias("s:issueId")
     private Integer Id;
-    
-    @XStreamAlias("s:issueAuthor")
-    private Author author;
-    
-    @XStreamAlias("s:issueStatus")
-    private String status;
-    
-    @XStreamAlias("s:issueResolution")
-    private String resolution;
-    
-    @XStreamAlias("s:issueDescription")
-    private String description;
-    
-    @XStreamAlias("s:issueKeyword")
-    private String keyword;
-
-    @XStreamAlias("s:issueProduct")
-    private Product product;
-
-    @XStreamAlias("s:issueComputerSystem")
-    private ComputerSystem computerSystem;
-
-    @XStreamAlias("s:issuePriority")
-    private String priority;
-
-    @XStreamAlias("s:issueSeverity")
-    private String severity;
-
-
-    @XStreamAlias("s:issueAssignedTo")
-    private Author assignedTo;
-
-    @XStreamImplicit(itemFieldName = "s:issueCCPerson")
-    private List<Author> ccPerson;
 
     @XStreamAlias("s:issueUrl")
     private String url;
@@ -64,22 +30,66 @@ public class KesiITS implements Serializable {
     @XStreamAlias("s:issueBlocksId")
     private Integer blocksId;
 
+
+    @XStreamAlias("s:issueTracker")
+    private Tracker tracker;
+
+    @XStreamAlias("s:issueAuthor")
+    private Author author;
+
+    // (Duplicate, Fixed, Invalid, ThirdParty, WontFix, WorksForMe, Later, Remind)
+    @XStreamAlias("s:issueStatus")
+    private String status;
+
+    @XStreamAlias("s:issueResolution")
+    private String resolution;
+
+    @XStreamAlias("s:issueSummary")
+    private String summary;
+
+    @XStreamAlias("s:issueDescription")
+    private String description;
+
+    @XStreamAlias("s:issueDateOpened")
+    @XStreamConverter(KESIDateConverter.class)
+    private Date dateOpened;
+
+    @XStreamAlias("s:issueAssignedTo")
+    private Author assignedTo;
+
+    @XStreamImplicit(itemFieldName = "s:issueCCPerson")
+    private List<Author> ccPerson;
+
+    @XStreamAlias("s:issuePriority")
+    private String priority;
+
+    @XStreamAlias("s:issueSeverity")
+    private String severity;
+
+    @XStreamAlias("s:issueProduct")
+    private Product product;
+
+    @XStreamAlias("s:issueComputerSystem")
+    private ComputerSystem computerSystem;
+
+    @XStreamAlias("s:issueKeyword")
+    private String keyword;
+
+    @XStreamAlias("s:issueMilestone")
+    private Milestone milestone;
+
+
+
     @XStreamImplicit(itemFieldName="s:issueDuplicateOfId")
     private List<Integer> duplicateOfId;
 
     @XStreamImplicit(itemFieldName="s:issueMergedIntoId")
     private List<Integer> mergedIntoId;
 
-    @XStreamAlias("s:issueDateOpened")
-    @XStreamConverter(KESIDateConverter.class)
-    private Date dateOpened;
-
     @XStreamAlias("s:issueLastModified")
     @XStreamConverter(KESIDateConverter.class)
     private Date lastModified;
 
-    @XStreamAlias("s:issueMilestone")
-    private Milestone milestone;
 
     @XStreamImplicit(itemFieldName="s:issueComment")
     private List<Comment> comments;
@@ -90,8 +100,7 @@ public class KesiITS implements Serializable {
     @XStreamImplicit(itemFieldName = "s:issueActivity")
     private List<Activity> activity;
 
-    @XStreamAlias("s:issueTracker")
-    private Tracker tracker;
+
 
     public Integer getId() {
         return Id;
@@ -285,6 +294,14 @@ public class KesiITS implements Serializable {
         this.tracker = tracker;
     }
 
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
     public static class Tracker implements Serializable{
         
         @XStreamAlias("s:issueTrackerId")
@@ -296,11 +313,6 @@ public class KesiITS implements Serializable {
         @XStreamAlias("s:issueTrackerURL")
         private String url;
 
-        @XStreamAlias("type")
-        private String type1;
-
-        @XStreamAlias("URI")
-        private String url1;
 
         public Integer getId() {
             return id;
@@ -326,7 +338,6 @@ public class KesiITS implements Serializable {
             this.url = url;
         }
     }
-
 
     public static class Activity implements Serializable{
 
@@ -388,8 +399,6 @@ public class KesiITS implements Serializable {
 
     }
 
-
-    
     public static class Attachement implements Serializable{
      
         @XStreamAlias("s:attachmentId")
@@ -439,12 +448,6 @@ public class KesiITS implements Serializable {
 
     public static class Comment implements Serializable{
 
-        @XStreamAlias("s:commentId")
-        private String id;
-        
-        @XStreamAlias("s:commentNumber")
-        private Integer number;
-
         @XStreamAlias("s:commentText")
         private String text;
         
@@ -454,22 +457,6 @@ public class KesiITS implements Serializable {
         @XStreamAlias("s:commentDate")
         @XStreamConverter(KESIDateConverter.class)
         private Date date;
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
-
-        public Integer getNumber() {
-            return number;
-        }
-
-        public void setNumber(Integer number) {
-            this.number = number;
-        }
 
         public String getText() {
             return text;
@@ -496,10 +483,7 @@ public class KesiITS implements Serializable {
         }
     }
 
-
-
-
-    static class Milestone implements Serializable{
+    public static class Milestone implements Serializable{
         
         @XStreamAlias("s:milestoneId")
         private String id;
@@ -525,7 +509,6 @@ public class KesiITS implements Serializable {
             this.target = target;
         }
     }
-
 
     public static class ComputerSystem implements Serializable{
 
@@ -563,8 +546,6 @@ public class KesiITS implements Serializable {
         }
     }
 
-
-    
     public static class Product implements Serializable{
         
         @XStreamAlias("s:productId")

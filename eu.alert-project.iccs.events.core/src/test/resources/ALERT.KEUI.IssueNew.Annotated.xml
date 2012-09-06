@@ -33,70 +33,84 @@
                                 <ns1:eventType>reply</ns1:eventType>
                             </ns1:meta>
                             <ns1:eventData>
-                                <s:kesi>
-                                    <s:issueId>184671</s:issueId>
+                                <s:issue>
+                                    <!-- issue id -->
+                                    <s:issueId>332</s:issueId>
+
+                                    <!-- issue URL -->
+                                    <s:issueUrl>https://bugzilla.libresoft.es/show_bug.cgi?id=332</s:issueUrl>
+
+                                    <!-- ids of related issues -->
+                                    <s:issueDependsOnId>10001</s:issueDependsOnId>
+                                    <s:issueBlocksId>20001</s:issueBlocksId>
+
+                                    <!-- tracker -->
+                                    <s:issueTracker>
+                                        <s:issueTrackerType>bugzilla</s:issueTrackerType>
+                                        <s:issueTrackerURL>https://bugzilla.libresoft.es/</s:issueTrackerURL>
+                                    </s:issueTracker>
+
+                                    <!-- id of issue author person -->
                                     <s:issueAuthor>
-                                        <s:name>Alex Fiestas</s:name>
-                                        <s:id >afiestas@kde.org</s:id >
-                                        <s:email >afiestas@kde.org</s:email >
-                                    </s:issueAuthor >
-                                    <s:issueStatus >Assigned</s:issueStatus >
-                                    <s:issueDescription >Notify user on hardware changes 2</s:issueDescription >
-                                    <s:issueKeyword >keyword</s:issueKeyword >
-                                    <s:issueProduct >
-                                        <s:productId >solid</s:productId >
-                                        <s:productComponentId >general</s:productComponentId >
-                                        <s:productVersion >unspecified</s:productVersion >
-                                    </s:issueProduct >
-                                    <s:issueComputerSystem >
-                                        <s:computerSystemPlatform >Ubuntu Packages</s:computerSystemPlatform >
-                                        <s:computerSystemOS >Linux</s:computerSystemOS >
-                                    </s:issueComputerSystem >
-                                    <s:issuePriority >4</s:issuePriority >
-                                    <s:issueSeverity >Blocker</s:issueSeverity >
-                                    <s:issueAssignedTo >
-                                        <s:name >Sander Pientka</s:name >
-                                        <s:id >cumulus0007@gmail.com</s:id >
-                                        <s:email >cumulus0007@gmail.com</s:email >
-                                    </s:issueAssignedTo >
-                                    <s:issueCCPerson >
-                                        <s:name >Angel Blue</s:name >
-                                        <s:id >angel_blue_co2004@yahoo.com</s:id >
-                                        <s:email >angel_blue_co2004@yahoo.com</s:email >
-                                    </s:issueCCPerson >
-                                    <s:issueUrl >https://bugs.kde.org/show_bug.cgi?id=184671</s:issueUrl >
-                                    <s:issueDependsOnId >10001</s:issueDependsOnId >
-                                    <s:issueBlocksId >20001</s:issueBlocksId >
-                                    <s:issueDateOpened >2009-02-17 16:31</s:issueDateOpened >
-                                    <s:issueComment >
-                                        <s:commentNumber >0</s:commentNumber >
-                                        <s:commentText >Version: (using KDE 4.2.0) OS: Linux Installed from: Ubuntu
-                                            Packages It would be awesome if KDE notifies te user of newly installed
-                                            hardware, missing drivers, programs to use the connected device, etc.
-                                        </s:commentText >
-                                        <s:commentPerson >
-                                            <s:name >Alex Fiestas</s:name >
-                                            <s:id >afiestas@kde.org</s:id >
-                                            <s:email >afiestas@kde.org</s:email >
-                                        </s:commentPerson >
-                                        <s:commentDate >2009-02-17 16:31:37</s:commentDate >
-                                    </s:issueComment >
-                                    <s:issueAttachment >
-                                        <s:attachmentId >3532</s:attachmentId >
-                                        <s:attachmentFilename >name</s:attachmentFilename >
-                                        <s:attachmentType >doc</s:attachmentType >
-                                        <s:attachmentCreator >
-                                            <s:name >Alex Fiestas</s:name >
-                                            <s:id >afiestas@kde.org</s:id >
-                                            <s:email >afiestas@kde.org</s:email >
-                                        </s:attachmentCreator >
-                                    </s:issueAttachment >
-                                    <s:issueTracker >
-                                        <s:issueTrackerId >241</s:issueTrackerId >
-                                        <s:issueTrackerType >bugzilla</s:issueTrackerType >
-                                        <s:issueTrackerURL >https://bugs.kde.org/</s:issueTrackerURL >
-                                    </s:issueTracker >
-                                </s:kesi >
+                                        <s:email>lcanas</s:email>
+                                        <s:name>Luis Cañas Díaz</s:name>
+                                        <s:id>lcanas</s:id>
+                                    </s:issueAuthor>
+
+                                    <!-- issue status (Assigned, Open, Verified, Resolved, Closed) -->
+                                    <s:issueStatus>Open</s:issueStatus>
+
+                                    <!-- issue resolution (Duplicate, Fixed, Invalid, ThirdParty, WontFix, WorksForMe, Later, Remind) -->
+                                    <s:issueResolution/>
+
+                                    <s:issueSummary>Second fake bug</s:issueSummary>
+                                    <s:issueDescription>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</s:issueDescription>
+
+                                    <!-- date time in format yyyy-MM-dd HH:mm -->
+                                    <s:issueDateOpened>2012-03-16T00:00:00+01:00</s:issueDateOpened>
+
+                                    <s:issueAssignedTo>
+                                        <s:email>lcanas</s:email>
+                                        <s:name>Luis Cañas</s:name>
+                                        <s:id>lcanas</s:id>
+                                    </s:issueAssignedTo>
+
+                                    <s:issueCCPerson>
+                                        <s:email>sduenas</s:email>
+                                        <s:name>Santiago Dueñas</s:name>
+                                        <s:id>sduenas</s:id>
+                                    </s:issueCCPerson>
+
+                                    <!-- issue priority (1 - 5) -->
+                                    <s:issuePriority>3</s:issuePriority>
+
+                                    <!-- issue severity (Blocker, Critical, Major, Minor, Trivial, Feature) -->
+                                    <s:issueSeverity>Normal</s:issueSeverity>
+
+                                    <s:issueProduct>
+                                        <s:productComponentId>fake-component</s:productComponentId>
+                                        <s:productId>Kesi-tester</s:productId>
+                                        <s:productVersion>unspecified</s:productVersion>
+                                    </s:issueProduct>
+
+                                    <s:issueComputerSystem>
+                                        <!-- id of computer system -->
+                                        <s:computerSystemId></s:computerSystemId>
+                                        <!-- computer system platform -->
+                                        <s:computerSystemPlatform>Ubuntu Packages</s:computerSystemPlatform>
+                                        <!-- computer system OS -->
+                                        <s:computerSystemOS>Linux</s:computerSystemOS>
+                                    </s:issueComputerSystem>
+
+                                    <!-- keywords -->
+                                    <s:issueKeyword/>
+
+                                    <s:issueMilestone>
+                                        <!-- id of milestone -->
+                                        <s:milestoneId></s:milestoneId>
+                                        <s:milestoneTarget></s:milestoneTarget>
+                                    </s:issueMilestone>
+                                </s:issue>
                                 <o:mdservice>
                                     <o:issueUri>http://www.alert-project.eu/ontologies/alert_its.owl#Bug1</o:issueUri>
                                     <o:issueAuthorUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1

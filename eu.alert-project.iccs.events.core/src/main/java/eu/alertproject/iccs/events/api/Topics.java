@@ -41,7 +41,7 @@ public class Topics {
     public static final String ALERT_METADATA_IssueNew_Updated =     "ALERT.Metadata.IssueNew.Updated";
     public static final String ALERT_METADATA_IssueUpdate_Updated =  "ALERT.Metadata.IssueUpdate.Updated";
     public static final String ALERT_METADATA_MailNew_Updated =      "ALERT.Metadata.MailNew.Updated";
-    public static final String ALERT_METADATA_ForumPost_Updated =    "ALERT.Metadata.ForumPost.Updated";
+    public static final String ALERT_METADATA_ForumPost_Updated =    "ALERT.Metadata.ForumPostNew.Updated";
 
 
 }

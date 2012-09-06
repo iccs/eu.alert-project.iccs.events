@@ -187,7 +187,6 @@ public class ItsNewAnnotatedEnvelopeTest {
 
         Iterator<KesiITS.Comment> iterator = comments.iterator();
         KesiITS.Comment comment1 = iterator.next();
-        Assert.assertEquals(0,comment1.getNumber(),0);
         Assert.assertEquals("Version: (using KDE 4.2.0) OS: Linux Installed from: Ubuntu " +
                 "Packages It would be awesome if KDE notifies te user of newly installed " +
                 "hardware, missing drivers, programs to use the connected device, etc.",

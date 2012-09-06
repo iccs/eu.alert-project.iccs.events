@@ -563,6 +563,7 @@ public class EventFactory {
                             cdata = (
                                     ArrayUtils.contains(
                                             new String[]{
+                                                "r1:from",
                                                 "r1:subject",
                                                 "r1:inReplyTo",
                                                 "r1:references",
@@ -670,6 +671,7 @@ public class EventFactory {
                             cdata = (
                                     ArrayUtils.contains(
                                             new String[]{
+                                                "r1:from",
                                                 "r1:subject",
                                                 "r1:inReplyTo",
                                                 "r1:references",
