@@ -130,7 +130,7 @@ public class CommitNewAnnotatedEnvelopeTest {
                 kesi.getRepositoryUri().trim()
         );
 
-        Assert.assertEquals(1, kesi.getRevisionTag(),0);
+        Assert.assertEquals("1", kesi.getRevisionTag());
 
         Assert.assertEquals("Sasa Stojanovic",kesi.getAuthor().getName());
         Assert.assertEquals("sasa.stojanovic@cimcollege.rs",kesi.getAuthor().getId());
@@ -157,7 +157,6 @@ public class CommitNewAnnotatedEnvelopeTest {
 
         KesiSCM.File file1 = iterator.next();
 
-        Assert.assertEquals(11111,file1.getId(),0);
         Assert.assertEquals("Add",file1.getAction());
         Assert.assertEquals("branch1",file1.getBranch());
 
@@ -168,7 +167,6 @@ public class CommitNewAnnotatedEnvelopeTest {
 
         Iterator<KesiSCM.File.Module> fileModules1 = modules.iterator();
         KesiSCM.File.Module next = fileModules1.next();
-        Assert.assertEquals(1111,next.getId(),0);
         Assert.assertEquals("Mod111",next.getName());
         Assert.assertEquals(100,next.getStartLine(),0);
         Assert.assertEquals(199,next.getEndLine(),0);
@@ -177,13 +175,11 @@ public class CommitNewAnnotatedEnvelopeTest {
 
         Iterator<KesiSCM.File.Module.Methods> moduleMethods1 = methods.iterator();
         KesiSCM.File.Module.Methods mm1 = moduleMethods1.next();
-        Assert.assertEquals(111,mm1.getId(),0);
         Assert.assertEquals("Meth111",mm1.getName());
         Assert.assertEquals(100,mm1.getStartLine(),0);
         Assert.assertEquals(149,mm1.getEndLine(),0);
 
         KesiSCM.File.Module.Methods mm2 = moduleMethods1.next();
-        Assert.assertEquals(112,mm2.getId(),0);
         Assert.assertEquals("Meth112",mm2.getName());
         Assert.assertEquals(150,mm2.getStartLine(),0);
         Assert.assertEquals(199,mm2.getEndLine(),0);
@@ -191,7 +187,6 @@ public class CommitNewAnnotatedEnvelopeTest {
 
         KesiSCM.File file2= iterator.next();
 
-        Assert.assertEquals(21111,file2.getId(),0);
         Assert.assertEquals("Copy",file2.getAction());
         Assert.assertEquals("branch2",file2.getBranch());
 
@@ -201,7 +196,6 @@ public class CommitNewAnnotatedEnvelopeTest {
         Iterator<KesiSCM.File.Module> file2ModulesIterator = file2Modules.iterator();
         KesiSCM.File.Module fm2i1 = file2ModulesIterator.next();
 
-        Assert.assertEquals(2111,fm2i1.getId(),0);
         Assert.assertEquals("Mod2111",fm2i1.getName());
         Assert.assertEquals(300,fm2i1.getStartLine(),0);
         Assert.assertEquals(399,fm2i1.getEndLine(),0);
@@ -212,7 +206,6 @@ public class CommitNewAnnotatedEnvelopeTest {
         Iterator<KesiSCM.File.Module.Methods> fm2iMethodsIterator = fm2i1Methods.iterator();
 
         KesiSCM.File.Module.Methods fm2im1 = fm2iMethodsIterator.next();
-        Assert.assertEquals(211,fm2im1.getId(),0);
         Assert.assertEquals("Meth211",fm2im1.getName());
         Assert.assertEquals(300,fm2im1.getStartLine(),0);
         Assert.assertEquals(399,fm2im1.getEndLine(),0);

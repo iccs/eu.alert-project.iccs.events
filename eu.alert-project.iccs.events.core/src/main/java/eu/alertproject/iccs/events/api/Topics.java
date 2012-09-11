@@ -36,7 +36,9 @@ public class Topics {
     public static final String ALERT_MLSensor_Mail_New ="ALERT.MLSensor.MailNew";
     public static final String ALERT_MLSensor_Forum_Post_New ="ALERT.MLSensor.ForumPostNew";
 
+
     public static final String ALERT_METADATA_IdentityUpdate_Stored=     "ALERT.Metadata.IdentityUpdate.Stored";
+
     public static final String ALERT_METADATA_CommitNew_Updated=     "ALERT.Metadata.CommitNew.Updated";
     public static final String ALERT_METADATA_IssueNew_Updated =     "ALERT.Metadata.IssueNew.Updated";
     public static final String ALERT_METADATA_IssueUpdate_Updated =  "ALERT.Metadata.IssueUpdate.Updated";

@@ -22,7 +22,7 @@ public class KesiSCM implements Serializable {
     private String repositoryUri;
     
     @XStreamAlias("s:commitRevisionTag")
-    private Integer revisionTag;
+    private String revisionTag;
     
     @XStreamAlias("s:commitAuthor")
     private Author author;
@@ -48,11 +48,11 @@ public class KesiSCM implements Serializable {
         this.repositoryUri = repositoryUri;
     }
 
-    public Integer getRevisionTag() {
+    public String getRevisionTag() {
         return revisionTag;
     }
 
-    public void setRevisionTag(Integer revisionTag) {
+    public void setRevisionTag(String revisionTag) {
         this.revisionTag = revisionTag;
     }
 
@@ -98,24 +98,24 @@ public class KesiSCM implements Serializable {
 
     public static class File{
 
-        @XStreamAlias("s:fileId")
-        private Integer id;
-        
         @XStreamAlias("s:fileAction")
         private String action;
-        
+
+        @XStreamAlias("s:fileName")
+        private String fileName;
+
         @XStreamAlias("s:fileBranch")
         private String branch;
         
         @XStreamImplicit(itemFieldName = "s:fileModules")
         private List<Module> modules;
 
-        public Integer getId() {
-            return id;
+        public String getFileName() {
+            return fileName;
         }
 
-        public void setId(Integer id) {
-            this.id = id;
+        public void setFileName(String fileName) {
+            this.fileName = fileName;
         }
 
         public String getAction() {
@@ -144,9 +144,6 @@ public class KesiSCM implements Serializable {
 
         public static class Module{
             
-            @XStreamAlias("s:moduleId")
-            private Integer id;
-            
             @XStreamAlias("s:moduleName")
             private String name;
             
@@ -159,15 +156,6 @@ public class KesiSCM implements Serializable {
             
             @XStreamImplicit(itemFieldName = "s:moduleMethods")
             private List<Methods> methods;
-
-
-            public Integer getId() {
-                return id;
-            }
-
-            public void setId(Integer id) {
-                this.id = id;
-            }
 
             public String getName() {
                 return name;
@@ -203,9 +191,6 @@ public class KesiSCM implements Serializable {
 
             public static class Methods{
                 
-                @XStreamAlias("s:methodId")
-                private Integer id;
-                
                 @XStreamAlias("s:methodName")
                 private String name;
                 
@@ -214,14 +199,6 @@ public class KesiSCM implements Serializable {
                 
                 @XStreamAlias("s:methodEndLine")
                 private Integer endLine;
-
-                public Integer getId() {
-                    return id;
-                }
-
-                public void setId(Integer id) {
-                    this.id = id;
-                }
 
                 public String getName() {
                     return name;
