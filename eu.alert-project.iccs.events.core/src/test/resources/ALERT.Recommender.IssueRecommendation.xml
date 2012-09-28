@@ -27,18 +27,22 @@
                   <sc:issue>
                     <sc:id>1010</sc:id>
                     <o:bug>owl#1</o:bug>
+                    <sc:subject><![CDATA[Subject 1010]]></sc:subject>
                   </sc:issue>
                   <sc:issue>
                     <sc:id>2050</sc:id>
                     <o:bug>owl#2</o:bug>
+                    <sc:subject><![CDATA[Subject 1010]]></sc:subject>
                   </sc:issue>
                   <sc:issue>
                     <sc:id>2030</sc:id>
                     <o:bug>owl#3</o:bug>
+                    <sc:subject><![CDATA[Subject 1010]]></sc:subject>
                   </sc:issue>
                   <sc:issue>
                     <sc:id>2040</sc:id>
                     <o:bug>owl#4</o:bug>
+                    <sc:subject><![CDATA[Subject 1010]]></sc:subject>
                   </sc:issue>
                 </sc:issues>
               </ns1:eventData>

@@ -54,6 +54,11 @@ public class RecommendIssuesRequestEvenlopeTest {
                                 .getType());
 
 
+
+        Assert.assertEquals(o.getBody().getNotify().getNotificationMessage().getMessage().getEvent().getPayload().getEventData().getRanking(),
+                        0.5,0.0);
+
+
         List<IssueIdentities> issueIdentitieses = o.getBody().getNotify().getNotificationMessage().getMessage().getEvent().getPayload().getEventData().getIssueIdentities();
 
         Assert.assertNotNull(issueIdentitieses);
@@ -79,7 +84,7 @@ public class RecommendIssuesRequestEvenlopeTest {
         identities.add(new Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e4","Messi"));
 
         IssueIdentities issueIdentities = new IssueIdentities(
-                new Issue("274", "owl#1"),
+                new Issue("274", "owl#1", "Subject 274"),
                 identities);
 
 
@@ -90,7 +95,7 @@ public class RecommendIssuesRequestEvenlopeTest {
         identities1.add(new Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e4","Messi"));
 
         IssueIdentities issueIdentities1 = new IssueIdentities(
-                new Issue("2050","owl#2"),
+                new Issue("2050","owl#2", "Subject 274"),
                 identities1
         );
 

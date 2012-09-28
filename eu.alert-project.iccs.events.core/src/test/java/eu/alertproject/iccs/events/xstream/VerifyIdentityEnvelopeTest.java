@@ -60,12 +60,12 @@ public class VerifyIdentityEnvelopeTest {
                 10010L,
                 1,
                 new Identity("51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1",null),
-                new Issue("274","owl#1"),
+                new Issue("274","owl#1","Subject 274"),
                 "1234",
                 true);
 
         Assert.assertEquals(
-            IOUtils.toString(VerifyIdentityEnvelopeTest.class.getResourceAsStream("/ALERT.Recommender.IdentityVerification.xml")),
+            IOUtils.toString(VerifyIdentityEnvelopeTest.class.getResourceAsStream("/ALERT.Recommender.Ident ityVerification.xml")),
             s);
 
 

@@ -41,11 +41,24 @@ public class RecommendIssuesPayload {
 
     public static class EventData implements Serializable {
 
+
+        @XStreamAlias("sc:ranking")
+        private Double ranking;
+
+
         @XStreamImplicit(itemFieldName = "sc:identities")
         private List<IssueIdentities> identities;
 
         @XStreamAlias("p:patternId")
         private String patternId;
+
+        public Double getRanking() {
+            return ranking;
+        }
+
+        public void setRanking(Double ranking) {
+            this.ranking = ranking;
+        }
 
         public List<IssueIdentities> getIssueIdentities() {
             return identities;

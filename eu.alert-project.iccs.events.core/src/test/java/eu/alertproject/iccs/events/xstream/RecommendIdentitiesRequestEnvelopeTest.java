@@ -61,6 +61,10 @@ public class RecommendIdentitiesRequestEnvelopeTest {
                                 .getMeta()
                                 .getType());
 
+        Assert.assertEquals(o.getBody().getNotify().getNotificationMessage().getMessage().getEvent().getPayload().getEventData().getRanking(),
+                1.8,0.0);
+
+
         List<Issue> identities = o.getBody()
                                                                             .getNotify()
                                                                             .getNotificationMessage()
@@ -102,10 +106,10 @@ public class RecommendIdentitiesRequestEnvelopeTest {
         List<Issue> issues =new ArrayList<Issue>();
 
 
-        issues.add(new Issue("1010","owl#1"));
-        issues.add(new Issue("2050","owl#2"));
-        issues.add(new Issue("2030","owl#3"));
-        issues.add(new Issue("2040","owl#4"));
+        issues.add(new Issue("1010","owl#1","Subject 1010"));
+        issues.add(new Issue("2050","owl#2","Subject 1010"));
+        issues.add(new Issue("2030","owl#3","Subject 1010"));
+        issues.add(new Issue("2040","owl#4","Subject 1010"));
 
         Assert.assertEquals(
                 EventFactory.createRecommendationIssuesEvent(

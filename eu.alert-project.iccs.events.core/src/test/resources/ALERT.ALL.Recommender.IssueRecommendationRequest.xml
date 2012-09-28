@@ -37,7 +37,7 @@
                                 <ns1:eventType>Request</ns1:eventType>
                             </ns1:meta>
                             <ns1:eventData>
-                                <sc:ranking>0.0</sc:ranking>
+                                <sc:ranking>0.5</sc:ranking>
                                 <sc:identities>
                                     <sc:identity>
                                         <sc:uuid>51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1

@@ -37,7 +37,7 @@
                                 <ns1:eventType>Request</ns1:eventType>
                             </ns1:meta>
                             <ns1:eventData>
-                                <sc:ranking>0.0</sc:ranking>
+                                <sc:ranking>1.8</sc:ranking>
                                 <sc:issues>
                                     <sc:issue>
                                         <sc:id>274</sc:id>

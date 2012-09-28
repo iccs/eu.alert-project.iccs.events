@@ -1,5 +1,6 @@
 package eu.alertproject.iccs.events.api;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -63,6 +64,13 @@ public abstract class AbstractActiveMQListener implements MessageListener{
                     String.valueOf(stared),
                     this.getClass(),
                     messageCount);
+
+
+            File file = new File("/tmp/iccs");
+            if(!file.isDirectory()){
+                file.mkdir();
+            }
+
 
             IOUtils.write(messageStr, new FileOutputStream(new File(fileName)));
             logger.info("void process([message]) Speed {} o/s ({}) - file={} ",new Object[]{processSpeed,messageCount,fileName});

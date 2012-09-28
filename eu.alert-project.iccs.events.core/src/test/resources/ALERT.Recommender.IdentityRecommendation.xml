@@ -27,6 +27,7 @@
                   <sc:issue>
                     <sc:id>274</sc:id>
                     <o:bug>owl#1</o:bug>
+                    <sc:subject>Subject 274</sc:subject>
                   </sc:issue>
                   <sc:identity>
                     <sc:uuid>51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1</sc:uuid>
@@ -45,6 +46,7 @@
                   <sc:issue>
                     <sc:id>2050</sc:id>
                     <o:bug>owl#2</o:bug>
+                    <sc:subject>Subject 274</sc:subject>
                   </sc:issue>
                   <sc:identity>
                     <sc:uuid>51d8ecec1d6ea40106c6c71ffed13547010870b0ab57fe396f5fbb124967e0e1</sc:uuid>

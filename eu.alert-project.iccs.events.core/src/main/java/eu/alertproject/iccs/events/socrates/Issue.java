@@ -11,12 +11,25 @@ public  class Issue{
     @XStreamAlias("o:bug")
     private String bug;
 
+    @XStreamAlias("sc:subject")
+    private String subject;
+
+
     public Issue() {
     }
 
-    public Issue(String uuid, String bug) {
+    public Issue(String uuid, String bug,String subject) {
         this.uuid = uuid;
         this.bug = bug;
+        this.subject = subject;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public String getUuid() {

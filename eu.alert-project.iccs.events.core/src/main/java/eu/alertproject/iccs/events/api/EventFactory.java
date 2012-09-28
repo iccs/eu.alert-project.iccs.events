@@ -284,7 +284,40 @@ public class EventFactory {
         envelope.setBody(body);
         envelope.setHeader("Header");
 
-        XStream xstream = new XStream();
+        XStream xstream = new XStream(
+
+                new XppDomDriver() {
+                    public HierarchicalStreamWriter createWriter(Writer out) {
+                        return new PrettyPrintWriter(out) {
+
+                            boolean cdata = false;
+
+                            //http://oktryitnow.com/?p=11
+                            public void startNode(String name, Class clazz) {
+                                super.startNode(name, clazz);
+                                cdata = (
+                                        ArrayUtils.contains(
+                                                new String[]{
+                                                        "sc:subject",
+                                                },
+                                                name
+                                        ));
+
+                            }
+
+                            protected void writeText(QuickWriter writer, String text) {
+                                if (cdata) {
+                                    writer.write("<![CDATA[");
+                                    writer.write(text);
+                                    writer.write("]]>");
+                                } else {
+                                    writer.write(text);
+                                }
+                            }
+                        };
+                    }
+                }
+        );
         xstream.processAnnotations(RecommendIdentityEnvelope.class);
 
         return EventFactory.fixEvent(xstream.toXML(envelope));
