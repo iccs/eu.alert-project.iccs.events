@@ -14,6 +14,7 @@ public class Topics {
 
 
     public static final String ALERT_STARDOM_Identity_Updated= "ALERT.STARDOM.IdentityUpdate";
+    public static final String ALERT_STARDOM_Identity_Snapshot= "ALERT.STARDOM.IdentitySnapshot";
     public static final String ALERT_STARDOM_New_Identity= "ALERT.STARDOM.IdentityNew";
     public static final String ALERT_STARDOM_Issue_Updated= "ALERT.STARDOM.IssueUpdated";
     public static final String ALERT_STARDOM_TextToAnnotate ="ALERT.STARDOM.TextToAnnotate";

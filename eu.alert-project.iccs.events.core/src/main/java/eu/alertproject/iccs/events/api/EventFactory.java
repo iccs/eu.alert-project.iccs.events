@@ -234,6 +234,66 @@ public class EventFactory {
 
     }
 
+    public static String createStardomIdentitySnapshot(
+            Integer eventId, long start,long end, int sequence,
+            StardomIdentitySnapshotPayload.EventData.Identity identity
+    ){
+
+
+        Head head = new Head();
+        head.setSender("STARDOM");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        StardomIdentitySnapshotPayload.EventData se = new StardomIdentitySnapshotPayload.EventData();
+        se.setIdentity(identity);
+
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_STARDOM_Identity_Snapshot);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(eventId);
+        meta.setType("Request");
+
+        StardomIdentitySnapshotPayload payload = new StardomIdentitySnapshotPayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        StardomIdentitySnapshotEnvelope.Body.Notify.NotificationMessage.Message.Event event = new StardomIdentitySnapshotEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+
+
+        StardomIdentitySnapshotEnvelope.Body.Notify.NotificationMessage.Message message = new StardomIdentitySnapshotEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/stardom");
+
+        StardomIdentitySnapshotEnvelope.Body.Notify.NotificationMessage notificationMessage = new StardomIdentitySnapshotEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_STARDOM_Identity_Snapshot);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+
+        StardomIdentitySnapshotEnvelope.Body.Notify notify = new StardomIdentitySnapshotEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+
+        StardomIdentitySnapshotEnvelope.Body body = new StardomIdentitySnapshotEnvelope.Body();
+        body.setNotify(notify);
+
+        StardomIdentitySnapshotEnvelope envelope = new StardomIdentitySnapshotEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+        XStream xstream = new XStream();
+        xstream.processAnnotations(StardomIdentitySnapshotEnvelope.class);
+
+        return EventFactory.fixEvent(xstream.toXML(envelope));
+
+    }
+
     public static String createRecommendationIssuesEvent(
             Integer eventId, long start,long end, int sequence,
             List<Issue> issues) {

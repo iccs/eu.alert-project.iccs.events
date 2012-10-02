@@ -11,7 +11,6 @@ import java.util.List;
  * User: fotis
  * Date: 13/03/12
  * Time: 15:24
- * To change this template use File | Settings | File Templates.
  */
 public class IdentityPersons {
 
