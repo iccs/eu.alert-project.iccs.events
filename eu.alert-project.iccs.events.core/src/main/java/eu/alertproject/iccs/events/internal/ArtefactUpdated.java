@@ -30,4 +30,12 @@ public class ArtefactUpdated implements Serializable {
     public void setConcepts(List<Keui.Concept> concepts) {
         this.concepts = concepts;
     }
+
+    @Override
+    public String toString() {
+        return "ArtefactUpdated{" +
+                "id='" + id + '\'' +
+                ", concepts=" + concepts +
+                '}';
+    }
 }

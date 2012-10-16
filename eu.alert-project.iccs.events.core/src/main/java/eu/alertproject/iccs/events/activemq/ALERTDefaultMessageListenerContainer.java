@@ -1,13 +1,12 @@
 package eu.alertproject.iccs.events.activemq;
 
-import eu.alertproject.iccs.events.api.AbstractActiveMQListener;
+import eu.alertproject.iccs.events.api.AbstractActiveMQHandler;
 import org.apache.activemq.command.ActiveMQTopic;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.jms.listener.DefaultMessageListenerContainer;
 
-import javax.annotation.PostConstruct;
 import javax.jms.ConnectionFactory;
-import java.util.Properties;
+import javax.jms.MessageListener;
 
 /**
  * User: fotis
@@ -18,8 +17,8 @@ public class ALERTDefaultMessageListenerContainer extends DefaultMessageListener
 
 
     public ALERTDefaultMessageListenerContainer(
-            String topic,
-            AbstractActiveMQListener listener,
+            String[] topic,
+            MessageListener listener,
             ConnectionFactory jmsConnectionFactory,
             Integer recoveryInterval,
             Integer cacheLevel
@@ -27,9 +26,9 @@ public class ALERTDefaultMessageListenerContainer extends DefaultMessageListener
 
         super();
         this.setMessageListener(listener);
-        this.setDestination(new ActiveMQTopic(topic));
+        this.setDestination(new ActiveMQTopic(StringUtils.join(topic,",")));
         this.setSubscriptionDurable(true);
-        this.setDurableSubscriptionName(topic);
+        this.setDurableSubscriptionName(StringUtils.join(topic,","));
 
         this.setConnectionFactory(jmsConnectionFactory);
         this.setRecoveryInterval(recoveryInterval);

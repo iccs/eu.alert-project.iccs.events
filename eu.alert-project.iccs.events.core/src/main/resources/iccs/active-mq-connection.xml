@@ -40,4 +40,5 @@
         <property name="connectionFactory" ref="jmsConnectionFactory" />
         <property name="pubSubDomain" value="true"/>
     </bean>
+
 </beans>

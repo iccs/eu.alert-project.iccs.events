@@ -113,7 +113,7 @@ public class RecommendIdentitiesRequestEnvelopeTest {
 
         Assert.assertEquals(
                 EventFactory.createRecommendationIssuesEvent(
-                        1818516212,
+                        "1818516212",
                         1331676396932L,
                         1331676396937L,
                         570749432,

@@ -62,7 +62,8 @@ public class EventFactory {
     private static String fixEvent(String str){
         return EventFactory.fixEvent(str, true);
     }
-    
+
+
     private static XStream getMarshaller(Class<?> ...clazz){
 
 
@@ -130,7 +131,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_STARDOM_New_Identity);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Request");
 
 
@@ -194,7 +195,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_STARDOM_Identity_Updated);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Request");
 
         StardomIdentityUpdatePayload payload = new StardomIdentityUpdatePayload();
@@ -254,7 +255,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_STARDOM_Identity_Snapshot);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Request");
 
         StardomIdentitySnapshotPayload payload = new StardomIdentitySnapshotPayload();
@@ -295,7 +296,7 @@ public class EventFactory {
     }
 
     public static String createRecommendationIssuesEvent(
-            Integer eventId, long start,long end, int sequence,
+            String eventId, long start,long end, int sequence,
             List<Issue> issues) {
 
         Head head = new Head();
@@ -311,7 +312,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_SOCRATES_Issue_Recommendation);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Reply");
 
         RecommendIdentityPayload payload = new RecommendIdentityPayload();
@@ -386,7 +387,7 @@ public class EventFactory {
     }
 
     public static String createRecommendationIdentityEvent(
-            Integer eventId, long start,long end, int sequence,
+            String eventId, long start,long end, int sequence,
             String patternId,
             List<IssueIdentities> identities) {
 
@@ -404,7 +405,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_SOCRATES_Identity_Recommendation);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Reply");
 
         RecommendIssuesPayload payload = new RecommendIssuesPayload();
@@ -468,7 +469,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_STARDOM_TextToAnnotate);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Request");
         
         TextToAnnotateRequestPayload payload = new TextToAnnotateRequestPayload();
@@ -511,7 +512,7 @@ public class EventFactory {
     
     
     public static String createVerifyIdentityEvent(
-            Integer eventId, 
+            String eventId,
             long start,
             long end, 
             int sequence,
@@ -538,7 +539,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_SOCRATES_Identity_Verification);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Reply");
         
         VerifyIdentityPayload payload = new VerifyIdentityPayload();
@@ -609,7 +610,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_MLSensor_Mail_New);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Request");
 
         MailingListNewPayload payload = new MailingListNewPayload();
@@ -717,7 +718,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_MLSensor_Forum_Post_New);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Request");
 
         MailingListNewPayload payload = new MailingListNewPayload();
@@ -797,7 +798,7 @@ public class EventFactory {
 
 
     public static String createStardomLoginVerifyEnvelope(
-            Integer eventId,
+            String eventId,
             long start,
             long end,
             int sequence,
@@ -828,7 +829,7 @@ public class EventFactory {
         meta.setEventName(Topics.ALERT_STARDOM_LoginVerify);
         meta.setStartTime(start);
         meta.setEndTime(end);
-        meta.setEventId(eventId);
+        meta.setEventId(String.valueOf(eventId));
         meta.setType("Request");
 
         LoginVerifyPayload payload = new LoginVerifyPayload();

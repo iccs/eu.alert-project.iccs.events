@@ -29,4 +29,14 @@ public class IssueUpdated extends ArtefactUpdated {
     public void setDate(Date date) {
         this.date = date;
     }
+
+
+    @Override
+    public String toString() {
+        return "IssueUpdated{" +
+                "parent"+super.toString()+
+                "date=" + date +
+                ", subject='" + subject + '\'' +
+                '}';
+    }
 }

@@ -1,5 +1,6 @@
 package eu.alertproject.iccs.events.activemq;
 
+import eu.alertproject.iccs.events.api.DataMessageCreator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jms.core.MessageCreator;
@@ -14,7 +15,7 @@ import javax.jms.TextMessage;
  * Date: 14/03/12
  * Time: 14:59
  */
-public class TextMessageCreator implements MessageCreator {
+public class TextMessageCreator implements DataMessageCreator{
     private Logger logger = LoggerFactory.getLogger(TextMessageCreator.class);
 
     private String message;
@@ -27,11 +28,15 @@ public class TextMessageCreator implements MessageCreator {
     @Override
     public Message createMessage(Session session) throws JMSException {
 
-
         TextMessage textMessage = session.createTextMessage(message);
 
         logger.trace("Message createMessage() {} ",textMessage);
 
         return textMessage;
+    }
+
+    @Override
+    public String getRawData() {
+        return this.message;
     }
 }

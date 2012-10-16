@@ -107,7 +107,7 @@ public class RecommendIssuesRequestEvenlopeTest {
 
         Assert.assertEquals(
                         EventFactory.createRecommendationIdentityEvent(
-                                5748,
+                                "5748",
                                 10001L,
                                 10012L,
                                 1,

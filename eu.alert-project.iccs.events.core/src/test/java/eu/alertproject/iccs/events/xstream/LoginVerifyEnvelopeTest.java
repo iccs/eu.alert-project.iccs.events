@@ -52,7 +52,7 @@ public class LoginVerifyEnvelopeTest{
     public void testCreate() throws IOException, SAXException {
 
         String verifyEnvelope = EventFactory.createStardomLoginVerifyEnvelope(
-                5748,
+                "5748",
                 10000L,
                 10010L,
                 1,

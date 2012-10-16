@@ -26,7 +26,7 @@ public class Meta implements Serializable {
     private String eventName;
 
     @XStreamAlias("ns1:eventId")
-    private Integer eventId;
+    private String eventId;
 
     @XStreamAlias("ns1:eventType")
     private String type;
@@ -56,11 +56,11 @@ public class Meta implements Serializable {
         this.eventName = eventName;
     }
 
-    public Integer getEventId() {
+    public String getEventId() {
         return eventId;
     }
 
-    public void setEventId(Integer eventId) {
+    public void setEventId(String eventId) {
         this.eventId = eventId;
     }
 
