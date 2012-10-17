@@ -78,6 +78,7 @@ public class ActiveMQMessageBroker implements MessageListener{
 
         //save
         //store the message
+        FileOutputStream output = null;
         try {
 
             TextMessage tm = (TextMessage) message;
@@ -93,8 +94,7 @@ public class ActiveMQMessageBroker implements MessageListener{
             }
 
             if(recordIncoming){
-                String fileName = String.format("/tmp/iccs/in-%s-%s-%s.txt",
-                        String.valueOf(started),
+                String fileName = String.format("/tmp/iccs/in-%s-%s.txt",
                         topic,
                         messageCount);
 
@@ -104,7 +104,9 @@ public class ActiveMQMessageBroker implements MessageListener{
                 }
 
                 logger.info("Message written to {} ",fileName);
-                IOUtils.write(messageStr, new FileOutputStream(new File(fileName)));
+
+                output = new FileOutputStream(new File(fileName));
+                IOUtils.write(messageStr, output);
             }
 
             int count = listenerCounts.get(SEND).incrementAndGet();
@@ -131,6 +133,8 @@ public class ActiveMQMessageBroker implements MessageListener{
         } catch (JMSException e) {
             logger.warn("Couldn't retrieve the message content {}", e);
         } finally {
+
+            IOUtils.closeQuietly(output);
             listenerCounts.get(TOTAL).incrementAndGet();
         }
     }
