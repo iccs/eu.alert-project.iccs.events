@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing"
+            xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
+    <s:Header/>
+    <s:Body>
+        <wsnt:Notify>
+            <wsnt:NotificationMessage>
+                <wsnt:Topic/>
+                <wsnt:ProducerReference>
+                    <wsa:Address>http://www.alert-project.eu/metadata</wsa:Address>
+                </wsnt:ProducerReference>
+                <wsnt:Message>
+                    <ns1:event xmlns:ns1="http://www.alert-project.eu/"
+                               xmlns:o="http://www.alert-project.eu/ontoevents-mdservice"
+                               xmlns:r="http://www.alert-project.eu/rawevents-forum"
+                               xmlns:r1="http://www.alert-project.eu/rawevents-mailinglist"
+                               xmlns:r2="http://www.alert-project.eu/rawevents-wiki"
+                               xmlns:s="http://www.alert-project.eu/strevents-kesi"
+                               xmlns:s1="http://www.alert-project.eu/strevents-keui"
+                               xmlns:s2="http://www.alert-project.eu/APIcall-request"
+                               xmlns:s3="http://www.alert-project.eu/APIcall-response"
+                               xmlns:sc="http://www.alert-project.eu/socrates"
+                               xmlns:schemaLocation="http://www.alert-project.eu/alert-root.xsd"
+                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <ns1:head>
+                            <ns1:sender>Alert-UI</ns1:sender>
+                            <ns1:sequencenumber>1</ns1:sequencenumber>
+                            <ns1:timestamp>1350564637898</ns1:timestamp>
+                        </ns1:head>
+                        <ns1:payload>
+                            <ns1:meta>
+                                <ns1:eventName>ALERT.AlertUI.Recommender.IssueRecommendationRequest</ns1:eventName>
+                                <ns1:eventType>request</ns1:eventType>
+                                <ns1:eventId>227381630963341844</ns1:eventId>
+                            </ns1:meta>
+                            <ns1:eventData>
+                                <sc:ranking>0.5</sc:ranking>
+                                <sc:identities>
+                                    <sc:identity>
+                                        <sc:uuid>d4d07b3a-1379-499d-a1f9-7056093cdb1e</sc:uuid>
+                                    </sc:identity>
+                                </sc:identities>
+                            </ns1:eventData>
+                        </ns1:payload>
+                    </ns1:event>
+                </wsnt:Message>
+            </wsnt:NotificationMessage>
+        </wsnt:Notify>
+    </s:Body>
+</s:Envelope>

@@ -27,7 +27,7 @@ public class RecommendIssuesRequestEvenlopeTest {
         XStream xstream = new XStream();
         xstream.processAnnotations(RecommendIssuesEnvelope.class);
 
-        String s = IOUtils.toString(RecommendIssuesRequestEvenlopeTest.class.getResourceAsStream("/ALERT.ALL.Recommender.IssueRecommendationRequest.xml"));
+        String s = IOUtils.toString(RecommendIssuesRequestEvenlopeTest.class.getResourceAsStream("/JSIevents.xml"));
 
         RecommendIssuesEnvelope o = EventFactory
                                 .<RecommendIssuesEnvelope>fromXml(s, RecommendIssuesEnvelope.class);

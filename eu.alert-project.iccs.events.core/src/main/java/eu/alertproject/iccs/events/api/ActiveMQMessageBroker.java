@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -116,10 +117,10 @@ public class ActiveMQMessageBroker implements MessageListener{
                logger.trace("void onMessage([message]) {}",messageStr);
 
                 //check if a listener is registered
-                if(listenerMap != null && listenerMap.containsKey(topic)){
-
-                    listenerCounts.get(topic).incrementAndGet();
-                    listenerMap.get(topic).process(this,message);
+                String realTopic = isListeningFor(topic);
+                if(listenerMap != null && realTopic !=null ){
+                    listenerCounts.get(realTopic).incrementAndGet();
+                    listenerMap.get(realTopic).process(this,message);
                 }
             }
 
@@ -182,6 +183,27 @@ public class ActiveMQMessageBroker implements MessageListener{
                     eventId.get(), topic);
 
         }
+
+    }
+
+    public String isListeningFor(String topic){
+
+        if(listenerMap == null){
+            return null;
+        }
+
+        Set<String> strings = listenerMap.keySet();
+
+        for(String key : strings){
+
+            if(topic.matches(key)){
+                return key;
+            }
+
+
+        }
+
+        return null;
 
     }
 
