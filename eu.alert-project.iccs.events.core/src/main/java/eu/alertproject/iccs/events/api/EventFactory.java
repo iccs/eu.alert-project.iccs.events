@@ -386,6 +386,100 @@ public class EventFactory {
 
     }
 
+    public static String createRecommendationModuleEvent(
+            String eventId, long start,long end, int sequence,
+            List<Module> modules) {
+
+        Head head = new Head();
+        head.setSender("SOCRATES");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        RecommendModulesPayload.EventData se = new RecommendModulesPayload.EventData();
+        se.setModules(modules);
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_SOCRATES_Module_Recommendation);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(String.valueOf(eventId));
+        meta.setType("Reply");
+
+        RecommendModulesPayload payload = new RecommendModulesPayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        RecommendModulesEnvelope.Body.Notify.NotificationMessage.Message.Event event = new RecommendModulesEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+
+
+        RecommendModulesEnvelope.Body.Notify.NotificationMessage.Message message = new RecommendModulesEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/socrates");
+
+        RecommendModulesEnvelope.Body.Notify.NotificationMessage notificationMessage = new RecommendModulesEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_SOCRATES_Module_Recommendation);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+
+        RecommendModulesEnvelope.Body.Notify notify = new RecommendModulesEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+
+        RecommendModulesEnvelope.Body body = new RecommendModulesEnvelope.Body();
+        body.setNotify(notify);
+
+        RecommendModulesEnvelope envelope = new RecommendModulesEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+        XStream xstream = new XStream(
+
+                new XppDomDriver() {
+                    public HierarchicalStreamWriter createWriter(Writer out) {
+                        return new PrettyPrintWriter(out) {
+
+                            boolean cdata = false;
+
+                            //http://oktryitnow.com/?p=11
+                            public void startNode(String name, Class clazz) {
+                                super.startNode(name, clazz);
+                                cdata = (
+                                        ArrayUtils.contains(
+                                                new String[]{
+                                                        "sc:id",
+                                                },
+                                                name
+                                        ));
+
+                            }
+
+                            protected void writeText(QuickWriter writer, String text) {
+                                if (cdata) {
+                                    writer.write("<![CDATA[");
+                                    writer.write(text);
+                                    writer.write("]]>");
+                                } else {
+                                    writer.write(text);
+                                }
+                            }
+                        };
+                    }
+                }
+        );
+        xstream.processAnnotations(RecommendModulesEnvelope.class);
+
+        return EventFactory.fixEvent(xstream.toXML(envelope));
+
+
+
+
+    }
+
+
     public static String createRecommendationIdentityEvent(
             String eventId, long start,long end, int sequence,
             String patternId,

@@ -23,11 +23,13 @@ public class Topics {
     public static final String ALERT_ALL_STARDOM_LoginVerifyRequest="ALERT.*.LoginVerifyRequest";
     public static final String ALERT_ALL_SOCRATES_Issue_Recommendation_Request = "ALERT.*.Recommender.IssueRecommendationRequest";
     public static final String ALERT_ALL_SOCRATES_Identity_Recommendation_Request= "ALERT.*.Recommender.IdentitiesRecommendationRequest";
+    public static final String ALERT_ALL_SOCRATES_Module_Recommendation_Request= "ALERT.*.Recommender.ModuleRecommendationRequest";
     public static final String ALERT_ALL_SOCRATES_Identity_Verification_Request= "ALERT.*.Recommender.VerifyIdentitiesRequest";
 
 
     public static final String ALERT_SOCRATES_Issue_Recommendation= "ALERT.Recommender.IssueRecommendation";
     public static final String ALERT_SOCRATES_Identity_Recommendation= "ALERT.Recommender.IdentityRecommendation";
+    public static final String ALERT_SOCRATES_Module_Recommendation= "ALERT.Recommender.ModuleRecommendation";
     public static final String ALERT_SOCRATES_Identity_Verification= "ALERT.Recommender.IdentityVerification";
 
 
