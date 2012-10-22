@@ -17,6 +17,7 @@ import org.apache.commons.lang.StringUtils;
 import java.io.Reader;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -967,5 +968,123 @@ public class EventFactory {
         );
 
 
+    }
+
+    public static String createCompetencyUpdateEvent(int eventId,
+                                                     long start,
+                                                     long end,
+                                                     int sequence,
+                                                     String uuid,
+                                                     List<String> personsUris,
+                                                     List<StardomCIUpdatePayload.EventData.CI> cir,
+                                                     StardomCIUpdatePayload.EventData.Metrics.Fluency fluency,
+                                                     StardomCIUpdatePayload.EventData.Metrics.Effectiveness effectiveness,
+                                                     StardomCIUpdatePayload.EventData.Metrics.Contribution contribution,
+                                                     StardomCIUpdatePayload.EventData.Metrics.Recency recency) {
+
+
+        Head head = new Head();
+        head.setSender("MLSensor");
+        head.setTimestamp(start);
+        head.setSequenceNumber(sequence);
+
+
+        StardomCIUpdatePayload.EventData se = new StardomCIUpdatePayload.EventData();
+
+
+
+        Meta meta = new Meta();
+        meta.setEventName(Topics.ALERT_STARDOM_CompetencyUpdate);
+        meta.setStartTime(start);
+        meta.setEndTime(end);
+        meta.setEventId(String.valueOf(eventId));
+        meta.setType("Response");
+
+
+        StardomCIUpdatePayload payload = new StardomCIUpdatePayload();
+        payload.setMeta(meta);
+        payload.setEventData(se);
+
+        StardomCIUpdateEnvelope.Body.Notify.NotificationMessage.Message.Event event = new StardomCIUpdateEnvelope.Body.Notify.NotificationMessage.Message.Event();
+        event.setHead(head);
+        event.setPayload(payload);
+
+
+        StardomCIUpdateEnvelope.Body.Notify.NotificationMessage.Message message = new StardomCIUpdateEnvelope.Body.Notify.NotificationMessage.Message();
+        message.setEvent(event);
+
+        ProducerReference producerReference = new ProducerReference();
+        producerReference.setAddress("http://www.alert-project.eu/STARDOM");
+
+        StardomCIUpdateEnvelope.Body.Notify.NotificationMessage notificationMessage = new StardomCIUpdateEnvelope.Body.Notify.NotificationMessage();
+        notificationMessage.setTopic(Topics.ALERT_STARDOM_CompetencyUpdate);
+        notificationMessage.setProducerReference(producerReference);
+        notificationMessage.setMessage(message);
+
+        StardomCIUpdateEnvelope.Body.Notify notify = new StardomCIUpdateEnvelope.Body.Notify();
+        notify.setNotificationMessage(notificationMessage);
+
+        StardomCIUpdateEnvelope.Body body = new StardomCIUpdateEnvelope.Body();
+        body.setNotify(notify);
+
+        StardomCIUpdateEnvelope envelope = new StardomCIUpdateEnvelope();
+        envelope.setBody(body);
+        envelope.setHeader("Header");
+
+
+        StardomCIUpdatePayload.EventData.Identity i =
+                new StardomCIUpdatePayload.EventData.Identity();
+
+        i.setUuid(uuid);
+        i.setPersons(personsUris);
+
+        StardomCIUpdatePayload.EventData.Metrics metrics = new StardomCIUpdatePayload.EventData.Metrics();
+        metrics.setFluency(fluency);
+        metrics.setEffectiveness(effectiveness);
+        metrics.setContribution(contribution);
+        metrics.setRecency(recency);
+
+
+        se.setIdentity(i);
+        se.setCis(cir);
+        se.setMetrics(metrics);
+
+
+        XStream xstream = new XStream(
+
+                new XppDomDriver() {
+                    public HierarchicalStreamWriter createWriter(Writer out) {
+                        return new PrettyPrintWriter(out) {
+
+                            boolean cdata = false;
+
+                            //http://oktryitnow.com/?p=11
+                            public void startNode(String name, Class clazz) {
+                                super.startNode(name, clazz);
+                                cdata = (
+                                        ArrayUtils.contains(
+                                                new String[]{
+                                                        "sm:class",
+                                                },
+                                                name
+                                        ));
+
+                            }
+
+                            protected void writeText(QuickWriter writer, String text) {
+                                if (cdata) {
+                                    writer.write("<![CDATA[");
+                                    writer.write(text);
+                                    writer.write("]]>");
+                                } else {
+                                    writer.write(text);
+                                }
+                            }
+                        };
+                    }
+                }
+        );
+        xstream.processAnnotations(StardomCIUpdateEnvelope.class);
+        return EventFactory.fixEvent(xstream.toXML(envelope));
     }
 }

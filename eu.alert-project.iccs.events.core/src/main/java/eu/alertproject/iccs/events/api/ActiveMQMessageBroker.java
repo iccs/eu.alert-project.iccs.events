@@ -104,7 +104,7 @@ public class ActiveMQMessageBroker implements MessageListener{
                     file.mkdir();
                 }
 
-                logger.info("Message written to {} ",fileName);
+                logger.debug("Message written to {} ",fileName);
 
                 output = new FileOutputStream(new File(fileName));
                 IOUtils.write(messageStr, output);
@@ -124,9 +124,9 @@ public class ActiveMQMessageBroker implements MessageListener{
                 }
             }
 
-            float sf = listenerCounts.get("total").get() / (System.currentTimeMillis() - start);
+            float sf = listenerCounts.get(TOTAL).get() / (System.currentTimeMillis() - start);
             speed.set(sf);
-            logger.info("void process([message]) Speed {} o/s ({}) - {} ",new Object[]{sf,messageCount,topic});
+            logger.debug("void process([message]) Speed {} o/s ({}) - {} ",new Object[]{sf,messageCount,topic});
 
 
         } catch (IOException e) {
