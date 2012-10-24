@@ -34,10 +34,6 @@ public class ActiveMQMessageBroker implements MessageListener{
     public static final String TOTAL = "total";
     private Logger logger = LoggerFactory.getLogger(ActiveMQMessageBroker.class);
 
-    private final long started = System.currentTimeMillis();
-    private AtomicReference<Float> speed = new AtomicReference<Float>(0.0f);
-
-    private long start = System.currentTimeMillis();
 
     private boolean processDisabled= false;
     private boolean recordIncoming = true;
@@ -123,11 +119,6 @@ public class ActiveMQMessageBroker implements MessageListener{
                     listenerMap.get(realTopic).process(this,message);
                 }
             }
-
-            float sf = listenerCounts.get(TOTAL).get() / (System.currentTimeMillis() - start);
-            speed.set(sf);
-            logger.debug("void process([message]) Speed {} o/s ({}) - {} ",new Object[]{sf,messageCount,topic});
-
 
         } catch (IOException e) {
             logger.warn("Couldn't handle and translate the message content {}",e);
@@ -231,9 +222,6 @@ public class ActiveMQMessageBroker implements MessageListener{
         this.recordOutgoing = recordOutgoing;
     }
 
-    public float getSpeed() {
-        return speed.get();
-    }
 
     public Map<String, AbstractActiveMQHandler> getListenerMap() {
         return listenerMap;

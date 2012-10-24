@@ -3,6 +3,7 @@ package eu.alertproject.iccs.events.internal;
 import eu.alertproject.iccs.events.alert.Keui;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -12,16 +13,18 @@ import java.util.List;
  */
 public class ComponentUpdated extends ArtefactUpdated {
 
-    private String component;
+    private List<String> components;
 
-    public void setComponent(String component){
-        this.component = component;
-    }
-    
-    public String getComponent(){
-        return this.component;
-        
-    }
-    
 
+    public List<String> getComponents() {
+        return components;
+    }
+
+    public void setComponents(List<String> component) {
+        this.components = component;
+    }
+
+    public void setComponent(String ... component){
+        this.components = Arrays.asList(component);
+    }
 }
