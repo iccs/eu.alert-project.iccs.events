@@ -52,6 +52,8 @@ public class ActiveMQMessageBroker implements MessageListener{
     @PostConstruct
     public void init(){
 
+        logger.debug("void init([]) Initializing instance");
+
         Set<String> strings = listenerMap.keySet();
         for(String key:strings){
             logger.info("Handling listener for {} ",key);
