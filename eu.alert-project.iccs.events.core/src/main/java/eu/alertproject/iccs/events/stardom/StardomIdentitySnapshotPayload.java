@@ -64,6 +64,14 @@ public class StardomIdentitySnapshotPayload {
             @XStreamImplicit(itemFieldName = "sm:person")
             private List<String> persons;
 
+            public Identity() {
+            }
+
+            public Identity(String uuid, List<String> persons) {
+                this.uuid = uuid;
+                this.persons = persons;
+            }
+
             public String getUuid() {
                 return uuid;
             }

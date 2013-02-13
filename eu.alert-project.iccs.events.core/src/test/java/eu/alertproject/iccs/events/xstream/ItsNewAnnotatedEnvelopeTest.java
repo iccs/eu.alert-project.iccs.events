@@ -43,6 +43,40 @@ public class ItsNewAnnotatedEnvelopeTest {
     }
 
     @Test
+    public void desirializeConverter() throws IOException {
+
+        String s = IOUtils.toString(ItsNewAnnotatedEnvelopeTest.class.getResourceAsStream("/ALERT.KEUI.IssueNew.Annotated.Converter.xml"));
+        IssueNewAnnotatedPayload.EventData eventData = EventFactory
+                .<IssueNewAnnotatedEnvelope>fromXml(s,IssueNewAnnotatedEnvelope.class)
+                .getBody()
+                .getNotify()
+                .getNotificationMessage()
+                .getMessage()
+                .getEvent()
+                .getPayload()
+                .getEventData();
+
+
+        Keui keui = eventData.getKeui();
+        List<Keui.Concept> issueDescriptionConcepts = keui.getIssueDescriptionConcepts();
+
+        Iterator<Keui.Concept> iterator = issueDescriptionConcepts.iterator();
+
+        Assert.assertEquals(iterator.next().getWeight(),1,0);
+        Assert.assertEquals(iterator.next().getWeight(),14,0);
+        Assert.assertEquals(iterator.next().getWeight(),1,0);
+        Assert.assertEquals(iterator.next().getWeight(),1,0);
+        Assert.assertEquals(iterator.next().getWeight(),1,0);
+
+//        assertKesi(eventData.getKesi());
+//
+//        assertMdService(eventData.getMdService());
+//
+//        assertKeui(eventData.getKeui());
+
+    }
+
+    @Test
     public void testDesirializeInvalidNodes() throws IOException{
 
         String s = IOUtils.toString(ItsNewAnnotatedEnvelopeTest.class.getResourceAsStream("/ALERT.KEUI.IssueNew.AnnotatedInvalidNodes.xml"));
@@ -126,7 +160,7 @@ public class ItsNewAnnotatedEnvelopeTest {
 
     private void assertKesi(KesiITS kesi) {
         
-        Assert.assertEquals(184671,kesi.getId(),0);
+        Assert.assertEquals(248762,kesi.getId(),0);
             //<s:name>Alex Fiestas</s:name>;
         Assert.assertEquals("Alex Fiestas",kesi.getAuthor().getName());
             //<s:id>afiestas@kde.org</s:id>;

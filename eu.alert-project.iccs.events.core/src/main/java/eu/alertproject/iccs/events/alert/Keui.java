@@ -1,7 +1,9 @@
 package eu.alertproject.iccs.events.alert;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
+import eu.alertproject.iccs.events.converters.KEUIWeightConverter;
 
 import java.util.List;
 
@@ -215,6 +217,7 @@ public class Keui{
         private String uri;
 
         @XStreamAlias("s1:weight")
+        @XStreamConverter(KEUIWeightConverter.class)
         private Integer weight;
 
         public String getUri() {

@@ -15,7 +15,7 @@ import java.util.List;
  * Time: 14:47
  */
 
-@XStreamAlias("s:issue")
+@XStreamAlias("s:kesi")
 public class KesiITS implements Serializable {
 
     @XStreamAlias("s:issueId")

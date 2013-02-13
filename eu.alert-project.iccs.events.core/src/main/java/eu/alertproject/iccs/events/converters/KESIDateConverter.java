@@ -1,6 +1,7 @@
 package eu.alertproject.iccs.events.converters;
 
 import com.thoughtworks.xstream.converters.basic.DateConverter;
+import org.apache.commons.lang.StringUtils;
 
 /**
  *
@@ -29,6 +30,9 @@ public class KESIDateConverter extends DateConverter {
 
     @Override
     public Object fromString(String str) {
+        if(StringUtils.isEmpty(str)){
+            return null;
+        }
         return super.fromString(str.replace("T"," "));    //To change body of overridden methods use File | Settings | File Templates.
     }
 }

@@ -2,6 +2,7 @@ package eu.alertproject.iccs.events.api;
 
 import eu.alertproject.iccs.events.activemq.TextMessageCreator;
 import org.apache.activemq.command.ActiveMQTopic;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -52,11 +53,19 @@ public class ActiveMQMessageBroker implements MessageListener{
     @PostConstruct
     public void init(){
 
+        this.listenerCounts= new HashMap<String, AtomicInteger>();
+        listenerCounts.put(TOTAL,new AtomicInteger(0));
+        listenerCounts.put(SEND,new AtomicInteger(0));
+
         logger.debug("void init([]) Initializing instance");
 
         Set<String> strings = listenerMap.keySet();
         for(String key:strings){
             logger.info("Handling listener for {} ",key);
+            if(!listenerCounts.containsKey(key)){
+                listenerCounts.put(key,new AtomicInteger(0));
+            }
+
         }
 
 
@@ -126,6 +135,8 @@ public class ActiveMQMessageBroker implements MessageListener{
             logger.warn("Couldn't handle and translate the message content {}",e);
         } catch (JMSException e) {
             logger.warn("Couldn't retrieve the message content {}", e);
+        }catch(Exception e){
+            logger.warn("Couldn't retrieve the message content {}", e);
         } finally {
 
             IOUtils.closeQuietly(output);
@@ -152,10 +163,13 @@ public class ActiveMQMessageBroker implements MessageListener{
 
                 File file = new File("/tmp/iccs");
                 if(!file.isDirectory()){
-                    file.mkdir();
+                    FileUtils.forceMkdir(file);
                 }
 
+                listenerCounts.get(SEND).incrementAndGet();
+
                 IOUtils.write(rawMessage, new FileOutputStream(new File(fileName)));
+                logger.debug("Message written to {} ",fileName);
             } catch (IOException e) {
                 logger.warn("Couldn't save the outgoing message ");
             }
@@ -231,19 +245,6 @@ public class ActiveMQMessageBroker implements MessageListener{
 
     public void setListenerMap(Map<String, AbstractActiveMQHandler> listenerMap) {
         this.listenerMap = listenerMap;
-        this.listenerCounts= new HashMap<String, AtomicInteger>();
-
-        listenerCounts.put(TOTAL,new AtomicInteger(0));
-        listenerCounts.put(SEND,new AtomicInteger(0));
-        Set<String> strings = listenerMap.keySet();
-        for(String key:strings){
-
-
-            if(!listenerCounts.containsKey(key)){
-                listenerCounts.put(key,new AtomicInteger(0));
-            }
-
-        }
     }
 
     public Map<String, AtomicInteger> getListenerCounts() {

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
     <soap:Header></soap:Header>
     <soap:Body>
@@ -19,1293 +19,262 @@
                             <ns1:meta>
                                 <ns1:startTime>10010</ns1:startTime>
                                 <ns1:endTime>10020</ns1:endTime>
-                                <ns1:eventName>ALERT.KEUI.IssueUpdate.Annotated</ns1:eventName>
-                                <ns1:eventId>5748</ns1:eventId>
+                                <ns1:eventName>ALERT.KEUI.IssueNew.Annotated</ns1:eventName>
+                                <ns1:eventId>3c5625e2-8955-4fe0-9a64-c4f5226f438b</ns1:eventId>
                                 <ns1:eventType>reply</ns1:eventType>
                             </ns1:meta>
                             <ns1:eventData>
                                 <s:kesi>
-    <s:issueActivity>
-        <s:activityAdded>drf54321</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2008-11-01 14:15:23.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>NEW</s:activityAdded>
-        <s:activityRemoved>UNCONFIRMED</s:activityRemoved>
-        <s:activityWhat>status</s:activityWhat>
-        <s:activityWhen>2008-11-01 14:15:23.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>1</s:activityAdded>
-        <s:activityRemoved>0</s:activityRemoved>
-        <s:activityWhat>Ever confirmed</s:activityWhat>
-        <s:activityWhen>2008-11-01 14:15:23.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>powerdevil-daemon</s:activityAdded>
-        <s:activityRemoved>general</s:activityRemoved>
-        <s:activityWhat>Component</s:activityWhat>
-        <s:activityWhen>2008-11-15 12:27:42.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>solid</s:activityAdded>
-        <s:activityRemoved>powerdevil</s:activityRemoved>
-        <s:activityWhat>Product</s:activityWhat>
-        <s:activityWhen>2008-11-15 12:27:42.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>bymenda</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2008-12-23 21:00:10.0</s:activityWhen>
-        <s:activityWho>bymenda</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>sven.burmeister</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2008-12-29 13:59:59.0</s:activityWhen>
-        <s:activityWho>sven.burmeister</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>ASSIGNED</s:activityAdded>
-        <s:activityRemoved>NEW</s:activityRemoved>
-        <s:activityWhat>status</s:activityWhat>
-        <s:activityWhen>2008-12-30 12:40:19.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>bluedzins</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2008-12-31 08:29:54.0</s:activityWhen>
-        <s:activityWho>bluedzins</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>andreas</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2009-01-31 19:39:28.0</s:activityWhen>
-        <s:activityWho>None</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>naught101</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2009-04-07 12:27:11.0</s:activityWhen>
-        <s:activityWho>naught101</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>szepesvari.david</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2009-09-14 05:36:03.0</s:activityWhen>
-        <s:activityWho>szepesvari.david</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>RESOLVED</s:activityAdded>
-        <s:activityRemoved>ASSIGNED</s:activityRemoved>
-        <s:activityWhat>status</s:activityWhat>
-        <s:activityWhen>2009-10-11 16:21:05.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>FIXED</s:activityAdded>
-        <s:activityRemoved>---</s:activityRemoved>
-        <s:activityWhat>resolution</s:activityWhat>
-        <s:activityWhen>2009-10-11 16:21:05.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>senjas</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2010-04-12 21:17:48.0</s:activityWhen>
-        <s:activityWho>senjas</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>REOPENED</s:activityAdded>
-        <s:activityRemoved>RESOLVED</s:activityRemoved>
-        <s:activityWhat>status</s:activityWhat>
-        <s:activityWhen>2010-05-03 03:09:14.0</s:activityWhen>
-        <s:activityWho>alex</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>---</s:activityAdded>
-        <s:activityRemoved>FIXED</s:activityRemoved>
-        <s:activityWhat>resolution</s:activityWhat>
-        <s:activityWhen>2010-05-03 03:09:14.0</s:activityWhen>
-        <s:activityWho>alex</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>CaptainSifff</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2010-08-07 21:20:58.0</s:activityWhen>
-        <s:activityWho>CaptainSifff</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>powermanagement-daemon</s:activityAdded>
-        <s:activityRemoved>powerdevil-daemon</s:activityRemoved>
-        <s:activityWhat>Component</s:activityWhat>
-        <s:activityWhen>2010-10-02 12:49:25.0</s:activityWhen>
-        <s:activityWho>ervin</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>piekarzarkadiusz</s:activityAdded>
-        <s:activityRemoved></s:activityRemoved>
-        <s:activityWhat>CC</s:activityWhat>
-        <s:activityWhen>2010-11-08 10:39:54.0</s:activityWhen>
-        <s:activityWho>piekarzarkadiusz</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>RESOLVED</s:activityAdded>
-        <s:activityRemoved>REOPENED</s:activityRemoved>
-        <s:activityWhat>status</s:activityWhat>
-        <s:activityWhen>2010-11-09 13:24:48.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueActivity>
-        <s:activityAdded>FIXED</s:activityAdded>
-        <s:activityRemoved>---</s:activityRemoved>
-        <s:activityWhat>resolution</s:activityWhat>
-        <s:activityWhen>2010-11-09 13:24:48.0</s:activityWhen>
-        <s:activityWho>drf</s:activityWho>
-    </s:issueActivity>
-    <s:issueAssignedTo>
-        <s:email>drf</s:email>
-        <s:name>Dario Freddi</s:name>
-        <s:id>drf</s:id>
-    </s:issueAssignedTo>
-    <s:issueCCPerson>
-        <s:email>sven.burmeister</s:email>
-        <s:name>S. Burmeister</s:name>
-        <s:id>sven.burmeister</s:id>
-    </s:issueCCPerson>
-    <s:issueCCPerson>
-        <s:email>drf</s:email>
-        <s:name>Dario Freddi</s:name>
-        <s:id>drf</s:id>
-    </s:issueCCPerson>
-    <s:issueCCPerson>
-        <s:email>None</s:email>
-        <s:name>None</s:name>
-        <s:id>andreas</s:id>
-    </s:issueCCPerson>
-    <s:issueCCPerson>
-        <s:email>bymenda</s:email>
-        <s:name>Rafa Mu?oz C?rdenas</s:name>
-        <s:id>bymenda</s:id>
-    </s:issueCCPerson>
-    <s:issueCCPerson>
-        <s:email>bluedzins</s:email>
-        <s:name>Maciej Pilichowski</s:name>
-        <s:id>bluedzins</s:id>
-    </s:issueCCPerson>
-    <s:issueCCPerson>
-        <s:email>naught101</s:email>
-        <s:name>ned</s:name>
-        <s:id>naught101</s:id>
-    </s:issueCCPerson>
-    <s:issueCCPerson>
-        <s:email>szepesvari.david</s:email>
-        <s:name>David</s:name>
-        <s:id>szepesvari.david</s:id>
-    </s:issueCCPerson>
-    <s:issueCCPerson>
-        <s:email>senjas</s:email>
-        <s:name>Andrey</s:name>
-        <s:id>senjas</s:id>
-    </s:issueCCPerson>
-    <s:issueCCPerson>
-        <s:email>CaptainSifff</s:email>
-        <s:name>Florian Goth</s:name>
-        <s:id>CaptainSifff</s:id>
-    </s:issueCCPerson>
-    <s:issueCCPerson>
-        <s:email>piekarzarkadiusz</s:email>
-        <s:name>Arkadiusz Piekarz</s:name>
-        <s:id>piekarzarkadiusz</s:id>
-    </s:issueCCPerson>
-    <s:issueComment>
-        <s:commentText>Version:            (using KDE 4.1.2)
- OS:                Linux
- Installed from:    SuSE RPMs
-
- Currently, Powerdevil will set the brightness of the screen to a certain level according to the profile that corresponds to the battery state.  This is fine... for most situations.  However, there are some situations where it runs counter to what the user obviously wants.
-
- Key point:
- If I have lowered the brightness of my screen (to reduce glare, or because it ' s dark), and my battery level lowers enough to trigger a new Powerdevil profile, the brightness will be _set_ to the level specified by the profile, which is, in most cases, _higher_ than what I had set it to manually.  This obviously runs /counter/ to preserving battery life, as the screen suddenly becomes _brighter_.
-
- Suggested solution:
- I feel that it would be better for Powerdevil to first check if the brightness level is already lower than that of the next profile, and if it is, not to set the brightness.
- Alternatively, it would be even nicer if the brightness slider had an  " advanced "  option showing a max setting for brightness, allowing one to set the max end of the range of possible brightness for a profile, the default one being specified by the normal slider.  This would be difficult to be done in a nice-UI fashion, but might offer just the right level of flexibility most users would want in this situation.  (As a disclaimer, whatever solution taken is obviously up to the developer, I ' m just throwing out ideas.)</s:commentText>
-        <s:commentPerson>
-            <s:email>alex</s:email>
-            <s:name>Nicholas Marquez</s:name>
-            <s:id>alex</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-10-30T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>What you say is a scenario that happens lots of times, though you forgot that sometimes exactly the opposite happens, e.g.: you set brightness to an higher level and an automatic profile change lowers it.
-
- This is quite normal imho, but I recognize some people could be annoyed by that. What if I added a checkbox  " Lock brightness "  to the applet, that when in effect, prevents brightness from being automatically changed?</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-11-01T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Thanks for the prompt response.  Unfortunately, I wasn ' t notified of one. :/
-
- Anyway, I actually take a different stance than those who seem to have been... suggesting things to you.  ^^;  The application is /inherently/ about power management and thus is more concerned with battery life than anything else.  Therefore, I feel that the case that I described, where the backlight ends up higher than it was, should be handled (as it clearly is /contrary/ to saving power), versus the case where the backlight ends up lower than it was, which should be expected.
-
- However, there are cases where one needs the backlight higher for sheer visibility, regardless of power.  For those, I think the proper approach would be to expose such locking functionality as you describe and allow a global keybinding for it. Whether this goes into the applet is up to you.  If people keep complaining, you could always put a set of checkboxes in the General Settings tab that allows one to select what things Powerdevil controls (with all on by default), and simply not showing those options in the profile management (but keeping any settings for them, in case the control is reenabled).
-
- Personally, the case of the backlight lowering when I don ' t want it to can be handled perfectly with the locking functionality that you described, though I haven ' t had such a need yet.  Again, the opposite case of the backlight getting brighter is what was troubling.  It goes contrary to the clear goals of this program and I feel should be handled appropriately and by default, regardless of a locking mechanism.
-
- On a side-note, I for one am a big fan of the direction KDE4 is headed (though a realistic one; i.e. KDE4.0 was a technical preview, don ' t be an idiot and complain) and very much like your approach with Powerdevil.  It ' s very well-designed and elegant.  (No matter what the peanut gallery cares to gripe about.)</s:commentText>
-        <s:commentPerson>
-            <s:email>alex</s:email>
-            <s:name>Nicholas Marquez</s:name>
-            <s:id>alex</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-11-10T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Hi. This issue is really annoying for me as well. Sometimes my eyes are a bit tired, so I have to set the brightness of the screen lower. Unfortunately, it takes just 2/3 seconds for Powerdevil to change the brightness without my consent.
-
- A fix for this situation would be really good :)</s:commentText>
-        <s:commentPerson>
-            <s:email>bymenda</s:email>
-            <s:name>Rafa Mu?oz C?rdenas</s:name>
-            <s:id>bymenda</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-23T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>This issue is a bug! If a brightness level was set manually, e.g. via the slider powerdevil must only decrease it and never increase it. this is quite easy to check: if the brightness currently set is lower than the one set in the profile, do not change the brightness.
-
- Connected to this is that the slider in the battery applet ' s pop-up is not changed to the new level, but remains where it was set manually, i.e. does not even show the correct brightness level.</s:commentText>
-        <s:commentPerson>
-            <s:email>sven.burmeister</s:email>
-            <s:name>S. Burmeister</s:name>
-            <s:id>sven.burmeister</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-29T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Guys, unfortunately not everyone thinks about that this way, though I recognize that for some people such an issue can be annoying. So I ' m accepting it, and I ' ll add an option in PowerDevil. I can ' t change a default behavior this way, but in 4.3 (feature freeze...) I ' ll add an option for keeping the brightness never over the last manual set level.</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>So what is the reason that a majority (otherwise it should not be default) thinks that this is not the right way?
-
- What you are saying is that the majority expects the brightness to go up, if the power level goes down and that even though they set the brightness level lower than the current scheme, they want it higher again for the next scheme which is supposed to save as much or more power (battery is decharching).
-
- So why would one want to have the next scheme having a higher brightness level?
-
- AFAIK there are only two reasons to change the brightness level lower than the active power scheme, 1. to save power, 2. to adjust it to the current environment (dark room) or personal liking (tired eyes).
-
- So if the user set the brightness lower for powersaving reasons, who would claim that it makes sense to the same user that the next scheme, which is supposed to save more power than the last, increases brightness?
-
- If the user has lowered the brightness because of the environment, why would the same user want it to increase, if the environment did not change. He might want it to decrease because 1. comes into play as well though, but that is another issue.
-
- If the user has lowered the brightness because of personla liking, why would the same user want it to increase with the next power saving scheme?
-
- What is the use-case you are refering to, i.e. in what situation, would the user first lower the brigthness level manually and then wants it to be increased by the next lower (more powersaving) powersaving scheme?</s:commentText>
-        <s:commentPerson>
-            <s:email>sven.burmeister</s:email>
-            <s:name>S. Burmeister</s:name>
-            <s:id>sven.burmeister</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Because your analysis is simply wrong: power schemes can also go up. If you shut your brightness to 10% manually and then plug in your AC adaptor, 99% of people expect brightness to arise. With this settings, brightness would stay at 10%, and that ' s really annoying.
-
- I think this one alone is more than a good reason, but anyway, I can ' t change default behavior to something unexpected: the average user expects brightness to reflect profile ' s one. I am saying I am adding it as an option because not everyone uses the PC as you like, and default behavior should be as much predictable as possible. (And also, I can ' t change such an important behavior right before releasing)
-
- More over, consider that there is not a way to determine which profile aims to save more power on the code side, since profiles are dynamic.
-
- Anyway, I ' ll surely add an option to behave like this in KDE 4.3</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Sorry, but my analysis is not wrong because I never ever stated that this should be true for charging batteries, neither did the reporter. In fact he stated:  " If I have lowered the brightness of my screen... "
-
- So unless you are trying to tell me that it is impossible to check whether the battery is discharging while the profile is changed, your assumptions about the defaults and what the majority wants are not valid. You could not state a use case where the user wants an increased brightness although the battery is discharging.
-
- And it is quite easy to determine which profile saves power, in terms of brightness. If profile x has a brightness of 80% and profile y has a brightness of 50%, then profile y is saving more power regarding the brightness and that is all that matters when discussing  " changing the brigthness level " .
-
- So unless you can provide some use case, the current default is wrong and fixing it is not a feature and does not require any new strings.
-
- If powerdevil does the following check before applying the brightness level of the new profile it would work as expected.
-
- - If battery is discharging (power not plugged in) and the current brightness level is lower than the brightness level to be applied, do not change the brightness level.
- - If the new brightness level is lower, apply it. (this is debateable, since some people might argue that a manually set brightness level should never be changed)
- - If the battery is charging, i.e. the power is plugged in, and the brightness level of the new profile is lower then the current, do not apply the change, if it is higher apply it.
-
- A new setting to  " never change manually set brightness level "  is only needed for people who do not want the brightness to be set automatically, even if power is plugged in. Yet although I do not have any figures I agree with you that those are likely to be a minority and this should not be the default behaviour.</s:commentText>
-        <s:commentPerson>
-            <s:email>sven.burmeister</s:email>
-            <s:name>S. Burmeister</s:name>
-            <s:id>sven.burmeister</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>You caught the point by saying:
-
- " (this is debateable, since
- some people might argue that a manually set brightness level should never be
- changed) "
-
- Now, as a programmer I know that every default has someone against it, and that ' s pretty normal. If I changed the behavior to reflect what you say, I ' d have another ton of people asking me  " why does it behave this way? "
-
- The current default suits me and most of the other users (you see, this bug has been reported by 3 people only, and consider how many people are using KDE on their laptop...), this leads me to say that is the most sane default, since it strictly fits most of the people.
-
- I ' m not showing you use cases because here we are not talking about use cases: some people might prefer having it this way, some other people not. Some people wouldn ' t even want to have their brightness changed, some other might want a completely different behavior, it ' s impossible to find a standard that suits everyone, that ' s the point.
-
- Now, ok, I see your points, and to some extents I agree with you, though I find myself comfortable with the current settings, so here are my points in favour to provide this as an option:
-
-  - A simplicistic one: you can ' t change such an important behavior right before releasing a major version. Now every user expects Powerdevil to behave like this, and it would be rather confusing for them.
-  - Brightness is not the only component concurring in saving power. More than that, as I (and you) said before,  " locking "  the brightness to a certain level might leave some people unhappy with that anyway
-  - Providing this as an option and not as a default makes everyone happy. I already agreed that with the original reporter that was more than fine with it, though I simply had not enough time to implement it.
-
- I am sorry, but I think I won ' t change it. More than that, KDE 4.2 is just a few days away, and since such a feature would require a decent amount of code + testing (and I ' m also in some kind of holidays, like I suppose everyone), I wouldn ' t have a sufficient testing period for releasing it as  " stable " .
-
- Though, I can surely assure you it will be there for KDE 4.3</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Well, then you need two new settings:
-
- 1. Current behaviour
- 2. Never ever change a manually set brightness
- 3. never change the brightness to a higher level then set manually if discharging.
-
- I ' ll send an email to the usability mailinglist, maybe that helps us both understanding the matter.</s:commentText>
-        <s:commentPerson>
-            <s:email>sven.burmeister</s:email>
-            <s:name>S. Burmeister</s:name>
-            <s:id>sven.burmeister</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Seems to me the most reasonable decision, thanks for caring about this</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-30T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Sounds great.  I didn ' t expect it to go into 4.2 anyway.  As long as it happens in a reasonable manner in a reasonable amount of time, I ' m fine.  My only concern is that it may hamper usability, but that seems to be being taken care of, so all ' s well and right with the world.  Thank you for your efforts, Dario.</s:commentText>
-        <s:commentPerson>
-            <s:email>alex</s:email>
-            <s:name>Nicholas Marquez</s:name>
-            <s:id>alex</s:id>
-        </s:commentPerson>
-        <s:commentDate>2008-12-31T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Ok, seems like people regard the current behaviour as bug. Nobody opted for the current behaviour. Hence the severity of this bug has to be changed and the issue fixed for KDE 4.2.
-
- The only thing that seems be worth a discussion is if the default for manual settings handling is to:
-
- a) do not change the manually set brightness until the user logs out or selects a profile manually.
-
- b) change the brightness to lower level, if the next profile has a lower setting and increase the brightness if the power is plugged-in
-
- The switch for the latter has to wait until KDE 4.3 though, so for KDE 4.2 you have to decide for one of them.
-
- http://lists.kde.org/?t=123067791200003 &amp; r=1 &amp; w=2
-</s:commentText>
-        <s:commentPerson>
-            <s:email>sven.burmeister</s:email>
-            <s:name>S. Burmeister</s:name>
-            <s:id>sven.burmeister</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-01-11T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>There is still some room for being smart. Back to profiles design (automatic change) -- this settings only cover the state of power. When user makes some manual changes while system is running it could be caused by two things only (I didn ' t notice other case):
- * light
- * power
-
- So if user increases the brightness it could be caused only by light conditions, if she/he decreases it is either by light or by power conditions.
-
- Having this in mind, powerdevil could come up with really smart behaviour.
-
- ad.a) this means light takes precedence so at the same time it denies the need for automatic change of brightness at all
-
- But even such case (a) can be cover up. If the source and target profile have different levels of brightness user takes into account power considerations. If they are the same -- not, so then brightness could stay the same even after manual change.
-
- I hope I expressed myself in an understandable fashion :-)</s:commentText>
-        <s:commentPerson>
-            <s:email>bluedzins</s:email>
-            <s:name>Maciej Pilichowski</s:name>
-            <s:id>bluedzins</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-01-11T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Thanks for bringing up the discussion. Unfortunately I don ' t think it will make it for 4.2.0, since time is really running out and this would require a decent amount of code for working. I ' ll try gathering up the suggestions and work on it in trunk.</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-01-11T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>(In reply to comment #13)
- &gt;  Ok, seems like people regard the current behaviour as bug. Nobody opted for the
- &gt;  current behaviour. Hence the severity of this bug has to be changed and the
- &gt;  issue fixed for KDE 4.2.
- &gt;
- &gt;  The only thing that seems be worth a discussion is if the default for manual
- &gt;  settings handling is to:
- &gt;
- &gt;  a) do not change the manually set brightness until the user logs out or selects
- &gt;  a profile manually.
- &gt;
- &gt;  b) change the brightness to lower level, if the next profile has a lower
- &gt;  setting and increase the brightness if the power is plugged-in
- &gt;
- &gt;  The switch for the latter has to wait until KDE 4.3 though, so for KDE 4.2 you
- &gt;  have to decide for one of them.
- &gt;
- &gt;  http://lists.kde.org/?t=123067791200003 &amp; r=1 &amp; w=2
- &gt;
-
- For what it ' s worth, I concur with Sven ' s choice B.  Choice A is cumbersome and anal, effectively circumventing Powerdevil period.  (But perhaps I misunderstand the proposal.)  It would be a mistake to set such a thing to a default.  For example, the user could accidentally raise the brightness or have done so in a bright room to be able to see, then move to a room that ' s not so bright.  The brightness doesn ' t bother them, but the higher level is straining the battery more than it should be.  Given the /Power/devil is about power, I feel that it is in the right to take intelligent, discretionary action towards preserving the battery life.  Sure, if the user has raised the light, they want it to stay raised.  I doubt, however, that they ' d very much like their laptop/device dying on them because of poor judgment.  A switch can be used in that use-case (to be brought up for 4.3) or perhaps the backlight stepped down an equivalent amount from the previous profile, e.g.:
- Profile A = 80%, B = 60%
- User starts off in A (due to battery level) and ups backlight to 90%.  After some use, B gets activated.  Powerdevil notes that the backlight is higher than it was supposed to be in A, and so keeps that offset (10%), yielding a resulting level of 70%.  If the backlight is lower than it was supposed to be in A, and is lower than B would expect, then it stays the same.  If it was lower than in A, but higher than in B, the same scaling could be applied.
- Anyway, that ' s my two-cents. Choice B was perfectly fine.  I was just again throwing ideas out there.
-
- (Out of curiousity, it seems this would be a much smaller issue if Powerdevil made use of ambient light sensors.  Has this feature been considered?  Granted, the platforms that use such things are few and far between.)</s:commentText>
-        <s:commentPerson>
-            <s:email>alex</s:email>
-            <s:name>Nicholas Marquez</s:name>
-            <s:id>alex</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-01-12T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>I miss the option from KDE 3.5/kpowersave to completely disable brightness modifications in a specific profile. With such an option it ' s possible to let the user choose his preferred brightness, and only in situation the battery runs low, also lowering the brightness automatically.</s:commentText>
-        <s:commentPerson>
-            <s:email>None</s:email>
-            <s:name>None</s:name>
-            <s:id>andreas</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-01-31T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Would it be possible to simply return to user-set brightness after an automatic inactivity-caused screen-dim?
- And then simply reset the user input on automatic battery-caused profile changes.
-
- In other words:
- Profile1 brightness  &gt;  inactivity dim
- activity  &gt;  Back to Profile1 brightness
- User changes brightness  &gt;  inactivity dim
- activity  &gt;  back to User-set brightness
- battery causes profile change  &gt;  Profile2 brightness
-
- This means that by default, battery will be maximised, by decreasing brightness at appropriate times, but user preferences will override default.
-
- It would also be very useful to have a  " do no change brightness "  or  " no associates brightness "  option on each profile.</s:commentText>
-        <s:commentPerson>
-            <s:email>naught101</s:email>
-            <s:name>ned</s:name>
-            <s:id>naught101</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-04-07T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Is this going to be fixed in KDE 4.3?</s:commentText>
-        <s:commentPerson>
-            <s:email>sven.burmeister</s:email>
-            <s:name>S. Burmeister</s:name>
-            <s:id>sven.burmeister</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-05-04T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>&gt;  Connected to this is that the slider in the battery applet ' s pop-up is not
- &gt;  changed to the new level, but remains where it was set manually, i.e. does not
- &gt;  even show the correct brightness level.
-
- I have this same bug even in KDE 4.2.2</s:commentText>
-        <s:commentPerson>
-            <s:email>szepesvari.david</s:email>
-            <s:name>David</s:name>
-            <s:id>szepesvari.david</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-09-14T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>This bug was actually fixed</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-10-11T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Which KDE version has that fix?</s:commentText>
-        <s:commentPerson>
-            <s:email>sven.burmeister</s:email>
-            <s:name>S. Burmeister</s:name>
-            <s:id>sven.burmeister</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-10-11T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>This one was fixed at Tokamak, if I recall correctly 4.3.2 should have it, trunk has it for sure.</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2009-10-11T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Can someone please clarify status of this bug?
-
- As far as I can see it still present:
- https://bugs.kde.org/show_bug.cgi?id=198463
-
- Combine this bug (brightness level resets to profile default after 30 seconds of idle time):
- https://bugs.kde.org/show_bug.cgi?id=216675
-
- And you will get pretty unusable brightness management (and just forget about ambient light sensor - it will make things even worse).
- _______________________________________________________________
- On a side-note:
-
- Is there any way to disable brightness management by Powerdevil?
- Some kind of  " Leave my freaking brightness alone "  option.
- Maybe I can edit some configuration file?
-
- I tried disabling
- 1)  " Let PowerDevil manage screen powersaving "
- 2)  " Dim display when idle for more than ... mins "
- 3)  " Enable diplay power management "  in  " Screen "  profile tab
- And setting  " When the system is idle for more than ... "  to  " Do Nothing " .
-
- Neither helps.
-
- So I have to set screen brightness in profile. And then change it in profile every time lighting conditions change.
-
- Of course, I can just set brightness to 100% and burn my eyes at night, so later I won ' t have to change the settings to see anything in daylight.
-
- Is this a bug? Should I report it?</s:commentText>
-        <s:commentPerson>
-            <s:email>senjas</s:email>
-            <s:name>Andrey</s:name>
-            <s:id>senjas</s:id>
-        </s:commentPerson>
-        <s:commentDate>2010-04-12T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>This bug is back with KDE 4.5 trunk. Could the reporter please re-open?</s:commentText>
-        <s:commentPerson>
-            <s:email>sven.burmeister</s:email>
-            <s:name>S. Burmeister</s:name>
-            <s:id>sven.burmeister</s:id>
-        </s:commentPerson>
-        <s:commentDate>2010-04-29T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>Re-opened bug at Sven ' s request.</s:commentText>
-        <s:commentPerson>
-            <s:email>alex</s:email>
-            <s:name>Nicholas Marquez</s:name>
-            <s:id>alex</s:id>
-        </s:commentPerson>
-        <s:commentDate>2010-05-03T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>I also see this issue in KDE 4.4.5. But I won ' t join on the discussion what constitutes a sane default...</s:commentText>
-        <s:commentPerson>
-            <s:email>CaptainSifff</s:email>
-            <s:name>Florian Goth</s:name>
-            <s:id>CaptainSifff</s:id>
-        </s:commentPerson>
-        <s:commentDate>2010-08-07T00:00:00+02:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>This bug is still present in KDE 4.5.1 (Kubuntu 10.10).
-
- Imho there should be an option to disable changing brightness by Powerdevil. The most common annoyances that it creates are:
- - making the screen brighter when the battery is low -  " to save energy "
- - changing the brigthness when plugging in power supply
- - changing the brightness while KDE is loading during system start.</s:commentText>
-        <s:commentPerson>
-            <s:email>piekarzarkadiusz</s:email>
-            <s:name>Arkadiusz Piekarz</s:name>
-            <s:id>piekarzarkadiusz</s:id>
-        </s:commentPerson>
-        <s:commentDate>2010-11-08T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>In 4.6, the new Power Management System has an option not to control brightness.</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2010-11-09T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>(In reply to comment #29)
- &gt;  In 4.6, the new Power Management System has an option not to control
- &gt;  brightness.
-
- How does that fix the actual bug, i.e. that if enabled powerdevil does not consider the current brightness level?</s:commentText>
-        <s:commentPerson>
-            <s:email>sven.burmeister</s:email>
-            <s:name>S. Burmeister</s:name>
-            <s:id>sven.burmeister</s:id>
-        </s:commentPerson>
-        <s:commentDate>2010-11-09T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComment>
-        <s:commentText>The behavior is consistent with the previous version, and some more intelligent behavior to the brightness control plugin is being added (even if it might not make it into Beta 1 given that I ' ll be travelling the next days).
-
- Btw, feel free to reopen and restart a discussion if behavior in Beta 1 won ' t be what you expect. TBH, the bug description diverged a lot from the original, hence my closing message.</s:commentText>
-        <s:commentPerson>
-            <s:email>drf</s:email>
-            <s:name>Dario Freddi</s:name>
-            <s:id>drf</s:id>
-        </s:commentPerson>
-        <s:commentDate>2010-11-09T00:00:00+01:00</s:commentDate>
-    </s:issueComment>
-    <s:issueComputerSystem>
-        <s:computerSystemOS>Linux</s:computerSystemOS>
-        <s:computerSystemPlatform>openSUSE RPMs</s:computerSystemPlatform>
-    </s:issueComputerSystem>
-    <s:issueDateOpened>2008-10-30T00:00:00+01:00</s:issueDateOpened>
-    <s:issueDescription>Powerdevil sets backlight without regards to current level</s:issueDescription>
-    <s:issueId>173930</s:issueId>
-    <s:issueTracker>
-        <type>bugzilla</type>
-        <URI>https://bugs.kde.org/</URI>
-        <s:issueTrackerType>bugzilla</s:issueTrackerType>
-        <s:issueTrackerURL>https://bugs.kde.org/</s:issueTrackerURL>
-    </s:issueTracker>
-    <s:issueUrl>https://bugs.kde.org/show_bug.cgi?id=173930</s:issueUrl>
-    <s:issueLastModified>2010-11-09T00:00:00+01:00</s:issueLastModified>
-    <s:issueMilestone>
-        <s:milestoneId>---</s:milestoneId>
-    </s:issueMilestone>
-    <s:issuePriority></s:issuePriority>
-    <s:issueProduct>
-        <s:productComponentId>powermanagement-daemon</s:productComponentId>
-        <s:productId>solid</s:productId>
-        <s:productVersion>unspecified</s:productVersion>
-    </s:issueProduct>
-    <s:issueAuthor>
-        <s:email>alex</s:email>
-        <s:name>Nicholas Marquez</s:name>
-        <s:id>alex</s:id>
-    </s:issueAuthor>
-    <s:issueResolution>FIXED</s:issueResolution>
-    <s:issueSeverity></s:issueSeverity>
-    <s:issueStatus>Resolved</s:issueStatus>
-</s:kesi>
+                                    <s:issueAssignedTo>
+                                        <s:email>unassigned-bugs</s:email>
+                                        <s:name>Unassigned bugs mailing-list</s:name>
+                                        <s:id>unassigned-bugs</s:id>
+                                    </s:issueAssignedTo>
+                                    <s:issueComment>
+                                        <s:commentText>Version:           0.0.1 (using Devel)
+                                            OS:                Linux
+
+                                            Application: kded4 ($Id$)
+                                            KDE Platform Version: 4.7.97 (4.8 RC2 (4.7.97)
+                                            Qt Version: 4.8.0
+                                            Operating System: Linux 2.6.34.10-0.4-desktop i686
+                                            Distribution:  " openSUSE 11.3 (i586) "
+
+                                            -- Backtrace:
+                                            Application: KDE Daemon (kdeinit4), signal: Aborted
+                                            [Current thread is 1 (Thread 0xb566d710 (LWP 27699))]
+
+                                            Thread 2 (Thread 0xb0b6eb70 (LWP 27744)):
+                                            #0  0xb590a22b in clock_gettime () from /lib/librt.so.1
+                                            #1  0xb6d4e5d5 in do_gettime () at tools/qelapsedtimer_unix.cpp:123
+                                            #2  qt_gettime () at tools/qelapsedtimer_unix.cpp:140
+                                            #3  0xb6e39466 in updateCurrentTime (this=0x8184674, tm=...) at kernel/qeventdispatcher_unix.cpp:343
+                                            #4  QTimerInfoList::timerWait (this=0x8184674, tm=...) at kernel/qeventdispatcher_unix.cpp:450
+                                            #5  0xb6e37c7b in timerSourcePrepareHelper (src= &lt; value optimized out &gt; , timeout=0xb0b6e0fc) at kernel/qeventdispatcher_glib.cpp:136
+                                            #6  0xb6e37d1d in timerSourcePrepare (source=0x8184640, timeout= &lt; value optimized out &gt; ) at kernel/qeventdispatcher_glib.cpp:169
+                                            #7  0xb585e0c0 in g_main_context_prepare () from /usr/lib/libglib-2.0.so.0
+                                            #8  0xb585ef22 in %s%s () from /usr/lib/libglib-2.0.so.0
+                                            #9  0xb585f60e in g_main_context_iteration () from /usr/lib/libglib-2.0.so.0
+                                            #10 0xb6e38567 in QEventDispatcherGlib::processEvents (this=0x8206c10, flags=...) at kernel/qeventdispatcher_glib.cpp:426
+                                            #11 0xb6e0453d in QEventLoop::processEvents (this=0xb0b6e2a0, flags=...) at kernel/qeventloop.cpp:149
+                                            #12 0xb6e047d1 in QEventLoop::exec (this=0xb0b6e2a0, flags=...) at kernel/qeventloop.cpp:204
+                                            #13 0xb6ce900d in QThread::exec (this=0x8200908) at thread/qthread.cpp:501
+                                            #14 0xb6de098d in QInotifyFileSystemWatcherEngine::run (this=0x8200908) at io/qfilesystemwatcher_inotify.cpp:248
+                                            #15 0xb6cebacd in QThreadPrivate::start (arg=0x8200908) at thread/qthread_unix.cpp:298
+                                            #16 0xb6c6ab25 in start_thread () from /lib/libpthread.so.0
+                                            #17 0xb5f3934e in clone () from /lib/libc.so.6
+
+                                            Thread 1 (Thread 0xb566d710 (LWP 27699)):
+                                            [KCrash Handler]
+                                            #7  0xffffe424 in __kernel_vsyscall ()
+                                            #8  0xb5e917af in raise () from /lib/libc.so.6
+                                            #9  0xb5e930f0 in abort () from /lib/libc.so.6
+                                            #10 0xb6ce10aa in qt_message_output (msgType=QtFatalMsg, buf=
+                                            0x82558c8  " ASSERT failure in KConfigGroup::groupImpl: \ " can not have an unnamed child group\ " , file /home/KDE4/source/kdelibs/kdecore/config/kconfiggroup.cpp, line 516 " )
+                                            at global/qglobal.cpp:2252
+                                            #11 0xb6ce12af in qt_message (msgType=QtFatalMsg, msg=0xb6e7365c  " ASSERT failure in %s: \ " %s\ " , file %s, line %d " , ap=0xbfa45df4  " O\300\ " \267h\300\ " \267\b\275\ " \267\004\002 " )
+                                            at global/qglobal.cpp:2298
+                                            #12 0xb6ce13c8 in qFatal (msg=0xb6e7365c  " ASSERT failure in %s: \ " %s\ " , file %s, line %d " ) at global/qglobal.cpp:2481
+                                            #13 0xb6ce140d in qt_assert_x (where=0xb722c04f  " KConfigGroup::groupImpl " , what=0xb722c068  " can not have an unnamed child group " , file=
+                                            0xb722bd08  " /home/KDE4/source/kdelibs/kdecore/config/kconfiggroup.cpp " , line=516) at global/qglobal.cpp:2007
+                                            #14 0xb707ae37 in KConfigGroup::groupImpl (this=0xbfa45f40, aGroup=...) at /home/KDE4/source/kdelibs/kdecore/config/kconfiggroup.cpp:516
+                                            #15 0xb7077eeb in KConfigBase::group (this=0xbfa45f40, str=...) at /home/KDE4/source/kdelibs/kdecore/config/kconfigbase.cpp:51
+                                            #16 0xb0de39ea in PowerDevil::Core::loadProfile (this=0x81c1dc8, force=true) at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilcore.cpp:267
+                                            #17 0xb0de35c4 in PowerDevil::Core::refreshStatus (this=0x81c1dc8) at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilcore.cpp:236
+                                            #18 0xb0de2ba1 in PowerDevil::Core::onBackendReady (this=0x81c1dc8) at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilcore.cpp:153
+                                            #19 0xb0de70ab in PowerDevil::Core::qt_static_metacall (_o=0x81c1dc8, _c=QMetaObject::InvokeMetaMethod, _id=24, _a=0xbfa4643c)
+                                            at /home/KDE4/build/kde-workspace/powerdevil/daemon/powerdevilcore.moc:145
+                                            #20 0xb6e1db4f in QMetaObject::activate (sender=0x81b4ba8, m=0x0, local_signal_index=-1327600308, argv=0x0) at kernel/qobject.cpp:3556
+                                            #21 0xb0de0edd in PowerDevil::BackendInterface::backendReady (this=0x81b4ba8) at /home/KDE4/build/kde-workspace/powerdevil/daemon/powerdevilbackendinterface.moc:160
+                                            #22 0xb0de0893 in PowerDevil::BackendInterface::setBackendIsReady (this=0x81b4ba8, availableBrightnessControls=..., supportedSuspendMethods=...)
+                                            at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilbackendinterface.cpp:120
+                                            #23 0xb0f9af7b in PowerDevilUPowerBackend::init (this=0x81b4ba8) at /home/KDE4/source/kde-workspace/powerdevil/daemon/backends/upower/powerdevilupowerbackend.cpp:151
+                                            #24 0xb0de2472 in PowerDevil::Core::loadCore (this=0x81c1dc8, backend=0x81b4ba8) at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilcore.cpp:84
+                                            #25 0xb0f96571 in KDEDPowerDevil::init (this=0x8158750) at /home/KDE4/source/kde-workspace/powerdevil/daemon/kdedpowerdevil.cpp:89
+                                            #26 0xb0f968f9 in KDEDPowerDevil::qt_static_metacall (_o=0x8158750, _c=QMetaObject::InvokeMetaMethod, _id=0, _a=0x816da68) at /home/KDE4/build/kde-workspace/powerdevil/daemon/kdedpowerdevil.moc:50
+                                            #27 0xb6e175d1 in QMetaCallEvent::placeMetaCall (this=0x80c0bf8, object=0x8158750) at kernel/qobject.cpp:525
+                                            #28 0xb6e1ba3b in QObject::event (this=0x8158750, e=0x80c0bf8) at kernel/qobject.cpp:1204
+                                            #29 0xb62aa924 in QApplicationPrivate::notify_helper (this=0x80c1850, receiver=0x8158750, e=0x80c0bf8) at kernel/qapplication.cpp:4550
+                                            #30 0xb62b37ab in QApplication::notify (this=0xbfa46fa4, receiver=0x8158750, e=0x80c0bf8) at kernel/qapplication.cpp:3932
+                                            #31 0xb75f48da in KApplication::notify (this=0xbfa46fa4, receiver=0x8158750, event=0x80c0bf8) at /home/KDE4/source/kdelibs/kdeui/kernel/kapplication.cpp:311
+                                            #32 0xb6e0563e in QCoreApplication::notifyInternal (this=0xbfa46fa4, receiver=0x8158750, event=0x80c0bf8) at kernel/qcoreapplication.cpp:876
+                                            #33 0xb6e09310 in sendEvent (receiver=0x0, event_type=0, data=0x805c758) at kernel/qcoreapplication.h:231
+                                            #34 QCoreApplicationPrivate::sendPostedEvents (receiver=0x0, event_type=0, data=0x805c758) at kernel/qcoreapplication.cpp:1500
+                                            #35 0xb6e0953c in QCoreApplication::sendPostedEvents (receiver=0x0, event_type=0) at kernel/qcoreapplication.cpp:1393
+                                            #36 0xb6e38394 in sendPostedEvents (s=0x80c3b10) at kernel/qcoreapplication.h:236
+                                            #37 postEventSourceDispatch (s=0x80c3b10) at kernel/qeventdispatcher_glib.cpp:279
+                                            #38 0xb585eb49 in g_main_context_dispatch () from /usr/lib/libglib-2.0.so.0
+                                            #39 0xb585f350 in %s%s () from /usr/lib/libglib-2.0.so.0
+                                            #40 0xb585f60e in g_main_context_iteration () from /usr/lib/libglib-2.0.so.0
+                                            #41 0xb6e3851b in QEventDispatcherGlib::processEvents (this=0x805d8c0, flags=...) at kernel/qeventdispatcher_glib.cpp:424
+                                            #42 0xb6361fba in QGuiEventDispatcherGlib::processEvents (this=0x805d8c0, flags=...) at kernel/qguieventdispatcher_glib.cpp:204
+                                            #43 0xb6e0453d in QEventLoop::processEvents (this=0xbfa46f14, flags=...) at kernel/qeventloop.cpp:149
+                                            #44 0xb6e047d1 in QEventLoop::exec (this=0xbfa46f14, flags=...) at kernel/qeventloop.cpp:204
+                                            #45 0xb6e09610 in QCoreApplication::exec () at kernel/qcoreapplication.cpp:1148
+                                            #46 0xb62a85f4 in QApplication::exec () at kernel/qapplication.cpp:3811
+                                            #47 0xb514c9cd in kdemain (argc=1, argv=0x80a2a10) at /home/KDE4/source/kdelibs/kded/kded.cpp:924
+                                            #48 0x0804de64 in launch (argc=1, _name=0x8053e00  " kded4 " , args=0x0, cwd=0x0, envc=0, envs=0x0, reset_env=false, tty=0x0, avoid_loops=false, startup_id_str=0x80536ef  " 0 " )
+                                            at /home/KDE4/source/kdelibs/kinit/kinit.cpp:734
+                                            #49 0x08050caf in main (argc=4, argv=0xbfa47374, envp=0xbfa47388) at /home/KDE4/source/kdelibs/kinit/kinit.cpp:1849
+
+                                            Reproducible: Always
+
+                                            Steps to Reproduce:
+                                            I start KDE for a user which has no kde4 settings
+                                            (in HOME rm -Rf /tmp/kde-kdetrunk /var/tmp/kdecache-kdetrunk .kde4 .config .local .qt .strigi .xine)
+                                            and this crash happens every time.
+
+
+                                            Expected Results:
+                                            no crash
+
+                                            OS: Linux (i686) release 2.6.34.10-0.4-desktop
+                                            Compiler: gcc</s:commentText>
+                                        <s:commentPerson>
+                                            <s:email>kollix</s:email>
+                                            <s:name>Martin Koller</s:name>
+                                            <s:id>kollix</s:id>
+                                        </s:commentPerson>
+                                        <s:commentDate>2012-01-05 19:32:00.0</s:commentDate>
+                                    </s:issueComment>
+                                    <s:issueComputerSystem>
+                                        <s:computerSystemOS>Linux</s:computerSystemOS>
+                                        <s:computerSystemPlatform>Compiled Sources</s:computerSystemPlatform>
+                                    </s:issueComputerSystem>
+                                    <s:issueDateOpened>2012-01-05T19:32:00+01:00</s:issueDateOpened>
+                                    <s:issueDescription>starting kde git KDE/4.8 for a new user crashes kded/powerdevil</s:issueDescription>
+                                    <s:issueId>290735</s:issueId>
+                                    <s:issueTracker>
+                                        <s:issueTrackerType>bugzilla</s:issueTrackerType>
+                                        <s:issueTrackerURL>https://bugs.kde.org/</s:issueTrackerURL>
+                                    </s:issueTracker>
+                                    <s:issueUrl>https://bugs.kde.org/show_bug.cgi?id=290735</s:issueUrl>
+                                    <s:issueMilestone>
+                                        <s:milestoneId>---</s:milestoneId>
+                                    </s:issueMilestone>
+                                    <s:issuePriority></s:issuePriority>
+                                    <s:issueProduct>
+                                        <s:productComponentId>powermanagement-daemon</s:productComponentId>
+                                        <s:productId>solid</s:productId>
+                                        <s:productVersion>unspecified</s:productVersion>
+                                    </s:issueProduct>
+                                    <s:issueAuthor>
+                                        <s:email>kollix</s:email>
+                                        <s:name>Martin Koller</s:name>
+                                        <s:id>kollix</s:id>
+                                    </s:issueAuthor>
+                                    <s:issueResolution>Duplicate</s:issueResolution>
+                                    <s:issueSeverity>Normal</s:issueSeverity>
+                                    <s:issueStatus>Resolved</s:issueStatus>
+                                </s:kesi>
                                 <o:mdservice>
-                                    <o:issueUri>http://www.alert-project.eu/ontologies/alert_its.owl#Bug25</o:issueUri>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity343</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity344</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity345</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity346</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity347</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity348</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person119</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity349</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity350</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity351</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person120</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity352</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person66</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity353</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person121</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity354</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person122</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity355</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity356</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity357</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person123</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity358</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person118</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity359</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person118</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity360</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person124</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity361</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person4</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity362</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person125</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity363</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueActivity>
-                                        <o:activityUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Activity364</o:activityUri>
-                                        <o:activityWhoUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:activityWhoUri>
-                                    </o:issueActivity>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:issueCCPersonUri>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:issueCCPersonUri>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person37</o:issueCCPersonUri>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person119</o:issueCCPersonUri>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person120</o:issueCCPersonUri>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person121</o:issueCCPersonUri>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person122</o:issueCCPersonUri>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person123</o:issueCCPersonUri>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person124</o:issueCCPersonUri>
-                                    <o:issueCCPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person125</o:issueCCPersonUri>
+                                    <o:issueUri>http://www.alert-project.eu/ontologies/alert_its.owl#Bug1075</o:issueUri>
                                     <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment282</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person118</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment283</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment284</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person118</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment285</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person119</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment286</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment287</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment288</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment289</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment290</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment291</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment292</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment293</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment294</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person118</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment295</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment296</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person120</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment297</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment298</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person118</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment299</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person37</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment300</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person121</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment301</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment302</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person122</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment303</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment304</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment305</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment306</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person123</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment307</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment308</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person118</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment309</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person124</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment310</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person125</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment311</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment312</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person1</o:commentPersonUri>
-                                    </o:issueComment>
-                                    <o:issueComment>
-                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment313</o:commentUri>
-                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:commentPersonUri>
+                                        <o:commentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Comment1075</o:commentUri>
+                                        <o:commentPersonUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person512</o:commentPersonUri>
                                     </o:issueComment>
                                     <o:issueComputerSystem>
-                                        <o:issueComputerSystemUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#ComputerSystem25</o:issueComputerSystemUri>
+                                        <o:issueComputerSystemUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#ComputerSystem1075</o:issueComputerSystemUri>
                                     </o:issueComputerSystem>
                                     <o:issueMilestone>
                                         <o:issueMilestoneUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Milestone1</o:issueMilestoneUri>
                                     </o:issueMilestone>
-                                    <o:issueAuthorUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person118</o:issueAuthorUri>
-                                    <o:issueAssignedToUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person2</o:issueAssignedToUri>
+                                    <o:issueAuthorUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person512</o:issueAuthorUri>
+                                    <o:issueAssignedToUri>http://www.alert-project.eu/ontologies/alert_scm.owl#Person7</o:issueAssignedToUri>
                                     <o:issueProduct>
                                         <o:productComponentUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Component1</o:productComponentUri>
                                         <o:productUri>http://www.ifi.uzh.ch/ddis/evoont/2008/11/bom#Product1</o:productUri>
                                     </o:issueProduct>
                                 </o:mdservice>
 
-								<s1:keui>
-									<s1:issueDescriptionAnnotated><![CDATA[Powerdevil <concept id="http://ailab.ijs.si/alert/resource/r14650">sets</concept> <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> without regards to current level]]></s1:issueDescriptionAnnotated>
-									<s1:issueDescriptionConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6178</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:issueDescriptionConcepts>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[<concept id="http://ailab.ijs.si/alert/resource/r18520">Version</concept>:            (using <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.1.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>)
- OS:                <concept id="http://ailab.ijs.si/alert/resource/r14937">Linux</concept>
- <concept id="http://ailab.ijs.si/alert/resource/installed">Installed</concept> from:    <concept id="http://ailab.ijs.si/alert/resource/r16720">SuSE</concept> RPMs
-
- Currently, Powerdevil will <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> the brightness of the <concept id="http://ailab.ijs.si/alert/resource/r1187">screen</concept> to a certain level according to the <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> that corresponds to the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> state.  This is fine... for most situations.  However, there are some situations where it runs <concept id="http://ailab.ijs.si/alert/resource/r176">counter</concept> to what the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> obviously wants.
-
- <concept id="http://ailab.ijs.si/alert/resource/r10388">Key</concept> point:
- If I have lowered the brightness of my <concept id="http://ailab.ijs.si/alert/resource/r1187">screen</concept> (to reduce glare, or because it ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> dark), and my <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> level lowers enough to <concept id="http://ailab.ijs.si/alert/resource/r10830">trigger</concept> a new Powerdevil <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept>, the brightness will be _set_ to the level specified by the <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept>, which is, in most cases, _higher_ than what I had <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> it to manually.  This obviously runs /<concept id="http://ailab.ijs.si/alert/resource/r176">counter</concept>/ to preserving <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> life, as the <concept id="http://ailab.ijs.si/alert/resource/r1187">screen</concept> suddenly becomes _brighter_.
-
- Suggested solution:
- I feel that it would be better for Powerdevil to first check if the brightness level is already lower than that of the <concept id="http://ailab.ijs.si/alert/resource/r588">next</concept> <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept>, and if it is, not to <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> the brightness.
- Alternatively, it would be even nicer if the brightness slider had an  " advanced "  <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> showing a max <concept id="http://ailab.ijs.si/alert/resource/r14650">setting</concept> for brightness, allowing one to <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> the max end of the <concept id="http://ailab.ijs.si/alert/resource/r17329">range</concept> of possible brightness for a <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept>, the default one being specified by the normal slider.  This would be difficult to be <concept id="http://ailab.ijs.si/alert/resource/r6204">done</concept> in a nice-<concept id="http://ailab.ijs.si/alert/resource/r17442">UI</concept> fashion, but might offer just the <concept id="http://ailab.ijs.si/alert/resource/r11876">right</concept> level of flexibility most <concept id="http://ailab.ijs.si/alert/resource/r12142">users</concept> would want in this situation.  (As a disclaimer, whatever solution taken is obviously <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept> to the developer, I ' m just throwing out <concept id="http://ailab.ijs.si/alert/resource/r2121">ideas</concept>.)]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18520</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14937</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/installed</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16720</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>5</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1187</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>5</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r176</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r10388</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r10830</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r588</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17329</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17442</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11876</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8553</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r2121</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5694</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[What you say is a scenario that happens lots of <concept id="http://ailab.ijs.si/alert/resource/r18152">times</concept>, though you forgot that sometimes exactly the opposite happens, e.<concept id="http://ailab.ijs.si/alert/resource/r18431">g</concept>.: you <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness to an higher level and an automatic <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> change lowers it.
-
- This is quite normal imho, but I recognize some people could be annoyed by that. What if I added a <concept id="http://ailab.ijs.si/alert/resource/r18222">checkbox</concept>  " <concept id="http://ailab.ijs.si/alert/resource/r1288">Lock</concept> brightness "  to the <concept id="http://ailab.ijs.si/alert/resource/r17541">applet</concept>, that when in effect, prevents brightness from being automatically changed?]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18152</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18431</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18222</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1288</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17541</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5695</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Thanks for the <concept id="http://ailab.ijs.si/alert/resource/r16668">prompt</concept> response.  Unfortunately, I wasn ' t notified of one. :/
-
- Anyway, I actually take a different stance than those who seem to have been... suggesting <concept id="http://ailab.ijs.si/alert/resource/r12485">things</concept> to you.  ^^;  The <concept id="http://ailab.ijs.si/alert/resource/r2004">application</concept> is /inherently/ about <concept id="http://ailab.ijs.si/alert/resource/r15958">power management</concept> and thus is more concerned with <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> life than anything else.  Therefore, I feel that the case that I described, where the <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> ends <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept> higher than it was, should be <concept id="http://ailab.ijs.si/alert/resource/r1941">handled</concept> (as it clearly is /contrary/ to saving <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept>), versus the case where the <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> ends <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept> lower than it was, which should be expected.
-
- However, there are cases where one needs the <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> higher for sheer visibility, regardless of <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept>.  For those, I think the proper approach would be to expose such <concept id="http://ailab.ijs.si/alert/resource/r1288">locking</concept> <concept id="http://ailab.ijs.si/alert/resource/r14957">functionality</concept> as you describe and allow a global keybinding for it. Whether this <concept id="http://ailab.ijs.si/alert/resource/r17080">goes</concept> into the <concept id="http://ailab.ijs.si/alert/resource/r17541">applet</concept> is <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept> to you.  If people keep complaining, you could always put a <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> of <concept id="http://ailab.ijs.si/alert/resource/r18222">checkboxes</concept> in the General Settings <concept id="http://ailab.ijs.si/alert/resource/r17651">tab</concept> that allows one to <concept id="http://ailab.ijs.si/alert/resource/r18053">select</concept> what <concept id="http://ailab.ijs.si/alert/resource/r12485">things</concept> Powerdevil <concept id="http://ailab.ijs.si/alert/resource/r6490">controls</concept> (with all on by default), and simply not showing those <concept id="http://ailab.ijs.si/alert/resource/r9241">options</concept> in the <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> <concept id="http://ailab.ijs.si/alert/resource/r18264">management</concept> (but keeping any settings for them, in case the <concept id="http://ailab.ijs.si/alert/resource/r6490">control</concept> is reenabled).
-
- Personally, the case of the <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> lowering when I don ' t want it to can be <concept id="http://ailab.ijs.si/alert/resource/r1941">handled</concept> perfectly with the <concept id="http://ailab.ijs.si/alert/resource/r1288">locking</concept> <concept id="http://ailab.ijs.si/alert/resource/r14957">functionality</concept> that you described, though I haven ' t had such a need yet.  Again, the opposite case of the <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> getting brighter is what was troubling.  It <concept id="http://ailab.ijs.si/alert/resource/r17080">goes</concept> contrary to the <concept id="http://ailab.ijs.si/alert/resource/r14659">clear</concept> goals of this <concept id="http://ailab.ijs.si/alert/resource/r657">program</concept> and I feel should be <concept id="http://ailab.ijs.si/alert/resource/r1941">handled</concept> appropriately and by default, regardless of a <concept id="http://ailab.ijs.si/alert/resource/r1288">locking</concept> mechanism.
-
- On a side-note, I for one am a big fan of the direction KDE4 is <concept id="http://ailab.ijs.si/alert/resource/r5585">headed</concept> (though a realistic one; i.e. KDE4.0 was a technical <concept id="http://ailab.ijs.si/alert/resource/r9178">preview</concept>, don ' t be an idiot and complain) and very much <concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept> your approach with Powerdevil.  It ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> very well-<concept id="http://ailab.ijs.si/alert/resource/r18198">designed</concept> and elegant.  (No <concept id="http://ailab.ijs.si/alert/resource/r11379">matter</concept> what the peanut gallery cares to gripe about.)]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16668</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12485</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r2004</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15958</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6178</s1:uri><s1:weight>5</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8553</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1941</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3630</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1288</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14957</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17080</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17541</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18222</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17651</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18053</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6490</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18264</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14659</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r657</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r5585</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9178</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17671</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18198</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11379</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5696</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Hi. This issue is really annoying for me as well. Sometimes my eyes are a <concept id="http://ailab.ijs.si/alert/resource/r15726">bit</concept> tired, so I have to <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> the brightness of the <concept id="http://ailab.ijs.si/alert/resource/r1187">screen</concept> lower. Unfortunately, it takes just <concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>/3 seconds for Powerdevil to change the brightness without my consent.
-
- A fix for this situation would be really good :)]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15726</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1187</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5697</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[This issue is a bug! If a brightness level was <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> manually, e.<concept id="http://ailab.ijs.si/alert/resource/r18431">g</concept>. via the slider powerdevil must only decrease it and never increase it. this is quite easy to check: if the brightness currently <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> is lower than the one <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> in the <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept>, <concept id="http://ailab.ijs.si/alert/resource/r6204">do</concept> not change the brightness.
-
- Connected to this is that the slider in the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> <concept id="http://ailab.ijs.si/alert/resource/r17541">applet</concept> ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> <concept id="http://ailab.ijs.si/alert/resource/r16894">pop-up</concept> is not changed to the new level, but remains where it was <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> manually, i.e. <concept id="http://ailab.ijs.si/alert/resource/r6204">does</concept> not even show the correct brightness level.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>4</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18431</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17541</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16894</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5698</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Guys, unfortunately not everyone thinks about that this way, though I recognize that for some people such an issue can be annoying. So I ' m accepting it, and I ' ll add an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> in PowerDevil. I can ' t change a default behavior this way, but in 4.3 (<concept id="http://ailab.ijs.si/alert/resource/r2363">feature</concept> freeze...) I ' ll add an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> for keeping the brightness never over the last manual <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> level.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r2363</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5699</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[So what is the reason that a majority (otherwise it should not be default) thinks that this is not the <concept id="http://ailab.ijs.si/alert/resource/r11876">right</concept> way?
-
- What you are saying is that the majority expects the brightness to <concept id="http://ailab.ijs.si/alert/resource/r17080">go</concept> <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept>, if the <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> level <concept id="http://ailab.ijs.si/alert/resource/r17080">goes</concept> down and that even though they <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> the brightness level lower than the current <concept id="http://ailab.ijs.si/alert/resource/r18265">scheme</concept>, they want it higher again for the <concept id="http://ailab.ijs.si/alert/resource/r588">next</concept> <concept id="http://ailab.ijs.si/alert/resource/r18265">scheme</concept> which is supposed to <concept id="http://ailab.ijs.si/alert/resource/r18310">save</concept> as much or more <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> (<concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> is decharching).
-
- So why would one want to have the <concept id="http://ailab.ijs.si/alert/resource/r588">next</concept> <concept id="http://ailab.ijs.si/alert/resource/r18265">scheme</concept> having a higher brightness level?
-
- AFAIK there are only two reasons to change the brightness level lower than the <concept id="http://ailab.ijs.si/alert/resource/r12469">active</concept> <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> <concept id="http://ailab.ijs.si/alert/resource/r18265">scheme</concept>, 1. to <concept id="http://ailab.ijs.si/alert/resource/r18310">save</concept> <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept>, <concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>. to adjust it to the current environment (dark room) or personal <concept id="http://ailab.ijs.si/alert/resource/r17671">liking</concept> (tired eyes).
-
- So if the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> the brightness lower for powersaving reasons, who would claim that it <concept id="http://ailab.ijs.si/alert/resource/r1458">makes</concept> sense to the same <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> that the <concept id="http://ailab.ijs.si/alert/resource/r588">next</concept> <concept id="http://ailab.ijs.si/alert/resource/r18265">scheme</concept>, which is supposed to <concept id="http://ailab.ijs.si/alert/resource/r18310">save</concept> more <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> than the last, increases brightness?
-
- If the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> has lowered the brightness because of the environment, why would the same <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> want it to increase, if the environment <concept id="http://ailab.ijs.si/alert/resource/r6204">did</concept> not change. He might want it to decrease because 1. comes into play as well though, but that is another issue.
-
- If the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> has lowered the brightness because of personla <concept id="http://ailab.ijs.si/alert/resource/r17671">liking</concept>, why would the same <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> want it to increase with the <concept id="http://ailab.ijs.si/alert/resource/r588">next</concept> <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> saving <concept id="http://ailab.ijs.si/alert/resource/r18265">scheme</concept>?
-
- What is the <concept id="http://ailab.ijs.si/alert/resource/r3020">use-case</concept> you are refering to, i.e. in what situation, would the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> first lower the brigthness level manually and then wants it to be increased by the <concept id="http://ailab.ijs.si/alert/resource/r588">next</concept> lower (more powersaving) powersaving <concept id="http://ailab.ijs.si/alert/resource/r18265">scheme</concept>?]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11876</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17080</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8553</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3630</s1:uri><s1:weight>6</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18265</s1:uri><s1:weight>7</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r588</s1:uri><s1:weight>5</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18310</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12469</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17671</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>7</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1458</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3020</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5700</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Because your analysis is simply wrong: <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> <concept id="http://ailab.ijs.si/alert/resource/r18265">schemes</concept> can also <concept id="http://ailab.ijs.si/alert/resource/r17080">go</concept> <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept>. If you shut your brightness to 10% manually and then plug in your <concept id="http://ailab.ijs.si/alert/resource/r15338">AC</concept> adaptor, 99% of people expect brightness to arise. With this settings, brightness would stay at 10%, and that ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> really annoying.
-
- I think this one alone is more than a good reason, but anyway, I can ' t change default behavior to something unexpected: the average <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> expects brightness to reflect <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> one. I am saying I am adding it as an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> because not everyone uses the <concept id="http://ailab.ijs.si/alert/resource/r15948">PC</concept> as you <concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept>, and default behavior should be as much predictable as possible. (And also, I can ' t change such an important behavior <concept id="http://ailab.ijs.si/alert/resource/r11876">right</concept> before <concept id="http://ailab.ijs.si/alert/resource/r17299">releasing</concept>)
-
- More over, consider that there is not a way to determine which <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> <concept id="http://ailab.ijs.si/alert/resource/r16746">aims</concept> to <concept id="http://ailab.ijs.si/alert/resource/r18310">save</concept> more <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> on the <concept id="http://ailab.ijs.si/alert/resource/r17446">code</concept> side, since <concept id="http://ailab.ijs.si/alert/resource/r17263">profiles</concept> are <concept id="http://ailab.ijs.si/alert/resource/r12494">dynamic</concept>.
-
- Anyway, I ' ll surely add an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> to behave <concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept> this in <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.3]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3630</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18265</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17080</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8553</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15338</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15948</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17671</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11876</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17299</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16746</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18310</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17446</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12494</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5701</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Sorry, but my analysis is not wrong because I never ever stated that this should be true for charging <concept id="http://ailab.ijs.si/alert/resource/r3368">batteries</concept>, neither <concept id="http://ailab.ijs.si/alert/resource/r6204">did</concept> the reporter. In fact he stated:  " If I have lowered the brightness of my <concept id="http://ailab.ijs.si/alert/resource/r1187">screen</concept>... "
-
- So unless you are trying to tell me that it is impossible to check whether the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> is discharging while the <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> is changed, your assumptions about the defaults and what the majority wants are not valid. You could not state a <concept id="http://ailab.ijs.si/alert/resource/r3020">use case</concept> where the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> wants an increased brightness although the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> is discharging.
-
- And it is quite easy to determine which <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> <concept id="http://ailab.ijs.si/alert/resource/r18310">saves</concept> <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept>, in terms of brightness. If <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> <concept id="http://ailab.ijs.si/alert/resource/r16051">x</concept> has a brightness of 80% and <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> y has a brightness of 50%, then <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> y is saving more <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> regarding the brightness and that is all that <concept id="http://ailab.ijs.si/alert/resource/r11379">matters</concept> when discussing  " changing the brigthness level " .
-
- So unless you can provide some <concept id="http://ailab.ijs.si/alert/resource/r3020">use case</concept>, the current default is wrong and fixing it is not a <concept id="http://ailab.ijs.si/alert/resource/r2363">feature</concept> and <concept id="http://ailab.ijs.si/alert/resource/r6204">does</concept> not require any new <concept id="http://ailab.ijs.si/alert/resource/r17548">strings</concept>.
-
- If powerdevil <concept id="http://ailab.ijs.si/alert/resource/r6204">does</concept> the following check before applying the brightness level of the new <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> it would work as expected.
-
- - If <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> is discharging (<concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> not plugged in) and the current brightness level is lower than the brightness level to be applied, <concept id="http://ailab.ijs.si/alert/resource/r6204">do</concept> not change the brightness level.
- - If the new brightness level is lower, apply it. (this is debateable, since some people might argue that a manually <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness level should never be changed)
- - If the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> is charging, i.e. the <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> is plugged in, and the brightness level of the new <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> is lower then the current, <concept id="http://ailab.ijs.si/alert/resource/r6204">do</concept> not apply the change, if it is higher apply it.
-
- A new <concept id="http://ailab.ijs.si/alert/resource/r14650">setting</concept> to  " never change manually <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness level "  is only needed for people who <concept id="http://ailab.ijs.si/alert/resource/r6204">do</concept> not want the brightness to be <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> automatically, even if <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> is plugged in. Yet although I <concept id="http://ailab.ijs.si/alert/resource/r6204">do</concept> not have any figures I agree with you that those are likely to be a minority and this should not be the default behaviour.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>5</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>7</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1187</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>7</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3020</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18310</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3630</s1:uri><s1:weight>5</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16051</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11379</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r2363</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17548</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>4</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5702</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[You caught the point by saying:
-
- " (this is debateable, since
- some people might argue that a manually <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness level should never be
- changed) "
-
- Now, as a <concept id="http://ailab.ijs.si/alert/resource/r654">programmer</concept> I know that every default has someone against it, and that ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> pretty normal. If I changed the behavior to reflect what you say, I ' <concept id="http://ailab.ijs.si/alert/resource/r16877">d</concept> have another ton of people asking me  " why <concept id="http://ailab.ijs.si/alert/resource/r6204">does</concept> it behave this way? "
-
- The current default suits me and most of the other <concept id="http://ailab.ijs.si/alert/resource/r12142">users</concept> (you see, this bug has been <concept id="http://ailab.ijs.si/alert/resource/r18523">reported</concept> by 3 people only, and consider how many people are using <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> on their <concept id="http://ailab.ijs.si/alert/resource/r14702">laptop</concept>...), this <concept id="http://ailab.ijs.si/alert/resource/r11814">leads</concept> me to say that is the most sane default, since it strictly fits most of the people.
-
- I ' m not showing you <concept id="http://ailab.ijs.si/alert/resource/r3020">use cases</concept> because here we are not talking about <concept id="http://ailab.ijs.si/alert/resource/r3020">use cases</concept>: some people might prefer having it this way, some other people not. Some people wouldn ' t even want to have their brightness changed, some other might want a completely different behavior, it ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> impossible to <concept id="http://ailab.ijs.si/alert/resource/r17893">find</concept> a <concept id="http://ailab.ijs.si/alert/resource/r17644">standard</concept> that suits everyone, that ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> the point.
-
- Now, ok, I see your points, and to some <concept id="http://ailab.ijs.si/alert/resource/r10170">extents</concept> I agree with you, though I <concept id="http://ailab.ijs.si/alert/resource/r17893">find</concept> myself comfortable with the current settings, so here are my points in favour to provide this as an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept>:
-
-  - A simplicistic one: you can ' t change such an important behavior <concept id="http://ailab.ijs.si/alert/resource/r11876">right</concept> before <concept id="http://ailab.ijs.si/alert/resource/r17299">releasing</concept> a major <concept id="http://ailab.ijs.si/alert/resource/r18520">version</concept>. Now every <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> expects Powerdevil to behave <concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept> this, and it would be rather confusing for them.
-  - Brightness is not the only <concept id="http://ailab.ijs.si/alert/resource/r17503">component</concept> concurring in saving <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept>. More than that, as I (and you) said before,  " <concept id="http://ailab.ijs.si/alert/resource/r1288">locking</concept> "  the brightness to a certain level might leave some people unhappy with that anyway
-  - Providing this as an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> and not as a default <concept id="http://ailab.ijs.si/alert/resource/r1458">makes</concept> everyone happy. I already agreed that with the original reporter that was more than fine with it, though I simply had not enough <concept id="http://ailab.ijs.si/alert/resource/r18152">time</concept> to implement it.
-
- I am sorry, but I think I <concept id="http://ailab.ijs.si/alert/resource/r15450">won</concept> ' t change it. More than that, <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept> is just a few days away, and since such a <concept id="http://ailab.ijs.si/alert/resource/r2363">feature</concept> would require a decent amount of <concept id="http://ailab.ijs.si/alert/resource/r17446">code</concept> + <concept id="http://ailab.ijs.si/alert/resource/r17619">testing</concept> (and I ' m also in some kind of holidays, <concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept> I suppose everyone), I wouldn ' t have a sufficient <concept id="http://ailab.ijs.si/alert/resource/r17619">testing</concept> period for <concept id="http://ailab.ijs.si/alert/resource/r17299">releasing</concept> it as  " stable " .
-
- Though, I can surely assure you it will be there for <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.3]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r654</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16877</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18523</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14702</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11814</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3020</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17893</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17644</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r10170</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11876</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17299</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18520</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17671</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17503</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3630</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1288</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1458</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18152</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15450</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r2363</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17446</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17619</s1:uri><s1:weight>2</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5703</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Well, then you need two new settings:
-
- 1. Current behaviour
- <concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>. Never ever change a manually <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness
- 3. never change the brightness to a higher level then <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> manually if discharging.
-
- I ' ll send an <concept id="http://ailab.ijs.si/alert/resource/r17390">email</concept> to the <concept id="http://ailab.ijs.si/alert/resource/r16372">usability</concept> mailinglist, maybe that <concept id="http://ailab.ijs.si/alert/resource/r15408">helps</concept> us both understanding the <concept id="http://ailab.ijs.si/alert/resource/r11379">matter</concept>.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17390</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16372</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15408</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11379</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5704</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Seems to me the most reasonable decision, thanks for caring about this]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts></s1:commentTextConcepts>
-										<s1:itemId>5705</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Sounds great.  I didn ' t expect it to <concept id="http://ailab.ijs.si/alert/resource/r17080">go</concept> into 4.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept> anyway.  As long as it happens in a reasonable manner in a reasonable amount of <concept id="http://ailab.ijs.si/alert/resource/r18152">time</concept>, I ' m fine.  My only concern is that it may hamper <concept id="http://ailab.ijs.si/alert/resource/r16372">usability</concept>, but that seems to be being taken care of, so all ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> well and <concept id="http://ailab.ijs.si/alert/resource/r11876">right</concept> with the world.  Thank you for your efforts, Dario.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17080</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18152</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16372</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11876</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5706</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Ok, seems <concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept> people regard the current behaviour as bug. Nobody opted for the current behaviour. Hence the severity of this bug has to be changed and the issue fixed for <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>.
-
- The only <concept id="http://ailab.ijs.si/alert/resource/r12485">thing</concept> that seems be worth a discussion is if the default for manual settings <concept id="http://ailab.ijs.si/alert/resource/r1941">handling</concept> is to:
-
- a) <concept id="http://ailab.ijs.si/alert/resource/r6204">do</concept> not change the manually <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness until the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> <concept id="http://ailab.ijs.si/alert/resource/r18225">logs out</concept> or <concept id="http://ailab.ijs.si/alert/resource/r18053">selects</concept> a <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> manually.
-
- b) change the brightness to lower level, if the <concept id="http://ailab.ijs.si/alert/resource/r588">next</concept> <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> has a lower <concept id="http://ailab.ijs.si/alert/resource/r14650">setting</concept> and increase the brightness if the <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> is plugged-in
-
- The <concept id="http://ailab.ijs.si/alert/resource/r806">switch</concept> for the latter has to wait until <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.3 though, so for <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept> you have to decide for one of them.
-
- http://lists.kde.org/?t=123067791200003 & <concept id="http://ailab.ijs.si/alert/resource/r18475">r</concept>=1 & w=<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>
-]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17671</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12485</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1941</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18225</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18053</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r588</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3630</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r806</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18475</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5707</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[There is still some room for being <concept id="http://ailab.ijs.si/alert/resource/r7431">smart</concept>. Back to <concept id="http://ailab.ijs.si/alert/resource/r17263">profiles</concept> <concept id="http://ailab.ijs.si/alert/resource/r18198">design</concept> (automatic change) -- this settings only cover the state of <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept>. When <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> <concept id="http://ailab.ijs.si/alert/resource/r1458">makes</concept> some manual changes while <concept id="http://ailab.ijs.si/alert/resource/r17960">system</concept> is running it could be caused by two <concept id="http://ailab.ijs.si/alert/resource/r12485">things</concept> only (I didn ' t notice other case):
- * light
- * <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept>
-
- So if <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> increases the brightness it could be caused only by light conditions, if she/he decreases it is either by light or by <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> conditions.
-
- Having this in mind, powerdevil could come <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept> with really <concept id="http://ailab.ijs.si/alert/resource/r7431">smart</concept> behaviour.
-
- <concept id="http://ailab.ijs.si/alert/resource/r3342">ad</concept>.a) this means light takes precedence so at the same <concept id="http://ailab.ijs.si/alert/resource/r18152">time</concept> it denies the need for automatic change of brightness at all
-
- But even such case (a) can be cover <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept>. If the <concept id="http://ailab.ijs.si/alert/resource/r17290">source</concept> and <concept id="http://ailab.ijs.si/alert/resource/r9549">target</concept> <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> have different levels of brightness <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> takes into account <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> considerations. If they are the same -- not, so then brightness could stay the same even after manual change.
-
- I hope I expressed myself in an understandable fashion :-)]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r7431</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18198</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3630</s1:uri><s1:weight>4</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1458</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17960</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12485</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8553</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3342</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18152</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17290</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9549</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5708</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Thanks for bringing <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept> the discussion. Unfortunately I don ' t think it will <concept id="http://ailab.ijs.si/alert/resource/r1458">make</concept> it for 4.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>.0, since <concept id="http://ailab.ijs.si/alert/resource/r18152">time</concept> is really running out and this would require a decent amount of <concept id="http://ailab.ijs.si/alert/resource/r17446">code</concept> for working. I ' ll try gathering <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept> the suggestions and work on it in trunk.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8553</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1458</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18152</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17446</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5709</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[(In reply to <concept id="http://ailab.ijs.si/alert/resource/r9475">comment</concept> #13)
- >  Ok, seems <concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept> people regard the current behaviour as bug. Nobody opted for the
- >  current behaviour. Hence the severity of this bug has to be changed and the
- >  issue fixed for <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>.
- >
- >  The only <concept id="http://ailab.ijs.si/alert/resource/r12485">thing</concept> that seems be worth a discussion is if the default for manual
- >  settings <concept id="http://ailab.ijs.si/alert/resource/r1941">handling</concept> is to:
- >
- >  a) <concept id="http://ailab.ijs.si/alert/resource/r6204">do</concept> not change the manually <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness until the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> <concept id="http://ailab.ijs.si/alert/resource/r18225">logs out</concept> or <concept id="http://ailab.ijs.si/alert/resource/r18053">selects</concept>
- >  a <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> manually.
- >
- >  b) change the brightness to lower level, if the <concept id="http://ailab.ijs.si/alert/resource/r588">next</concept> <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> has a lower
- >  <concept id="http://ailab.ijs.si/alert/resource/r14650">setting</concept> and increase the brightness if the <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept> is plugged-in
- >
- >  The <concept id="http://ailab.ijs.si/alert/resource/r806">switch</concept> for the latter has to wait until <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.3 though, so for <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept> you
- >  have to decide for one of them.
- >
- >  http://lists.kde.org/?t=123067791200003 & <concept id="http://ailab.ijs.si/alert/resource/r18475">r</concept>=1 & w=<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>
- >
-
- For what it ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> worth, I concur with Sven ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> choice B.  Choice A is cumbersome and anal, effectively circumventing Powerdevil period.  (But perhaps I misunderstand the proposal.)  It would be a mistake to <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> such a <concept id="http://ailab.ijs.si/alert/resource/r12485">thing</concept> to a default.  For example, the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> could accidentally raise the brightness or have <concept id="http://ailab.ijs.si/alert/resource/r6204">done</concept> so in a bright room to be able to see, then move to a room that ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> not so bright.  The brightness doesn ' t bother them, but the higher level is straining the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> more than it should be.  Given the /<concept id="http://ailab.ijs.si/alert/resource/r3630">Power</concept>/devil is about <concept id="http://ailab.ijs.si/alert/resource/r3630">power</concept>, I feel that it is in the <concept id="http://ailab.ijs.si/alert/resource/r11876">right</concept> to take intelligent, discretionary action towards preserving the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> life.  Sure, if the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> has raised the light, they want it to stay raised.  I doubt, however, that they ' <concept id="http://ailab.ijs.si/alert/resource/r16877">d</concept> very much <concept id="http://ailab.ijs.si/alert/resource/r17671">like</concept> their <concept id="http://ailab.ijs.si/alert/resource/r14702">laptop</concept>/<concept id="http://ailab.ijs.si/alert/resource/r18125">device</concept> <concept id="http://ailab.ijs.si/alert/resource/r9159">dying</concept> on them because of poor judgment.  A <concept id="http://ailab.ijs.si/alert/resource/r806">switch</concept> can be used in that <concept id="http://ailab.ijs.si/alert/resource/r3020">use-case</concept> (to be brought <concept id="http://ailab.ijs.si/alert/resource/r8553">up</concept> for 4.3) or perhaps the <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> <concept id="http://ailab.ijs.si/alert/resource/r5533">stepped</concept> down an equivalent amount from the previous <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept>, e.<concept id="http://ailab.ijs.si/alert/resource/r18431">g</concept>.:
- <concept id="http://ailab.ijs.si/alert/resource/r17263">Profile</concept> A = 80%, B = 60%
- <concept id="http://ailab.ijs.si/alert/resource/r12142">User</concept> starts off in A (due to <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> level) and <concept id="http://ailab.ijs.si/alert/resource/r8553">ups</concept> <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> to 90%.  After some use, B gets activated.  Powerdevil notes that the <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> is higher than it was supposed to be in A, and so keeps that offset (10%), yielding a resulting level of 70%.  If the <concept id="http://ailab.ijs.si/alert/resource/r6178">backlight</concept> is lower than it was supposed to be in A, and is lower than B would expect, then it stays the same.  If it was lower than in A, but higher than in B, the same <concept id="http://ailab.ijs.si/alert/resource/r18496">scaling</concept> could be applied.
- Anyway, that ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> my two-cents. Choice B was perfectly fine.  I was just again throwing <concept id="http://ailab.ijs.si/alert/resource/r2121">ideas</concept> out there.
-
- (Out of curiousity, it seems this would be a much smaller issue if Powerdevil made use of <concept id="http://ailab.ijs.si/alert/resource/r8921">ambient light</concept> <concept id="http://ailab.ijs.si/alert/resource/r10128">sensors</concept>.  <concept id="http://ailab.ijs.si/alert/resource/r7095">Has</concept> this <concept id="http://ailab.ijs.si/alert/resource/r2363">feature</concept> been considered?  Granted, the <concept id="http://ailab.ijs.si/alert/resource/r1752">platforms</concept> that use such <concept id="http://ailab.ijs.si/alert/resource/r12485">things</concept> are few and far between.)]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9475</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17671</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12485</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1941</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>4</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18225</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18053</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>4</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r588</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3630</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r806</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18475</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>4</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11876</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16877</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14702</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18125</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9159</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3020</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8553</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6178</s1:uri><s1:weight>4</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r5533</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18431</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18496</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r2121</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8921</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r10128</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r7095</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r2363</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1752</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5710</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[I miss the <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> from <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 3.5/kpowersave to completely disable brightness modifications in a specific <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept>. With such an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> it ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> possible to let the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> <concept id="http://ailab.ijs.si/alert/resource/r4588">choose</concept> his preferred brightness, and only in situation the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> runs low, also lowering the brightness automatically.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r4588</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5711</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Would it be possible to simply <concept id="http://ailab.ijs.si/alert/resource/r17630">return</concept> to <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept>-<concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness after an automatic inactivity-caused <concept id="http://ailab.ijs.si/alert/resource/r1187">screen</concept>-dim?
- And then simply reset the <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> <concept id="http://ailab.ijs.si/alert/resource/r14934">input</concept> on automatic <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept>-caused <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> changes.
-
- In other <concept id="http://ailab.ijs.si/alert/resource/r18115">words</concept>:
- Profile1 brightness  >  inactivity dim
- <concept id="http://ailab.ijs.si/alert/resource/r18494">activity</concept>  >  Back to Profile1 brightness
- <concept id="http://ailab.ijs.si/alert/resource/r12142">User</concept> changes brightness  >  inactivity dim
- <concept id="http://ailab.ijs.si/alert/resource/r18494">activity</concept>  >  back to <concept id="http://ailab.ijs.si/alert/resource/r12142">User</concept>-<concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness
- <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> causes <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> change  >  Profile2 brightness
-
- This means that by default, <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> will be maximised, by decreasing brightness at appropriate <concept id="http://ailab.ijs.si/alert/resource/r18152">times</concept>, but <concept id="http://ailab.ijs.si/alert/resource/r12142">user</concept> preferences will override default.
-
- It would also be very useful to have a  " <concept id="http://ailab.ijs.si/alert/resource/r6204">do</concept> no change brightness "  or  " no <concept id="http://ailab.ijs.si/alert/resource/r7001">associates</concept> brightness "  <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> on each <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept>.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17630</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12142</s1:uri><s1:weight>5</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1187</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14934</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18115</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18494</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18152</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r7001</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5712</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Is this going to be fixed in <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.3?]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5713</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[>  Connected to this is that the slider in the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> <concept id="http://ailab.ijs.si/alert/resource/r17541">applet</concept> ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> <concept id="http://ailab.ijs.si/alert/resource/r16894">pop-up</concept> is not
- >  changed to the new level, but remains where it was <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> manually, i.e. <concept id="http://ailab.ijs.si/alert/resource/r6204">does</concept> not
- >  even show the correct brightness level.
-
- I have this same bug even in <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17541</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16894</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>2</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5714</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[This bug was actually fixed]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts></s1:commentTextConcepts>
-										<s1:itemId>5715</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Which <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> <concept id="http://ailab.ijs.si/alert/resource/r18520">version</concept> has that fix?]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18520</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5716</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[This one was fixed at Tokamak, if I recall correctly 4.3.<concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept> should have it, trunk has it for sure.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5717</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Can someone please clarify status of this bug?
-
- As far as I can see it still present:
- <reference bugUri="198463">https://bugs.kde.org/show_bug.cgi?id=198463</reference>
-
- Combine this bug (brightness level resets to <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> default after 30 seconds of idle <concept id="http://ailab.ijs.si/alert/resource/r18152">time</concept>):
- <reference bugUri="216675">https://bugs.kde.org/show_bug.cgi?id=216675</reference>
-
- And you will get pretty unusable brightness <concept id="http://ailab.ijs.si/alert/resource/r18264">management</concept> (and just forget about <concept id="http://ailab.ijs.si/alert/resource/r8921">ambient light</concept> <concept id="http://ailab.ijs.si/alert/resource/r10128">sensor</concept> - it will <concept id="http://ailab.ijs.si/alert/resource/r1458">make</concept> <concept id="http://ailab.ijs.si/alert/resource/r12485">things</concept> even worse).
- _______________________________________________________________
- On a side-note:
-
- Is there any way to disable brightness <concept id="http://ailab.ijs.si/alert/resource/r18264">management</concept> by Powerdevil?
- Some kind of  " Leave my freaking brightness alone "  <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept>.
- Maybe I can <concept id="http://ailab.ijs.si/alert/resource/r11672">edit</concept> some <concept id="http://ailab.ijs.si/alert/resource/r17676">configuration file</concept>?
-
- I tried disabling
- 1)  " Let PowerDevil manage <concept id="http://ailab.ijs.si/alert/resource/r1187">screen</concept> powersaving "
- <concept id="http://ailab.ijs.si/alert/resource/r17814">2</concept>)  " Dim <concept id="http://ailab.ijs.si/alert/resource/r17072">display</concept> when idle for more than ... <concept id="http://ailab.ijs.si/alert/resource/r16852">mins</concept> "
- 3)  " Enable diplay <concept id="http://ailab.ijs.si/alert/resource/r15958">power management</concept> "  in  " <concept id="http://ailab.ijs.si/alert/resource/r1187">Screen</concept> "  <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> <concept id="http://ailab.ijs.si/alert/resource/r17651">tab</concept>
- And <concept id="http://ailab.ijs.si/alert/resource/r14650">setting</concept>  " When the <concept id="http://ailab.ijs.si/alert/resource/r17960">system</concept> is idle for more than ... "  to  " <concept id="http://ailab.ijs.si/alert/resource/r6204">Do</concept> Nothing " .
-
- Neither <concept id="http://ailab.ijs.si/alert/resource/r15408">helps</concept>.
-
- So I have to <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> <concept id="http://ailab.ijs.si/alert/resource/r1187">screen</concept> brightness in <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept>. And then change it in <concept id="http://ailab.ijs.si/alert/resource/r17263">profile</concept> every <concept id="http://ailab.ijs.si/alert/resource/r18152">time</concept> lighting conditions change.
-
- Of course, I can just <concept id="http://ailab.ijs.si/alert/resource/r14650">set</concept> brightness to 100% and burn my eyes at night, so later I <concept id="http://ailab.ijs.si/alert/resource/r15450">won</concept> ' t have to change the settings to see anything in daylight.
-
- Is this a bug? Should I <concept id="http://ailab.ijs.si/alert/resource/r18523">report</concept> it?]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17263</s1:uri><s1:weight>4</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18152</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18264</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r8921</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r10128</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1458</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r12485</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r11672</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17676</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1187</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17814</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17072</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16852</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15958</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17651</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14650</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17960</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15408</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15450</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18523</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5718</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[This bug is back with <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.5 trunk. Could the reporter please re-<concept id="http://ailab.ijs.si/alert/resource/r3964">open</concept>?]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3964</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5719</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[Re-<concept id="http://ailab.ijs.si/alert/resource/r3964">opened</concept> bug at Sven ' <concept id="http://ailab.ijs.si/alert/resource/r16797">s</concept> <concept id="http://ailab.ijs.si/alert/resource/r18495">request</concept>.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3964</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r16797</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18495</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5720</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[I also see this issue in <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.4.5. But I <concept id="http://ailab.ijs.si/alert/resource/r15450">won</concept> ' t <concept id="http://ailab.ijs.si/alert/resource/r18385">join</concept> on the discussion what constitutes a sane default...]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15450</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18385</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5721</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[This bug is still present in <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> 4.5.1 (<concept id="http://ailab.ijs.si/alert/resource/r13331">Kubuntu</concept> 10.10).
-
- Imho there should be an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> to disable changing brightness by Powerdevil. The most common annoyances that it creates are:
- - making the <concept id="http://ailab.ijs.si/alert/resource/r1187">screen</concept> brighter when the <concept id="http://ailab.ijs.si/alert/resource/r3368">battery</concept> is low -  " to <concept id="http://ailab.ijs.si/alert/resource/r18310">save</concept> energy "
- - changing the brigthness when plugging in <concept id="http://ailab.ijs.si/alert/resource/r17118">power supply</concept>
- - changing the brightness while <concept id="http://ailab.ijs.si/alert/resource/r14859">KDE</concept> is <concept id="http://ailab.ijs.si/alert/resource/r17957">loading</concept> during <concept id="http://ailab.ijs.si/alert/resource/r17960">system</concept> start.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r14859</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r13331</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1187</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r3368</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18310</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17118</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17957</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17960</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5722</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[In 4.6, the new <concept id="http://ailab.ijs.si/alert/resource/r15958">Power Management</concept> <concept id="http://ailab.ijs.si/alert/resource/r17960">System</concept> has an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> not to <concept id="http://ailab.ijs.si/alert/resource/r6490">control</concept> brightness.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15958</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17960</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6490</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5723</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[(In reply to <concept id="http://ailab.ijs.si/alert/resource/r9475">comment</concept> #29)
- >  In 4.6, the new <concept id="http://ailab.ijs.si/alert/resource/r15958">Power Management</concept> <concept id="http://ailab.ijs.si/alert/resource/r17960">System</concept> has an <concept id="http://ailab.ijs.si/alert/resource/r9241">option</concept> not to <concept id="http://ailab.ijs.si/alert/resource/r6490">control</concept>
- >  brightness.
-
- How <concept id="http://ailab.ijs.si/alert/resource/r6204">does</concept> that fix the actual bug, i.e. that if enabled powerdevil <concept id="http://ailab.ijs.si/alert/resource/r6204">does</concept> not consider the current brightness level?]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9475</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15958</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17960</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r9241</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6490</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6204</s1:uri><s1:weight>2</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5724</s1:itemId></s1:issueComment>
-									<s1:issueComment>
-										<s1:commentTextAnnotated><![CDATA[The behavior is consistent with the previous <concept id="http://ailab.ijs.si/alert/resource/r18520">version</concept>, and some more intelligent behavior to the brightness <concept id="http://ailab.ijs.si/alert/resource/r6490">control</concept> <concept id="http://ailab.ijs.si/alert/resource/r17841">plugin</concept> is being added (even if it might not <concept id="http://ailab.ijs.si/alert/resource/r1458">make</concept> it into <concept id="http://ailab.ijs.si/alert/resource/r1905">Beta</concept> 1 given that I ' ll be travelling the <concept id="http://ailab.ijs.si/alert/resource/r588">next</concept> days).
-
- Btw, feel <concept id="http://ailab.ijs.si/alert/resource/r18248">free</concept> to reopen and restart a discussion if behavior in <concept id="http://ailab.ijs.si/alert/resource/r1905">Beta</concept> 1 <concept id="http://ailab.ijs.si/alert/resource/r15450">won</concept> ' t be what you expect. TBH, the bug description diverged a lot from the original, hence my <concept id="http://ailab.ijs.si/alert/resource/r18241">closing</concept> <concept id="http://ailab.ijs.si/alert/resource/r1164">message</concept>.]]></s1:commentTextAnnotated>
-										<s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18520</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r6490</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r17841</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1458</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1905</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r588</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18248</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r15450</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r18241</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/r1164</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:commentTextConcepts>
-										<s1:itemId>5725</s1:itemId></s1:issueComment><s1:threadId>24</s1:threadId>
-								</s1:keui>
-							</ns1:eventData>
+                                <s1:keui>
+                                    <s1:issueDescriptionAnnotated><![CDATA[starting kde <concept id="http://ailab.ijs.si/alert/resource/git">git</concept> KDE/4.8 for a new <concept id="http://ailab.ijs.si/alert/resource/users">user</concept> <concept id="http://ailab.ijs.si/alert/resource/crash">crashes</concept> kded/powerdevil]]></s1:issueDescriptionAnnotated>
+                                    <s1:issueDescriptionConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/git</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/users</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/crash</s1:uri><s1:weight>1</s1:weight></s1:concept></s1:issueDescriptionConcepts>
+                                    <s1:issueComment>
+                                        <s1:commentTextAnnotated><![CDATA[<concept id="http://ailab.ijs.si/alert/resource/versioning">Version</concept>:           0.0.1 (using Devel)
+ <concept id="http://ailab.ijs.si/alert/resource/operating_systems">OS</concept>:                <concept id="http://ailab.ijs.si/alert/resource/linux">Linux</concept> 
+ 
+ <concept id="http://ailab.ijs.si/alert/resource/application">Application</concept>: kded4 ($Id$) 
+ KDE <concept id="http://ailab.ijs.si/alert/resource/platform">Platform</concept> <concept id="http://ailab.ijs.si/alert/resource/versioning">Version</concept>: 4.7.97 (4.8 RC2 (4.7.97) 
+ <concept id="http://ailab.ijs.si/alert/resource/qt">Qt</concept> <concept id="http://ailab.ijs.si/alert/resource/versioning">Version</concept>: 4.8.0 
+ <concept id="http://ailab.ijs.si/alert/resource/operating_systems">Operating System</concept>: <concept id="http://ailab.ijs.si/alert/resource/linux">Linux</concept> 2.6.34.10-0.4-<concept id="http://ailab.ijs.si/alert/resource/desktop">desktop</concept> i686 
+ <concept id="http://ailab.ijs.si/alert/resource/distribution">Distribution</concept>:  " <concept id="http://ailab.ijs.si/alert/resource/opensuse">openSUSE</concept> 11.3 (i586) " 
+ 
+ -- Backtrace: 
+ <concept id="http://ailab.ijs.si/alert/resource/application">Application</concept>: KDE Daemon (kdeinit4), <concept id="http://ailab.ijs.si/alert/resource/signaling">signal</concept>: <concept id="http://ailab.ijs.si/alert/resource/abort">Aborted</concept> 
+ [Current thread is 1 (Thread 0xb566d710 (LWP 27699))] 
+ 
+ Thread 2 (Thread 0xb0b6eb70 (LWP 27744)): 
+ #0  0xb590a22b in clock_gettime () from /lib/librt.so.1 
+ #1  0xb6d4e5d5 in do_gettime () at tools/qelapsedtimer_unix.cpp:123 
+ #2  qt_gettime () at tools/qelapsedtimer_unix.cpp:140 
+ #3  0xb6e39466 in updateCurrentTime (this=0x8184674, tm=...) at kernel/qeventdispatcher_unix.cpp:343 
+ #4  QTimerInfoList::timerWait (this=0x8184674, tm=...) at kernel/qeventdispatcher_unix.cpp:450 
+ #5  0xb6e37c7b in timerSourcePrepareHelper (src= < value optimized out > , timeout=0xb0b6e0fc) at kernel/qeventdispatcher_glib.cpp:136 
+ #6  0xb6e37d1d in timerSourcePrepare (source=0x8184640, timeout= < value optimized out > ) at kernel/qeventdispatcher_glib.cpp:169 
+ #7  0xb585e0c0 in g_main_context_prepare () from /usr/lib/libglib-2.0.so.0 
+ #8  0xb585ef22 in %s%s () from /usr/lib/libglib-2.0.so.0 
+ #9  0xb585f60e in g_main_context_iteration () from /usr/lib/libglib-2.0.so.0 
+ #10 0xb6e38567 in QEventDispatcherGlib::processEvents (this=0x8206c10, flags=...) at kernel/qeventdispatcher_glib.cpp:426 
+ #11 0xb6e0453d in QEventLoop::processEvents (this=0xb0b6e2a0, flags=...) at kernel/qeventloop.cpp:149 
+ #12 0xb6e047d1 in QEventLoop::exec (this=0xb0b6e2a0, flags=...) at kernel/qeventloop.cpp:204 
+ #13 0xb6ce900d in QThread::exec (this=0x8200908) at thread/qthread.cpp:501 
+ #14 0xb6de098d in QInotifyFileSystemWatcherEngine::run (this=0x8200908) at io/qfilesystemwatcher_inotify.cpp:248 
+ #15 0xb6cebacd in QThreadPrivate::start (arg=0x8200908) at thread/qthread_unix.cpp:298 
+ #16 0xb6c6ab25 in start_thread () from /lib/libpthread.so.0 
+ #17 0xb5f3934e in clone () from /lib/libc.so.6  
+ Thread 1 (Thread 0xb566d710 (LWP 27699)):  [KCrash <concept id="http://ailab.ijs.si/alert/resource/handler">Handler</concept>] 
+ #7  0xffffe424 in __kernel_vsyscall () 
+ #8  0xb5e917af in raise () from /lib/libc.so.6 
+ #9  0xb5e930f0 in abort () from /lib/libc.so.6 
+ #10 0xb6ce10aa in qt_message_output (msgType=QtFatalMsg, buf=  0x82558c8  " ASSERT failure in KConfigGroup::groupImpl: \ " can not have an unnamed child group\ " , file /home/KDE4/source/kdelibs/kdecore/config/kconfiggroup.cpp, line 516 " )  at global/qglobal.cpp:2252 
+ #11 0xb6ce12af in qt_message (msgType=QtFatalMsg, msg=0xb6e7365c  " ASSERT failure in %s: \ " %s\ " , file %s, line %d " , ap=0xbfa45df4  " O\300\ " \267h\300\ " \267\b\275\ " \267\004\002 " )  at global/qglobal.cpp:2298 
+ #12 0xb6ce13c8 in qFatal (msg=0xb6e7365c  " ASSERT failure in %s: \ " %s\ " , file %s, line %d " ) at global/qglobal.cpp:2481 
+ #13 0xb6ce140d in qt_assert_x (where=0xb722c04f  " KConfigGroup::groupImpl " , what=0xb722c068  " can not have an unnamed child group " , file=  0xb722bd08  " /home/KDE4/source/kdelibs/kdecore/config/kconfiggroup.cpp " , line=516) at global/qglobal.cpp:2007 
+ #14 0xb707ae37 in KConfigGroup::groupImpl (this=0xbfa45f40, aGroup=...) at /home/KDE4/source/kdelibs/kdecore/config/kconfiggroup.cpp:516 
+ #15 0xb7077eeb in <concept id="http://www.alert-project.eu/ontologies/alert.owl#Method92197" weight="0,0000">KConfigBase::group (this=0xbfa45f40, str=...)</concept>  at /home/KDE4/source/kdelibs/kdecore/config/kconfigbase.cpp:51 
+ #16 0xb0de39ea in <concept id="http://www.alert-project.eu/ontologies/alert.owl#Method58244" weight="0,0000">PowerDevil::Core::loadProfile (this=0x81c1dc8, force=true)</concept>  at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilcore.cpp:267 
+ #17 0xb0de35c4 in <concept id="http://www.alert-project.eu/ontologies/alert.owl#Method546" weight="0,0000">PowerDevil::Core::refreshStatus (this=0x81c1dc8)</concept>  at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilcore.cpp:236 
+ #18 0xb0de2ba1 in <concept id="http://www.alert-project.eu/ontologies/alert.owl#Method577" weight="0,0000">PowerDevil::Core::onBackendReady (this=0x81c1dc8)</concept>  at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilcore.cpp:153 
+ #19 0xb0de70ab in PowerDevil::Core::qt_static_metacall (_o=0x81c1dc8, _c=QMetaObject::InvokeMetaMethod, _id=24, _a=0xbfa4643c)  at /home/KDE4/build/kde-workspace/powerdevil/daemon/powerdevilcore.moc:145 
+ #20 0xb6e1db4f in QMetaObject::activate (sender=0x81b4ba8, m=0x0, local_signal_index=-1327600308, argv=0x0) at kernel/qobject.cpp:3556 
+ #21 0xb0de0edd in PowerDevil::BackendInterface::backendReady (this=0x81b4ba8) at /home/KDE4/build/kde-workspace/powerdevil/daemon/powerdevilbackendinterface.moc:160 
+ #22 0xb0de0893 in <concept id="http://www.alert-project.eu/ontologies/alert.owl#Method67375" weight="0,0000">PowerDevil::BackendInterface::setBackendIsReady (this=0x81b4ba8, availableBrightnessControls=..., supportedSuspendMethods=...)</concept>   at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilbackendinterface.cpp:120 
+ #23 0xb0f9af7b in <concept id="http://www.alert-project.eu/ontologies/alert.owl#Method3301" weight="0,0000">PowerDevilUPowerBackend::init (this=0x81b4ba8)</concept>  at /home/KDE4/source/kde-workspace/powerdevil/daemon/backends/upower/powerdevilupowerbackend.cpp:151 
+ #24 0xb0de2472 in <concept id="http://www.alert-project.eu/ontologies/alert.owl#Method572" weight="0,0000">PowerDevil::Core::loadCore (this=0x81c1dc8, backend=0x81b4ba8)</concept>  at /home/KDE4/source/kde-workspace/powerdevil/daemon/powerdevilcore.cpp:84 
+ #25 0xb0f96571 in <concept id="http://www.alert-project.eu/ontologies/alert.owl#Method95728" weight="0,0000">KDEDPowerDevil::init (this=0x8158750)</concept>  at /home/KDE4/source/kde-workspace/powerdevil/daemon/kdedpowerdevil.cpp:89 
+ #26 0xb0f968f9 in KDEDPowerDevil::qt_static_metacall (_o=0x8158750, _c=QMetaObject::InvokeMetaMethod, _id=0, _a=0x816da68) at /home/KDE4/build/kde-workspace/powerdevil/daemon/kdedpowerdevil.moc:50 
+ #27 0xb6e175d1 in QMetaCallEvent::placeMetaCall (this=0x80c0bf8, object=0x8158750) at kernel/qobject.cpp:525 
+ #28 0xb6e1ba3b in QObject::event (this=0x8158750, e=0x80c0bf8) at kernel/qobject.cpp:1204 
+ #29 0xb62aa924 in QApplicationPrivate::notify_helper (this=0x80c1850, receiver=0x8158750, e=0x80c0bf8) at kernel/qapplication.cpp:4550 
+ #30 0xb62b37ab in QApplication::notify (this=0xbfa46fa4, receiver=0x8158750, e=0x80c0bf8) at kernel/qapplication.cpp:3932 
+ #31 0xb75f48da in <concept id="http://www.alert-project.eu/ontologies/alert.owl#Method21767" weight="0,0000">KApplication::notify (this=0xbfa46fa4, receiver=0x8158750, event=0x80c0bf8)</concept>  at /home/KDE4/source/kdelibs/kdeui/kernel/kapplication.cpp:311 
+ #32 0xb6e0563e in QCoreApplication::notifyInternal (this=0xbfa46fa4, receiver=0x8158750, event=0x80c0bf8) at kernel/qcoreapplication.cpp:876 
+ #33 0xb6e09310 in sendEvent (receiver=0x0, event_type=0, data=0x805c758) at kernel/qcoreapplication.h:231 
+ #34 QCoreApplicationPrivate::sendPostedEvents (receiver=0x0, event_type=0, data=0x805c758) at kernel/qcoreapplication.cpp:1500 
+ #35 0xb6e0953c in QCoreApplication::sendPostedEvents (receiver=0x0, event_type=0) at kernel/qcoreapplication.cpp:1393 
+ #36 0xb6e38394 in sendPostedEvents (s=0x80c3b10) at kernel/qcoreapplication.h:236 
+ #37 postEventSourceDispatch (s=0x80c3b10) at kernel/qeventdispatcher_glib.cpp:279 
+ #38 0xb585eb49 in g_main_context_dispatch () from /usr/lib/libglib-2.0.so.0 
+ #39 0xb585f350 in %s%s () from /usr/lib/libglib-2.0.so.0 
+ #40 0xb585f60e in g_main_context_iteration () from /usr/lib/libglib-2.0.so.0 
+ #41 0xb6e3851b in QEventDispatcherGlib::processEvents (this=0x805d8c0, flags=...) at kernel/qeventdispatcher_glib.cpp:424 
+ #42 0xb6361fba in QGuiEventDispatcherGlib::processEvents (this=0x805d8c0, flags=...) at kernel/qguieventdispatcher_glib.cpp:204 
+ #43 0xb6e0453d in QEventLoop::processEvents (this=0xbfa46f14, flags=...) at kernel/qeventloop.cpp:149 
+ #44 0xb6e047d1 in QEventLoop::exec (this=0xbfa46f14, flags=...) at kernel/qeventloop.cpp:204 
+ #45 0xb6e09610 in QCoreApplication::exec () at kernel/qcoreapplication.cpp:1148 
+ #46 0xb62a85f4 in QApplication::exec () at kernel/qapplication.cpp:3811 
+ #47 0xb514c9cd in kdemain (argc=1, argv=0x80a2a10) at /home/KDE4/source/kdelibs/kded/kded.cpp:924 
+ #48 0x0804de64 in launch (argc=1, _name=0x8053e00  " kded4 " , args=0x0, cwd=0x0, envc=0, envs=0x0, reset_env=false, tty=0x0, avoid_loops=false, startup_id_str=0x80536ef  " 0 " )  at /home/KDE4/source/kdelibs/kinit/kinit.cpp:734 
+ #49 0x08050caf in main (argc=4, argv=0xbfa47374, envp=0xbfa47388) at /home/KDE4/source/kdelibs/kinit/kinit.cpp:1849  
+ Reproducible: Always  
+ Steps to Reproduce:  I start KDE for a <concept id="http://ailab.ijs.si/alert/resource/users">user</concept> which has no kde4 <concept id="http://ailab.ijs.si/alert/resource/configuration">settings</concept>  (in HOME rm -Rf /tmp/kde-kdetrunk /var/tmp/kdecache-kdetrunk .kde4 .<concept id="http://ailab.ijs.si/alert/resource/configuration">config</concept> .local .<concept id="http://ailab.ijs.si/alert/resource/qt">qt</concept> .strigi .xine)  and this <concept id="http://ailab.ijs.si/alert/resource/crash">crash</concept> happens every <concept id="http://ailab.ijs.si/alert/resource/time">time</concept>.  
+ 
+ <concept id="http://ailab.ijs.si/alert/resource/expect">Expected</concept> Results:    no <concept id="http://ailab.ijs.si/alert/resource/crash">crash</concept>  
+ <concept id="http://ailab.ijs.si/alert/resource/operating_systems">OS</concept>: <concept id="http://ailab.ijs.si/alert/resource/linux">Linux</concept> (i686) <concept id="http://ailab.ijs.si/alert/resource/release">release</concept> 2.6.34.10-0.4-<concept id="http://ailab.ijs.si/alert/resource/desktop">desktop</concept>  <concept id="http://ailab.ijs.si/alert/resource/compiler">Compiler</concept>: <concept id="http://ailab.ijs.si/alert/resource/gcc">gcc</concept>]]></s1:commentTextAnnotated>
+                                        <s1:commentTextConcepts><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/versioning</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/operating_systems</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/linux</s1:uri><s1:weight>3</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/application</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/platform</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/qt</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/desktop</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/distribution</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/opensuse</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/signaling</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/abort</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/handler</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/users</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/configuration</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/crash</s1:uri><s1:weight>2</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/time</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/expect</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/release</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/compiler</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://ailab.ijs.si/alert/resource/gcc</s1:uri><s1:weight>1</s1:weight></s1:concept><s1:concept><s1:uri>http://www.alert-project.eu/ontologies/alert.owl#Method92197</s1:uri><s1:weight>0,0000</s1:weight></s1:concept><s1:concept><s1:uri>http://www.alert-project.eu/ontologies/alert.owl#Method58244</s1:uri><s1:weight>0,0000</s1:weight></s1:concept><s1:concept><s1:uri>http://www.alert-project.eu/ontologies/alert.owl#Method546</s1:uri><s1:weight>0,0000</s1:weight></s1:concept><s1:concept><s1:uri>http://www.alert-project.eu/ontologies/alert.owl#Method577</s1:uri><s1:weight>0,0000</s1:weight></s1:concept><s1:concept><s1:uri>http://www.alert-project.eu/ontologies/alert.owl#Method67375</s1:uri><s1:weight>0,0000</s1:weight></s1:concept><s1:concept><s1:uri>http://www.alert-project.eu/ontologies/alert.owl#Method3301</s1:uri><s1:weight>0,0000</s1:weight></s1:concept><s1:concept><s1:uri>http://www.alert-project.eu/ontologies/alert.owl#Method572</s1:uri><s1:weight>0,0000</s1:weight></s1:concept><s1:concept><s1:uri>http://www.alert-project.eu/ontologies/alert.owl#Method95728</s1:uri><s1:weight>0,0000</s1:weight></s1:concept><s1:concept><s1:uri>http://www.alert-project.eu/ontologies/alert.owl#Method21767</s1:uri><s1:weight>0,0000</s1:weight></s1:concept></s1:commentTextConcepts><s1:itemId>25960</s1:itemId></s1:issueComment><s1:threadId>1074</s1:threadId>
+                                </s1:keui>
+                            </ns1:eventData>
                         </ns1:payload>
                     </ns1:event>
                 </wsnt:Message>

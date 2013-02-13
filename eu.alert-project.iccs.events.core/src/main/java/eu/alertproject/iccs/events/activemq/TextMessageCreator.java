@@ -28,7 +28,7 @@ public class TextMessageCreator implements DataMessageCreator{
     @Override
     public Message createMessage(Session session) throws JMSException {
 
-        TextMessage textMessage = session.createTextMessage(message);
+         TextMessage textMessage = session.createTextMessage(message);
 
         logger.trace("Message createMessage() {} ",textMessage);
 
